@@ -8,6 +8,7 @@
     "start": "node server/server.js"
   },
   "dependencies": {
+    "dotenv": "^16.5.0",
     "node-fetch": "^3.3.2"
   },
   "description": "project-root/\r ├── api/\r │   └── wakatimeStats.js     # Vercel function entry point\r ├── lib/\r │   ├── heatmapCard.js        # generates SVG for heatmap\r │   └── basicStatsCard.js     # generates SVG for basic stats\r ├── server/\r │   └── server.js             # server code\r ├── package.json\r ├── vercel.json               # config file (optional)",

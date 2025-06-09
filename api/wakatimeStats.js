@@ -1,5 +1,6 @@
 import { getHeatmapCard } from '../lib/heatmapCard.js';
 import { getBasicStatsCard } from '../lib/basicStatsCard.js';
+import 'dotenv/config';
 
 export default async function handler(req, res) {
     const { username, type } = req.query;
