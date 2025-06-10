@@ -47,8 +47,20 @@ export default async function handler(req, res) {
 
     res.setHeader('Content-Type', 'image/svg+xml');
     res.send(svg);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error generating card.');
-  }
+    } catch (err) {
+        console.error(err);
+
+        // Custom SVG fallback message
+        const errorSvg = `
+    <svg width="700" height="120" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;font-size:14;">
+    <rect width="100%" height="100%" fill="#ffffff" />
+    <text x="20" y="40" fill="#333333" font-size="18" font-weight="bold">WakaTime Error</text>
+    <text x="20" y="70" fill="#333333">No per-day data available. Consider upgrading to WakaTime Premium</text>
+    <text x="20" y="90" fill="#333333">or stay logged-in to wakatime.com and ensure your API key is valid.</text>
+    </svg>
+        `;
+
+        res.setHeader('Content-Type', 'image/svg+xml');
+        res.status(200).send(errorSvg); // 200 so GitHub still renders the SVG
+    }
 }
