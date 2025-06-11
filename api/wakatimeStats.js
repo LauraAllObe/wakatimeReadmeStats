@@ -1,6 +1,7 @@
 import { svgContainer } from '../lib/svgContainer.js';
 import { getHeatmapCard } from '../lib/heatmapCard.js';
 import { getBasicStatsCard } from '../lib/basicStatsCard.js';
+import { getCodingActivityChart } from '../lib/codingActivityChart.js';
 import 'dotenv/config';
 
 function parseBoolean(value, defaultValue = false) {
@@ -43,6 +44,8 @@ export default async function handler(req, res) {
 
     const count = Math.min(parseInt(components, 10), 3);
     const svgParts = [];
+    let maxComponentWidth = 0;
+
 
     for (let i = 1; i <= count; i++) {
       const raw = req.query[`component${i}`];
@@ -67,7 +70,18 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions
           });
-        } else {
+        } else if (type === 'last7') {
+          result = await getCodingActivityChart({
+            ...sharedStyles,
+            ...componentOptions,
+            hide_legend: parseBoolean(componentOptions.hide_legend),
+            hide_total: parseBoolean(componentOptions.hide_total),
+            hide_time: parseBoolean(componentOptions.hide_time),
+            hide_percentage: parseBoolean(componentOptions.hide_percentage),
+            hide_title: parseBoolean(componentOptions.hide_title)
+          });
+        }
+        else {
           svgParts.push({
             content: `<text x="20" y="20" fill="red">Invalid component type: ${type}</text>`,
             height: 40
@@ -76,6 +90,9 @@ export default async function handler(req, res) {
         }
 
         svgParts.push({ content: result.content, height: result.height });
+        if (result.width) {
+          maxComponentWidth = Math.max(maxComponentWidth, result.width);
+        }
       } catch (err) {
         console.error(`Component ${i} (${type}) error:`, err.message || err);
 
@@ -93,6 +110,7 @@ export default async function handler(req, res) {
 
     const finalSvg = svgContainer({
       ...sharedStyles,
+      width: Math.max(sharedStyles.width, maxComponentWidth),
       components: svgParts
     });
 
