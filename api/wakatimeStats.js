@@ -39,7 +39,8 @@ export default async function handler(req, res) {
       border_color: req.query.border_color || '333333',
       border_width: parseNumber(req.query.border_width, 1),
       border_radius: parseNumber(req.query.border_radius, 4),
-      show_logo: parseBoolean(req.query.show_logo ?? req.query.showLogo, true)
+      show_logo: parseBoolean(req.query.show_logo ?? req.query.showLogo, true),
+      title_prefix: req.query.title_prefix || ''
     };
 
     const count = Math.min(parseInt(components, 10), 3);
