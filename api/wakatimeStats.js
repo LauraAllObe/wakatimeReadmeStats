@@ -1,7 +1,8 @@
 import { svgContainer } from '../lib/svgContainer.js';
 import { getHeatmapCard } from '../lib/heatmapCard.js';
 import { getBasicStatsCard } from '../lib/basicStatsCard.js';
-import { getCodingActivityChart } from '../lib/codingActivityChart.js';
+import { getCodingActivityCard } from '../lib/codingActivityCard.js';
+import {getSpedometerCard} from '../lib/spedometerCard.js';
 import 'dotenv/config';
 
 function parseBoolean(value, defaultValue = false) {
@@ -74,7 +75,7 @@ export default async function handler(req, res) {
             ...componentOptions
           });
         } else if (type === 'last7') {
-          result = await getCodingActivityChart({
+          result = await getCodingActivityCard({
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type || 'bar',
@@ -88,8 +89,12 @@ export default async function handler(req, res) {
             hide_percentage: parseBoolean(componentOptions.hide_percentage),
             hide_title: parseBoolean(componentOptions.hide_title),
           });
-        }
-        else {
+        } else if (type === 'spedometer') {
+          result = await getSpedometerCard({
+            ...sharedStyles,
+            ...componentOptions
+          });
+        } else {
           svgParts.push({
             content: `<text x="20" y="20" fill="red">Invalid component type: ${type}</text>`,
             height: 40
@@ -128,11 +133,11 @@ export default async function handler(req, res) {
   } catch (err) {
     console.error("Server error:", err.message || err);
     const errorSvg = `
-<svg width="700" height="120" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;font-size:14;">
-  <rect width="100%" height="100%" fill="#ffffff" />
-  <text x="20" y="40" fill="#333333" font-size="18" font-weight="bold">WakaTime Error</text>
-  <text x="20" y="70" fill="#333333">${err.message || "Unknown error occurred."}</text>
-</svg>`;
+      <svg width="700" height="120" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;font-size:14;">
+        <rect width="100%" height="100%" fill="#ffffff" />
+        <text x="20" y="40" fill="#333333" font-size="18" font-weight="bold">WakaTime Error</text>
+        <text x="20" y="70" fill="#333333">${err.message || "Unknown error occurred."}</text>
+      </svg>`;
     res.setHeader('Content-Type', 'image/svg+xml');
     res.status(200).send(errorSvg);
   }
