@@ -75,11 +75,16 @@ export default async function handler(req, res) {
           result = await getCodingActivityChart({
             ...sharedStyles,
             ...componentOptions,
+            chart_type: componentOptions.chart_type || 'bar',
+            chart_curved_line: parseBoolean(componentOptions.chart_curved_line),
+            start_day: componentOptions.start_day || '-7',
+            heading_type: componentOptions.heading_type || 'standard',
+            mixed_colors: parseBoolean(componentOptions.mixed_colors),
             hide_legend: parseBoolean(componentOptions.hide_legend),
             hide_total: parseBoolean(componentOptions.hide_total),
             hide_time: parseBoolean(componentOptions.hide_time),
             hide_percentage: parseBoolean(componentOptions.hide_percentage),
-            hide_title: parseBoolean(componentOptions.hide_title)
+            hide_title: parseBoolean(componentOptions.hide_title),
           });
         }
         else {
