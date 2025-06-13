@@ -61,6 +61,8 @@ export default async function handler(req, res) {
           result = await getBasicStatsCard({
             ...sharedStyles,
             ...componentOptions,
+            hide_daily_average: parseBoolean(componentOptions.hide_daily_average, false),
+            hide_total_time: parseBoolean(componentOptions.hide_total_time, false),
             hide_languages: parseBoolean(componentOptions.hide_languages, false),
             hide_projects: parseBoolean(componentOptions.hide_projects, false),
             hide_operating_systems: parseBoolean(componentOptions.hide_operating_systems, false),
