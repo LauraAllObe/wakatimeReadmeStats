@@ -92,7 +92,9 @@ export default async function handler(req, res) {
         } else if (type === 'spedometer') {
           result = await getSpedometerCard({
             ...sharedStyles,
-            ...componentOptions
+            ...componentOptions,
+            competition: componentOptions.difficulty || 'medium',
+            label_type: componentOptions.label_type || 'standard'
           });
         } else {
           svgParts.push({
