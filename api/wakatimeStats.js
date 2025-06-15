@@ -72,7 +72,10 @@ export default async function handler(req, res) {
         } else if (type === 'heatmap') {
           result = await getHeatmapCard({
             ...sharedStyles,
-            ...componentOptions
+            ...componentOptions,
+            heatmap_color: componentOptions.heatmap_color || '00ff00',
+            start_day: componentOptions.start_day || 'mo',
+            time: componentOptions.time || 'last_year',
           });
         } else if (type === 'last7') {
           result = await getCodingActivityCard({
@@ -93,8 +96,11 @@ export default async function handler(req, res) {
           result = await getSpedometerCard({
             ...sharedStyles,
             ...componentOptions,
-            competition: componentOptions.difficulty || 'medium',
-            label_type: componentOptions.label_type || 'standard'
+            difficulty: componentOptions.difficulty || 'medium',
+            label_type: componentOptions.label_type || 'standard',
+            chart_color: componentOptions.chart_color || '#f1c40f',
+            custom_emojis: componentOptions.custom_emojis || '',
+            show_high_score: componentOptions.show_high_score ?? false
           });
         } else {
           svgParts.push({
