@@ -78,7 +78,7 @@ export default async function handler(req, res) {
             heatmap_color: componentOptions.heatmap_color || '00ff00',
             start_day: componentOptions.start_day || 'mo',
             time: componentOptions.time || 'last_year',
-            heading_type: componentOptions.heading_type || 'standard',
+            heading_type: componentOptions.heading_type || 'friendly',
             hide_title: parseBoolean(componentOptions.hide_title, false)
           });
         } else if (type === 'last7') {
@@ -104,7 +104,7 @@ export default async function handler(req, res) {
             label_type: componentOptions.label_type || 'standard',
             chart_color: componentOptions.chart_color || '#f1c40f',
             custom_emojis: componentOptions.custom_emojis || '',
-            show_high_score: componentOptions.show_high_score ?? false
+            show_high_score: componentOptions.show_high_score ?? true
           });
         } else if (type === 'star_rank') {
           result = await getStarRankCard({
