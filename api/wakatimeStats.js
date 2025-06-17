@@ -3,6 +3,7 @@ import { getHeatmapCard } from '../lib/heatmapCard.js';
 import { getBasicStatsCard } from '../lib/basicStatsCard.js';
 import { getCodingActivityCard } from '../lib/codingActivityCard.js';
 import {getSpedometerCard} from '../lib/spedometerCard.js';
+import { getStarRankCard } from '../lib/starRankCard.js';
 import 'dotenv/config';
 
 function parseBoolean(value, defaultValue = false) {
@@ -76,6 +77,8 @@ export default async function handler(req, res) {
             heatmap_color: componentOptions.heatmap_color || '00ff00',
             start_day: componentOptions.start_day || 'mo',
             time: componentOptions.time || 'last_year',
+            heading_type: componentOptions.heading_type || 'standard',
+            hide_title: parseBoolean(componentOptions.hide_title, false)
           });
         } else if (type === 'last7') {
           result = await getCodingActivityCard({
@@ -84,7 +87,7 @@ export default async function handler(req, res) {
             chart_type: componentOptions.chart_type || 'bar',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line),
             start_day: componentOptions.start_day || '-7',
-            heading_type: componentOptions.heading_type || 'standard',
+            heading_type: componentOptions.heading_type || 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors),
             hide_legend: parseBoolean(componentOptions.hide_legend),
             hide_total: parseBoolean(componentOptions.hide_total),
@@ -101,6 +104,12 @@ export default async function handler(req, res) {
             chart_color: componentOptions.chart_color || '#f1c40f',
             custom_emojis: componentOptions.custom_emojis || '',
             show_high_score: componentOptions.show_high_score ?? false
+          });
+        } else if (type === 'star_rank') {
+          result = await getStarRankCard({
+            ...sharedStyles,
+            ...componentOptions,
+            rank_color: componentOptions.chart_color || '#FFD700',
           });
         } else {
           svgParts.push({
