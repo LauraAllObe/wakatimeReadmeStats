@@ -4,6 +4,7 @@ import { getBasicStatsCard } from '../lib/basicStatsCard.js';
 import { getCodingActivityCard } from '../lib/codingActivityCard.js';
 import {getSpedometerCard} from '../lib/spedometerCard.js';
 import { getStarRankCard } from '../lib/starRankCard.js';
+import { getWeekdayAverageCard } from '../lib/weekdayAverageCard.js';
 import 'dotenv/config';
 
 function parseBoolean(value, defaultValue = false) {
@@ -110,6 +111,21 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             rank_color: componentOptions.chart_color || '#FFD700',
+          });
+        } else if (type === 'weekday_avg') {
+          result = await getWeekdayAverageCard({
+            ...sharedStyles,
+            ...componentOptions,
+            chart_type: componentOptions.chart_type || 'bar',
+            chart_curved_line: parseBoolean(componentOptions.chart_curved_line),
+            start_day: componentOptions.start_day || 'mo',
+            heading_type: componentOptions.heading_type || 'friendly',
+            mixed_colors: parseBoolean(componentOptions.mixed_colors),
+            hide_legend: parseBoolean(componentOptions.hide_legend),
+            hide_total: parseBoolean(componentOptions.hide_total),
+            hide_time: parseBoolean(componentOptions.hide_time),
+            hide_percentage: parseBoolean(componentOptions.hide_percentage),
+            hide_title: parseBoolean(componentOptions.hide_title),
           });
         } else {
           svgParts.push({
