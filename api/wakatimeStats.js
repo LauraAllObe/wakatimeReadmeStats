@@ -110,7 +110,8 @@ export default async function handler(req, res) {
           result = await getStarRankCard({
             ...sharedStyles,
             ...componentOptions,
-            rank_color: componentOptions.chart_color || '#FFD700',
+            rank_color: componentOptions.rank_color || '#FFD700',
+            hide_title: parseBoolean(componentOptions.hide_title, false)
           });
         } else if (type === 'weekday_avg') {
           result = await getWeekdayAverageCard({
