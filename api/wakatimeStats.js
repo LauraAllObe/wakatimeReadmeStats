@@ -6,6 +6,7 @@ import {getSpedometerCard} from '../lib/spedometerCard.js';
 import { getStarRankCard } from '../lib/starRankCard.js';
 import { getWeekdayAverageCard } from '../lib/weekdayAverageCard.js';
 import { getProjectBreakdownCard } from '../lib/projectBreakdownCard.js';
+import { getLanguageBreakdownCard } from '../lib/languageBreakdownCard.js';
 import 'dotenv/config';
 
 function parseBoolean(value, defaultValue = false) {
@@ -99,6 +100,21 @@ export default async function handler(req, res) {
           });
         } else if (type === 'project') {
           result = await getProjectBreakdownCard({
+            ...sharedStyles,
+            ...componentOptions,
+            chart_type: componentOptions.chart_type || 'bar',
+            chart_curved_line: parseBoolean(componentOptions.chart_curved_line),
+            start_day: componentOptions.start_day || '-7',
+            heading_type: componentOptions.heading_type || 'friendly',
+            mixed_colors: parseBoolean(componentOptions.mixed_colors),
+            hide_legend: parseBoolean(componentOptions.hide_legend),
+            hide_total: parseBoolean(componentOptions.hide_total),
+            hide_time: parseBoolean(componentOptions.hide_time),
+            hide_percentage: parseBoolean(componentOptions.hide_percentage),
+            hide_title: parseBoolean(componentOptions.hide_title),
+          });
+        } else if (type === 'language') {
+          result = await getLanguageBreakdownCard({
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type || 'bar',
