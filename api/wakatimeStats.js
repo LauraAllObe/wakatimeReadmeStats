@@ -7,6 +7,8 @@ import { getStarRankCard } from '../lib/starRankCard.js';
 import { getWeekdayAverageCard } from '../lib/weekdayAverageCard.js';
 import { getProjectBreakdownCard } from '../lib/projectBreakdownCard.js';
 import { getLanguageBreakdownCard } from '../lib/languageBreakdownCard.js';
+import { getAlltimeLanguagesCard } from '../lib/alltimeLanguagesCard.js';
+import {getAlltimeProjectsCard } from '../lib/alltimeProjectsCard.js';
 import 'dotenv/config';
 
 function parseBoolean(value, defaultValue = false) {
@@ -82,7 +84,7 @@ export default async function handler(req, res) {
             heading_type: componentOptions.heading_type ?? 'friendly',
             hide_title: parseBoolean(componentOptions.hide_title, false)
           });
-        } else if (type === 'last7') {
+        } else if (type === 'weekly') {
           result = await getCodingActivityCard({
             ...sharedStyles,
             ...componentOptions,
@@ -99,7 +101,7 @@ export default async function handler(req, res) {
             y_axis: parseBoolean(componentOptions.y_axis, false),
             y_axis_label: parseBoolean(componentOptions.y_axis_label, false),
           });
-        } else if (type === 'project') {
+        } else if (type === 'weekly_projs') {
           result = await getProjectBreakdownCard({
             ...sharedStyles,
             ...componentOptions,
@@ -116,7 +118,7 @@ export default async function handler(req, res) {
             y_axis: parseBoolean(componentOptions.y_axis, true),
             y_axis_label: parseBoolean(componentOptions.y_axis_label, true),
           });
-        } else if (type === 'language') {
+        } else if (type === 'weekly_langs') {
           result = await getLanguageBreakdownCard({
             ...sharedStyles,
             ...componentOptions,
@@ -133,7 +135,7 @@ export default async function handler(req, res) {
             y_axis: parseBoolean(componentOptions.y_axis, true),
             y_axis_label: parseBoolean(componentOptions.y_axis_label, true),
           });
-        } else if (type === 'weekday_avg') {
+        } else if (type === 'weekly_avg') {
           result = await getWeekdayAverageCard({
             ...sharedStyles,
             ...componentOptions,
@@ -142,6 +144,40 @@ export default async function handler(req, res) {
             start_day: componentOptions.start_day ?? 'mo',
             heading_type: componentOptions.heading_type ?? 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
+            hide_legend: parseBoolean(componentOptions.hide_legend, false),
+            hide_total: parseBoolean(componentOptions.hide_total, false),
+            hide_time: parseBoolean(componentOptions.hide_time, false),
+            hide_percentage: parseBoolean(componentOptions.hide_percentage, false),
+            hide_title: parseBoolean(componentOptions.hide_title, false),
+            y_axis: parseBoolean(componentOptions.y_axis, false),
+            y_axis_label: parseBoolean(componentOptions.y_axis_label, false),
+          });
+        } else if (type === 'all_langs') {
+          result = await getAlltimeLanguagesCard({
+            ...sharedStyles,
+            ...componentOptions,
+            chart_type: componentOptions.chart_type ?? 'bar',
+            chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
+            heading_type: componentOptions.heading_type ?? 'friendly',
+            mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
+            num_langs: componentOptions.num_langs ?? '10',
+            hide_legend: parseBoolean(componentOptions.hide_legend, false),
+            hide_total: parseBoolean(componentOptions.hide_total, false),
+            hide_time: parseBoolean(componentOptions.hide_time, false),
+            hide_percentage: parseBoolean(componentOptions.hide_percentage, false),
+            hide_title: parseBoolean(componentOptions.hide_title, false),
+            y_axis: parseBoolean(componentOptions.y_axis, false),
+            y_axis_label: parseBoolean(componentOptions.y_axis_label, false),
+          });
+        } else if (type === 'all_projs') {
+          result = await getAlltimeProjectsCard({
+            ...sharedStyles,
+            ...componentOptions,
+            chart_type: componentOptions.chart_type ?? 'bar',
+            chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
+            heading_type: componentOptions.heading_type ?? 'friendly',
+            mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
+            num_projs: componentOptions.num_projs ?? '10',
             hide_legend: parseBoolean(componentOptions.hide_legend, false),
             hide_total: parseBoolean(componentOptions.hide_total, false),
             hide_time: parseBoolean(componentOptions.hide_time, false),
@@ -160,7 +196,7 @@ export default async function handler(req, res) {
             custom_emojis: componentOptions.custom_emojis ?? '',
             show_high_score: componentOptions.show_high_score ?? true
           });
-        } else if (type === 'star_rank') {
+        } else if (type === 'rank') {
           result = await getStarRankCard({
             ...sharedStyles,
             ...componentOptions,
