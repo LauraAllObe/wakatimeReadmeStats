@@ -50,7 +50,7 @@ export default async function handler(req, res) {
       title_prefix: req.query.title_prefix || ''
     };
 
-    const count = Math.min(parseInt(components, 10), 3);
+    const count = Math.min(parseInt(components, 10), 10);
     const svgParts = [];
     let maxComponentWidth = 0;
 
@@ -106,10 +106,10 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
+            chart_color: componentOptions.chart_color ?? '#000000',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
-            mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
             hide_legend: parseBoolean(componentOptions.hide_legend, false),
             hide_total: parseBoolean(componentOptions.hide_total, false),
             hide_time: parseBoolean(componentOptions.hide_time, true),
@@ -123,10 +123,10 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
+            chart_color: componentOptions.chart_color ?? '#000000',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
-            mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
             hide_legend: parseBoolean(componentOptions.hide_legend, false),
             hide_total: parseBoolean(componentOptions.hide_total, false),
             hide_time: parseBoolean(componentOptions.hide_time, true),
@@ -211,7 +211,10 @@ export default async function handler(req, res) {
           continue;
         }
 
-        svgParts.push({ content: result.content, height: result.height });
+        svgParts.push({
+          ...result,
+          type // <- pass the type from componentOptions
+        });
         if (result.width) {
           maxComponentWidth = Math.max(maxComponentWidth, result.width);
         }
@@ -225,15 +228,19 @@ export default async function handler(req, res) {
                 ? '⚠︎ Heatmap Error: ' + (err.message || 'Unavailable')
                 : '⚠︎ Error: ' + (err.message || 'Unavailable')}
             </text>`,
-          height: 40
+          height: 40,
+          width: 0,
+          type
         });
       }
     }
-
+    const scale = parseBoolean(req.query.scale, false);
+    
     const finalSvg = svgContainer({
       ...sharedStyles,
       width: Math.max(sharedStyles.width, maxComponentWidth),
-      components: svgParts
+      components: svgParts,
+      scale
     });
 
     res.setHeader('Content-Type', 'image/svg+xml');
