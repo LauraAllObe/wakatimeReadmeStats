@@ -1,17 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/wakatimeStats.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/wakatime-stats",
-      "dest": "/api/wakatimeStats.js"
-    }
-  ],
   "crons": [
     {
       "path": "/api/updateTiers",

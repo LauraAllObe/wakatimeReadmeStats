@@ -37,15 +37,15 @@ export default async function handler(req, res) {
   try {
     const sharedStyles = {
       username,
-      bg_color: req.query.bg_color || 'ffffff',
-      title_color: req.query.title_color || '333333',
-      text_color: req.query.text_color || '999999',
-      logo_color: req.query.logo_color || '000000',
+      bg_color: req.query.bg_color || 'fffbea',
+      title_color: req.query.title_color || '6b4e16',
+      text_color: req.query.text_color || '4b3b0c',
+      logo_color: req.query.logo_color || 'a68b2c',
       font_family: req.query.font_family || 'Calibri',
       width: parseNumber(req.query.width, 350),
-      border_color: req.query.border_color || '333333',
-      border_width: parseNumber(req.query.border_width, 1),
-      border_radius: parseNumber(req.query.border_radius, 4),
+      border_color: req.query.border_color || 'e0d3a8',
+      border_width: parseNumber(req.query.border_width, 2),
+      border_radius: parseNumber(req.query.border_radius, 10),
       show_logo: parseBoolean(req.query.show_logo ?? req.query.showLogo, true),
       title_prefix: req.query.title_prefix || ''
     };
@@ -79,7 +79,7 @@ export default async function handler(req, res) {
           result = await getHeatmapCard({
             ...sharedStyles,
             ...componentOptions,
-            heatmap_color: componentOptions.heatmap_color ?? '00ff00',
+            heatmap_color: componentOptions.heatmap_color ?? 'e0d3a8',
             start_day: componentOptions.start_day ?? 'mo',
             heading_type: componentOptions.heading_type ?? 'friendly',
             hide_title: parseBoolean(componentOptions.hide_title, false)
@@ -89,6 +89,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
+            chart_color: componentOptions.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -106,7 +107,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? '#000000',
+            chart_color: componentOptions.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -123,7 +124,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? '#000000',
+            chart_color: componentOptions.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -140,6 +141,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
+            chart_color: componentOptions.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? 'mo',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -156,7 +158,8 @@ export default async function handler(req, res) {
           result = await getAlltimeLanguagesCard({
             ...sharedStyles,
             ...componentOptions,
-            chart_type: componentOptions.chart_type ?? 'bar',
+            chart_type: componentOptions.chart_type ?? 'bar_vertical',
+            chart_color: componentOptions.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             heading_type: componentOptions.heading_type ?? 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
@@ -173,7 +176,8 @@ export default async function handler(req, res) {
           result = await getAlltimeProjectsCard({
             ...sharedStyles,
             ...componentOptions,
-            chart_type: componentOptions.chart_type ?? 'bar',
+            chart_type: componentOptions.chart_type ?? 'bar_vertical',
+            chart_color: componentOptions.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             heading_type: componentOptions.heading_type ?? 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
@@ -192,7 +196,7 @@ export default async function handler(req, res) {
             ...componentOptions,
             difficulty: componentOptions.difficulty ?? 'medium',
             label_type: componentOptions.label_type ?? 'standard',
-            chart_color: componentOptions.chart_color ?? '#f1c40f',
+            chart_color: componentOptions.chart_color ?? '#a67c52',
             custom_emojis: componentOptions.custom_emojis ?? '',
             show_high_score: componentOptions.show_high_score ?? true
           });
@@ -200,7 +204,7 @@ export default async function handler(req, res) {
           result = await getStarRankCard({
             ...sharedStyles,
             ...componentOptions,
-            rank_color: componentOptions.rank_color ?? '#FFD700',
+            rank_color: componentOptions.rank_color ?? '#a67c52',
             hide_title: parseBoolean(componentOptions.hide_title, false)
           });
         } else {

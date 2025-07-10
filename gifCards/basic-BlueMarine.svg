@@ -1,0 +1,25 @@
+
+<svg width="501" height="193" xmlns="http://www.w3.org/2000/svg" style="font-family:Courier New,sans-serif;">
+  <rect
+    x="1.5"
+    y="1.5"
+    width="498"
+    height="190"
+    fill="#e7f5f1"
+    stroke="#0b3d91"
+    stroke-width="3"
+    rx="10"
+    ry="10"
+  />
+  <g transform="translate(20,12.5) scale(0.075)" style="color:#0b3d91"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g><text x="45" y="28" fill="#0b3d91" font-size="16" font-family="Courier New">Laura's WakaTime Stats</text>
+  <g transform="translate(0, 40) scale(1, 1)">
+      <g transform="translate(0, 132.6)">
+<text x="20" y="-110.49999999999999" fill="#102a43" font-size="13"><tspan font-weight="bold">Total Time:</tspan> 225 hrs 9 mins</text>
+<text x="20" y="-88.39999999999999" fill="#102a43" font-size="13"><tspan font-weight="bold">Daily Average:</tspan> 2 hrs 1 min</text>
+<text x="20" y="-66.3" fill="#102a43" font-size="13"><tspan font-weight="bold">Top Languages:</tspan> Python, TypeScript, JavaScript</text>
+<text x="20" y="-44.199999999999996" fill="#102a43" font-size="13"><tspan font-weight="bold">Top Projects:</tspan> nutriverse_v2, wakatimeReadmeStats, Portfolio</text>
+<text x="20" y="-22.099999999999998" fill="#102a43" font-size="13"><tspan font-weight="bold">Top OS:</tspan> Windows</text>
+<text x="20" y="0" fill="#102a43" font-size="13"><tspan font-weight="bold">Most Active Day:</tspan> June 8th, 2025</text>
+</g>
+    </g>
+</svg>

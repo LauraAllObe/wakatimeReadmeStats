@@ -1,0 +1,91 @@
+
+<svg width="300" height="320" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="298"
+    height="318"
+    fill="#FDF6E3"
+    stroke="#6B4EFF"
+    stroke-width="2"
+    rx="6"
+    ry="6"
+  />
+  <g transform="translate(20,12.5) scale(0.075)" style="color:#6B4EFF"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g><text x="45" y="28" fill="#6B4EFF" font-size="16" font-family="Calibri">📚 Study Tracker WakaTime Stats</text>
+  <g transform="translate(0, 40)"><svg width="300" height="260" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="22" text-anchor="middle" font-size="14" fill="#836bff" font-family="Calibri">
+          <tspan font-weight="bold">0 hrs 52 mins</tspan>
+          <tspan font-weight="normal"> Today</tspan>
+        </text>
+        
+    <g transform="rotate(-90, 150, 160)">
+      
+        <path d="M 150 80 A 80 80 0 0 1 197.02282018339787 95.2786404500042" stroke="#4ae2cf" stroke-width="45" fill="none" />
+        <path id="arcLabel-0" d="M 150 50 A 110 110 0 0 1 214.65637775217203 71.00813061875579" fill="none" />
+        <text font-size="10" fill="#836bff" font-family="Calibri">
+          <textPath href="#arcLabel-0" startOffset="50%" text-anchor="middle">📝 Poor</textPath>
+        </text>
+      
+
+        <path d="M 197.02282018339787 95.2786404500042 A 80 80 0 0 1 226.0845213036123 135.27864045000422" stroke="#4ac3e2" stroke-width="45" fill="none" />
+        <path id="arcLabel-1" d="M 214.65637775217203 71.00813061875579 A 110 110 0 0 1 254.6162167924669 126.00813061875579" fill="none" />
+        <text font-size="10" fill="#836bff" font-family="Calibri">
+          <textPath href="#arcLabel-1" startOffset="50%" text-anchor="middle">🎒 Fair</textPath>
+        </text>
+      
+
+        <path d="M 226.0845213036123 135.27864045000422 A 80 80 0 0 1 226.0845213036123 184.72135954999578" stroke="#4a90e2" stroke-width="45" fill="none" />
+        <path id="arcLabel-2" d="M 254.6162167924669 126.00813061875579 A 110 110 0 0 1 254.6162167924669 193.99186938124421" fill="none" />
+        <text font-size="10" fill="#836bff" font-family="Calibri">
+          <textPath href="#arcLabel-2" startOffset="50%" text-anchor="middle">💻 Good</textPath>
+        </text>
+      
+
+        <path d="M 226.0845213036123 184.72135954999578 A 80 80 0 0 1 197.02282018339787 224.72135954999578" stroke="#4a5de2" stroke-width="45" fill="none" />
+        <path id="arcLabel-3" d="M 254.6162167924669 193.99186938124421 A 110 110 0 0 1 214.65637775217203 248.99186938124421" fill="none" />
+        <text font-size="10" fill="#836bff" font-family="Calibri">
+          <textPath href="#arcLabel-3" startOffset="50%" text-anchor="middle">📈 Great</textPath>
+        </text>
+      
+
+        <path d="M 197.02282018339787 224.72135954999578 A 80 80 0 0 1 150 240" stroke="#694ae2" stroke-width="45" fill="none" />
+        <path id="arcLabel-4" d="M 214.65637775217203 248.99186938124421 A 110 110 0 0 1 150 270" fill="none" />
+        <text font-size="10" fill="#836bff" font-family="Calibri">
+          <textPath href="#arcLabel-4" startOffset="50%" text-anchor="middle">🧠 Excellent</textPath>
+        </text>
+      
+    </g>
+  
+        
+    <polygon points="150.61986746148864,156.04832132756374 74.91810522371097,148.22251823171598 149.38013253851136,163.95167867243626" fill="black" />
+    <circle cx="150" cy="160" r="4" fill="black"/>
+  
+        
+        <line x1="133.08035392045613" y1="105.04569555946526" x2="119.83889177124789" y2="62.03797904078591"
+                stroke="#8cb8ed" stroke-width="2" />
+        <text x="136.75853785079175" y="116.99228348132064" font-size="12" font-weight="bold" fill="#8cb8ed"
+                font-family="Calibri" text-anchor="middle">
+            ⚑
+        </text>
+        
+        <g transform="translate(110, 202)">
+          
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#836bff" stroke-width="3"
+         stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <polyline points="19 12 12 19 5 12"></polyline>
+    </svg>
+          <text x="20" y="12" font-size="13" fill="#836bff" font-family="Calibri">
+              57% decrease
+          </text>
+        </g>
+        <text x="50%" y="230" text-anchor="middle" font-size="13" fill="#836bff" font-family="Calibri">
+          <tspan font-weight="bold">2 hrs 1 mins</tspan>
+          <tspan font-weight="normal"> Daily Average</tspan>
+        </text>
+        <text x="50%" y="250" text-anchor="middle" font-size="13" fill="#836bff" font-family="Calibri">
+          <tspan font-weight="bold">7 hrs 9 mins</tspan>
+          <tspan font-weight="normal"> Most Active Day</tspan>
+        </text>
+      </svg></g>
+</svg>

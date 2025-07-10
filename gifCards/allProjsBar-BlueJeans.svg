@@ -1,0 +1,59 @@
+
+<svg width="408" height="236.5" xmlns="http://www.w3.org/2000/svg" style="font-family:Segoe UI,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="406"
+    height="234.5"
+    fill="#F0F4F8"
+    stroke="#274472"
+    stroke-width="2"
+    rx="8"
+    ry="8"
+  />
+  <g transform="translate(20,12.5) scale(0.075)" style="color:#274472"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g><text x="45" y="28" fill="#0B2545" font-size="16" font-family="Segoe UI">NavyStats WakaTime Stats</text>
+  <g transform="translate(0, 40) scale(1, 1)">
+      <text x="200" y="22.5" font-size="12" text-anchor="middle" fill="#1B3B6F" font-weight="bold">I mostly code for nutriverse_v2</text>
+      <rect x="30" y="46.5" width="30" height="60" fill="#4682B4" rx="3" ry="3" />
+<text x="45" y="42.5" font-size="9" text-anchor="middle" fill="#1B3B6F">77:10</text>
+<text x="45" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">nutriv</text>
+<text x="45" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">erse_v</text>
+<text x="45" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">30.0%</text>
+<rect x="75" y="53.49649147432924" width="30" height="53.00350852567076" fill="#4682B4" rx="3" ry="3" />
+<text x="90" y="49.49649147432924" font-size="9" text-anchor="middle" fill="#1B3B6F">68:10</text>
+<text x="90" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">Portfo</text>
+<text x="90" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">lio</text>
+<text x="90" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">26.5%</text>
+<rect x="120" y="75.66739491038433" width="30" height="30.83260508961567" fill="#4682B4" rx="3" ry="3" />
+<text x="135" y="71.66739491038433" font-size="9" text-anchor="middle" fill="#1B3B6F">39:39</text>
+<text x="135" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">wakati</text>
+<text x="135" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">meRead</text>
+<text x="135" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">15.4%</text>
+<rect x="165" y="87.72640560936904" width="30" height="18.773594390630954" fill="#4682B4" rx="3" ry="3" />
+<text x="180" y="83.72640560936904" font-size="9" text-anchor="middle" fill="#1B3B6F">24:08</text>
+<text x="180" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">Unknow</text>
+<text x="180" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">n Proj</text>
+<text x="180" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">9.4%</text>
+<rect x="210" y="94.42693225343187" width="30" height="12.073067746568132" fill="#4682B4" rx="3" ry="3" />
+<text x="225" y="90.42693225343187" font-size="9" text-anchor="middle" fill="#1B3B6F">15:31</text>
+<text x="225" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">finalP</text>
+<text x="225" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">roject</text>
+<text x="225" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">6.0%</text>
+<rect x="255" y="96.46037247323137" width="30" height="10.039627526768625" fill="#4682B4" rx="3" ry="3" />
+<text x="270" y="92.46037247323137" font-size="9" text-anchor="middle" fill="#1B3B6F">12:54</text>
+<text x="270" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">MLPAnd</text>
+<text x="270" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">WordVe</text>
+<text x="270" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">5.0%</text>
+<rect x="300" y="97.50978345840906" width="30" height="8.990216541590938" fill="#4682B4" rx="3" ry="3" />
+<text x="315" y="93.50978345840906" font-size="9" text-anchor="middle" fill="#1B3B6F">11:33</text>
+<text x="315" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">machin</text>
+<text x="315" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">eTrans</text>
+<text x="315" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">4.5%</text>
+<rect x="345" y="100.42646694527033" width="30" height="6.073533054729671" fill="#4682B4" rx="3" ry="3" />
+<text x="360" y="96.42646694527033" font-size="9" text-anchor="middle" fill="#1B3B6F">07:48</text>
+<text x="360" y="116.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">machin</text>
+<text x="360" y="126.5" font-weight="bold" font-size="9" text-anchor="middle" fill="#1B3B6F">eLearn</text>
+<text x="360" y="140.5" font-size="9" text-anchor="middle" fill="#1B3B6F">3.0%</text>
+      <text x="200" y="166.5" font-size="12" text-anchor="middle" fill="#1B3B6F"><tspan font-weight="bold">Total:</tspan> 273 hrs 40 mins</text>
+    </g>
+</svg>

@@ -1,0 +1,43 @@
+
+<svg width="518" height="328.5" xmlns="http://www.w3.org/2000/svg" style="font-family:Fira Code,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="516"
+    height="326.5"
+    fill="#FDFDFD"
+    stroke="#CCCCCC"
+    stroke-width="2"
+    rx="8"
+    ry="8"
+  />
+  <g transform="translate(20,12.5) scale(0.075)" style="color:#4CAF50"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g><text x="45" y="28" fill="#222222" font-size="16" font-family="Fira Code">CodeTime WakaTime Stats</text>
+  <g transform="translate(0, 40) scale(1, 1)">
+      <text x="255" y="22.5" font-size="12" text-anchor="middle" fill="#444444" font-weight="bold">I mostly code for nutriverse_v2</text>
+      <text x="122" y="55.5" font-size="10" text-anchor="end" fill="#444444">nutriverse_v2</text>
+<rect x="130" y="46.5" width="310" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="446" y="55.5" font-size="9" fill="#444444">77:10    |    30.0%</text>
+<text x="122" y="79.5" font-size="10" text-anchor="end" fill="#444444">Portfolio</text>
+<rect x="130" y="70.5" width="273.8514607159656" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="409.8514607159656" y="79.5" font-size="9" fill="#444444">68:10    |    26.5%</text>
+<text x="122" y="103.5" font-size="10" text-anchor="end" fill="#444444">wakatimeReadmeStats</text>
+<rect x="130" y="94.5" width="159.3017929630143" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="295.3017929630143" y="103.5" font-size="9" fill="#444444">39:39    |    15.4%</text>
+<text x="122" y="127.5" font-size="10" text-anchor="end" fill="#444444">Unknown Project</text>
+<rect x="130" y="118.5" width="96.99690435159327" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="232.9969043515933" y="127.5" font-size="9" fill="#444444">24:08    |    9.4%</text>
+<text x="122" y="151.5" font-size="10" text-anchor="end" fill="#444444">finalProject</text>
+<rect x="130" y="142.5" width="62.377516690602015" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="198.37751669060202" y="151.5" font-size="9" fill="#444444">15:31    |    6.0%</text>
+<text x="122" y="175.5" font-size="10" text-anchor="end" fill="#444444">MLPAndWordVectors</text>
+<rect x="130" y="166.5" width="51.871408888304565" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="187.87140888830456" y="175.5" font-size="9" fill="#444444">12:54    |    5.0%</text>
+<text x="122" y="199.5" font-size="10" text-anchor="end" fill="#444444">machineTranslation</text>
+<rect x="130" y="190.5" width="46.44945213155318" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="182.4494521315532" y="199.5" font-size="9" fill="#444444">11:33    |    4.5%</text>
+<text x="122" y="223.5" font-size="10" text-anchor="end" fill="#444444">machineLearningProj…</text>
+<rect x="130" y="214.5" width="31.379920782769965" height="12" fill="#4CAF50" rx="2" ry="2" />
+<text x="167.37992078276997" y="223.5" font-size="9" fill="#444444">07:48    |    3.0%</text>
+      <text x="255" y="258.5" font-size="12" text-anchor="middle" fill="#444444"><tspan font-weight="bold">Total:</tspan> 273 hrs 40 mins</text>
+    </g>
+</svg>

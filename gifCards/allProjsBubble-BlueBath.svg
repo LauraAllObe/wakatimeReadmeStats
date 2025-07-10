@@ -1,0 +1,101 @@
+
+<svg width="478" height="545.183604729749" xmlns="http://www.w3.org/2000/svg" style="font-family:Georgia,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="476"
+    height="543.183604729749"
+    fill="#fffaf4"
+    stroke="#6e4b3a"
+    stroke-width="2"
+    rx="8"
+    ry="8"
+  />
+  <g transform="translate(20,12.5) scale(0.075)" style="color:#3e2b1f"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g><text x="45" y="28" fill="#6e4b3a" font-size="16" font-family="Georgia">Stacy's WakaTime Stats</text>
+  <g transform="translate(0, 40) scale(1, 1)">
+      <text x="235" y="22.5" font-size="14" text-anchor="middle" fill="#4b3621" font-weight="bold">My Top Projects</text>
+      <g transform="translate(20.85794174361402, 0)">
+<circle cx="147.0308397800223" cy="161.27921264982945" r="60.16793597531201" fill="#c2d6eb" fill-opacity="0.85" />
+<circle cx="292.870016282266" cy="161.27921264982945" r="56.55119642579567" fill="#cbeced" fill-opacity="0.85" />
+<circle cx="223.8351922423079" cy="245.64943955257425" r="43.13150362781341" fill="#bad8de" fill-opacity="0.85" />
+<circle cx="223.4780616219457" cy="88.77701172795943" r="33.656054605005245" fill="#c4dde3" fill-opacity="0.85" />
+<circle cx="149.41616270707084" cy="72.56251786610977" r="26.989715531131104" fill="#b7e5ed" fill-opacity="0.85" />
+<circle cx="296.17998894508844" cy="78.57937029653087" r="24.612078334203222" fill="#ccdbe6" fill-opacity="0.85" />
+<circle cx="140.0045876003718" cy="246.1263528533548" r="23.29027221474561" fill="#b2e8e4" fill-opacity="0.85" />
+<circle cx="302.01708368197677" cy="238.19651632980745" r="19.14300831872623" fill="#b6e2e0" fill-opacity="0.85" />
+</g>
+
+              <circle cx="22" cy="375.183604729749" r="6" fill="#c2d6eb" />
+              <text x="34" y="378.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                nutriverse_v2:
+              </text>
+              <text x="169" y="378.183604729749" font-size="10" fill="#4b3621">
+                77:10 (30.0%)
+              </text>
+            
+
+              <circle cx="252" cy="375.183604729749" r="6" fill="#cbeced" />
+              <text x="264" y="378.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                Portfolio:
+              </text>
+              <text x="399" y="378.183604729749" font-size="10" fill="#4b3621">
+                68:10 (26.5%)
+              </text>
+            
+
+              <circle cx="22" cy="395.183604729749" r="6" fill="#bad8de" />
+              <text x="34" y="398.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                wakatimeReadmeStats:
+              </text>
+              <text x="169" y="398.183604729749" font-size="10" fill="#4b3621">
+                39:39 (15.4%)
+              </text>
+            
+
+              <circle cx="252" cy="395.183604729749" r="6" fill="#c4dde3" />
+              <text x="264" y="398.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                Unknown Project:
+              </text>
+              <text x="399" y="398.183604729749" font-size="10" fill="#4b3621">
+                24:08 (9.4%)
+              </text>
+            
+
+              <circle cx="22" cy="415.183604729749" r="6" fill="#b7e5ed" />
+              <text x="34" y="418.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                finalProject:
+              </text>
+              <text x="169" y="418.183604729749" font-size="10" fill="#4b3621">
+                15:31 (6.0%)
+              </text>
+            
+
+              <circle cx="252" cy="415.183604729749" r="6" fill="#ccdbe6" />
+              <text x="264" y="418.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                MLPAndWordVectors:
+              </text>
+              <text x="399" y="418.183604729749" font-size="10" fill="#4b3621">
+                12:54 (5.0%)
+              </text>
+            
+
+              <circle cx="22" cy="435.183604729749" r="6" fill="#b2e8e4" />
+              <text x="34" y="438.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                machineTranslation:
+              </text>
+              <text x="169" y="438.183604729749" font-size="10" fill="#4b3621">
+                11:33 (4.5%)
+              </text>
+            
+
+              <circle cx="252" cy="435.183604729749" r="6" fill="#b6e2e0" />
+              <text x="264" y="438.183604729749" font-size="10" font-weight="bold" fill="#4b3621">
+                machineLearningProj…:
+              </text>
+              <text x="399" y="438.183604729749" font-size="10" fill="#4b3621">
+                07:48 (3.0%)
+              </text>
+            
+      <text x="235" y="475.183604729749" font-size="12" text-anchor="middle" fill="#4b3621"><tspan font-weight="bold">Total:</tspan> 273 hrs 40 mins</text>
+    </g>
+</svg>
