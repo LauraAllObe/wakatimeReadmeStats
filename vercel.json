@@ -11,5 +11,11 @@
       "src": "/api/wakatime-stats",
       "dest": "/api/wakatimeStats.js"
     }
+  ],
+  "crons": [
+    {
+      "path": "/api/updateTiers",
+      "schedule": "0 2 * * *"
+    }
   ]
 }
