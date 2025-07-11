@@ -1,22 +1,100 @@
 # wakatimeReadmeStats
 
-## 🔐 WakaTime API Setup
+## Setup Instructions
 
-To use your own WakaTime stats in this card:
+Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions.
 
-1. Go to your WakaTime account → Settings → Copy your **API Key**
-2. In your GitHub repo, go to **Settings → Secrets → Actions**
-3. Add a new secret:
-   - **Name**: `WAKATIME_API_KEY`
-   - **Value**: *(paste your WakaTime key)*
+### 1. Grant GitHub Actions Write Permissions
 
-Then add this to your `README.md`:
+1. Go to **Repository → Settings → Actions → General**
+2. Scroll down to **Workflow permissions**
+3. Select:  
+   ```
+   [x] Read and write permissions
+   ```
+4. Click **Save**
 
-```html
-<img src="https://yourusername.vercel.app/api/wakatime-stats?username=YOUR_WAKATIME_USERNAME&type=basic" />
+### 2. Create and Add Your WakaTime API Key
+
+#### Get your WakaTime API key:
+1. Go to [https://wakatime.com/settings/account](https://wakatime.com/settings/account)
+2. Copy your **"Secret API Key"**
+
+#### Add it to GitHub:
+1. Go to **Repository → Settings → Secrets and variables → Actions**
+2. Click **"New repository secret"**
+3. Name it exactly:
+   ```
+   WAKATIME_API_KEY
+   ```
+4. Paste your WakaTime key into the value field and click **Add secret**
+
+### 3. Add the GitHub Actions Workflow
+
+1. In your repo, create this folder if it doesn't exist:
+   ```
+   .github/workflows/
+   ```
+2. Inside that folder, create a file named:
+   ```
+   update-stats.yml
+   ```
+3. Paste the following contents:
+
+```yaml
+name: Update WakaTime Stats
+
+on:
+  schedule:
+    - cron: '55 23 * * *'  # Runs once a day at 23:55 UTC
+  workflow_dispatch:       # Allows manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Download WakaTime Stats SVG
+        run: |
+          curl -f "YOUR_CUSTOM_VERCEL_URL" -o stats.svg
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add stats.svg
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update stats.svg"
+          git push
 ```
 
----
+Replace `YOUR_USERNAME` in the URL with your actual WakaTime username.
+
+### 4. Add the Stats Card to Your README
+
+In your `README.md`, add the following line wherever you want the card to appear:
+
+```md
+![WakaTime Stats](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/main/stats.svg)
+```
+
+Or use code:
+
+```md
+<img src="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/main/stats.svg" height="410"/>
+```
+*Note the file path may be different, such as https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/stats.svg; or you may have to use the raw.githubsusercontent.com url, such as https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/stats.svg*
+
+### 5. Test the Setup
+
+- Go to the **Actions** tab in your GitHub repo
+- Click **"Update WakaTime Stats"**
+- Use the **"Run workflow"** button to trigger it manually
+- Wait a few seconds, then refresh your repo – `stats.svg` should be updated
 
 ## 📊 Card Type: `basic`
 

@@ -61,10 +61,24 @@ export default async function handler(req, res) {
 
 
     for (let i = 1; i <= count; i++) {
+      let componentOptions = {};
       const raw = req.query[`component${i}`];
-      if (!raw) continue;
 
-      const componentOptions = parseComponentParams(raw);
+      if (raw) {
+        // fallback: parse full query string
+        componentOptions = parseComponentParams(raw);
+      } else {
+        // new structure
+        const prefix = `component${i}_`;
+        for (const [key, value] of Object.entries(req.query)) {
+          if (key.startsWith(prefix)) {
+            const subKey = key.slice(prefix.length);
+            componentOptions[subKey] = value;
+          }
+        }
+      }
+      if (!componentOptions.type) continue;
+
       const type = componentOptions.type;
 
       try {
