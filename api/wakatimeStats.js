@@ -35,8 +35,13 @@ export default async function handler(req, res) {
   if (!username) return res.status(400).send('Missing username.');
 
   try {
+    const api_key_2 = process.env.WAKATIME_API_KEY ?? '';
+    const apiKey = req.query.api_key || api_key_2;
+    if (!apiKey || apiKey === '') throw new Error('Missing WAKATIME_API_KEY');
+
     const sharedStyles = {
       username,
+      api_key: apiKey || '',
       bg_color: req.query.bg_color || 'fffbea',
       title_color: req.query.title_color || '6b4e16',
       text_color: req.query.text_color || '4b3b0c',
@@ -93,6 +98,7 @@ export default async function handler(req, res) {
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
+            custom_heading: componentOptions.custom_heading ?? '',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
             hide_legend: parseBoolean(componentOptions.hide_legend, false),
             hide_total: parseBoolean(componentOptions.hide_total, false),
@@ -101,6 +107,7 @@ export default async function handler(req, res) {
             hide_title: parseBoolean(componentOptions.hide_title, false),
             y_axis: parseBoolean(componentOptions.y_axis, false),
             y_axis_label: parseBoolean(componentOptions.y_axis_label, false),
+            custom_days: componentOptions.custom_days ?? ''
           });
         } else if (type === 'weekly_projs') {
           result = await getProjectBreakdownCard({

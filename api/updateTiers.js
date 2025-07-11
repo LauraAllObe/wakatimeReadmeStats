@@ -26,8 +26,9 @@ export default async function handler(req, res) {
   console.log("✅ /api/updateTiers triggered at", new Date().toISOString());
 
   try {
-    const apiKey = process.env.WAKATIME_API_KEY;
-    if (!apiKey) throw new Error('Missing WAKATIME_API_KEY');
+    const api_key_2 = process.env.WAKATIME_API_KEY ?? '';
+    const apiKey = req.query.api_key || api_key_2;
+    if (!apiKey || apiKey === '') throw new Error('Missing WAKATIME_API_KEY');
 
     const requiredRanks = Object.values(TIER_CUTOFFS).flat();
     const requiredPages = [...new Set(requiredRanks.map(rank => Math.floor((rank - 1) / 100) + 1))];
