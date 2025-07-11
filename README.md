@@ -2,7 +2,7 @@
 
 ## Setup Instructions
 
-Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions or use it directly.
+Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions or by using the url directly.
 
 ### 1. Create and Add Your WakaTime API Key
 
@@ -19,7 +19,7 @@ Follow these steps to automatically update your WakaTime stats card in your GitH
    ```
 4. Paste your WakaTime key into the value field and click **Add secret**
 
-5. for using directly, skip to step 4
+5. if using the url directly, skip to step 4
 
 ### 2. Grant GitHub Actions Write Permissions (FOR GITHUB ACTIONS SETUP ONLY)
 
@@ -78,9 +78,9 @@ Replace `YOUR_USERNAME` in the URL with your actual WakaTime username.
 
 ### 4. Add the Stats Card to Your README
 
-In your `README.md`, add the following line wherever you want the card to appear:
+In your `README.md`, add the following line wherever you want the card to appear.
 
-If using directly:
+If using the url directly:
 ```md
 ![WakaTime Stats](YOUR_CUSTOM_VERCEL_URL)
 ```
@@ -105,7 +105,7 @@ If using github actions:
 - Wait a few seconds, then refresh your repo – `stats.svg` should be updated
 
 
-### ⚙️ Available Parameters
+## ⚙️ Available Parameters
 
 | Parameter              | Type         | Description                                                        |
 | ---------------------- | ------------ | ------------------------------------------------------------------ |
