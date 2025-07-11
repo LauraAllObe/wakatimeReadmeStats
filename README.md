@@ -2,7 +2,7 @@
 
 ## Setup Instructions
 
-Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions or by using the url directly.
+Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions (svg loads faster on page refresh) or by using the url directly (easier setup).
 
 ### 1. Create and Add Your WakaTime API Key
 
