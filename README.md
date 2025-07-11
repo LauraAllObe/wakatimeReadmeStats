@@ -74,7 +74,7 @@ jobs:
           git push
 ```
 
-Replace `YOUR_USERNAME` in the URL with your actual WakaTime username.
+Replace `YOUR_CUSTOM_VERCEL_URL` in the URL with your actual WakaTime customized url.
 
 ### 4. Add the Stats Card to Your README
 
