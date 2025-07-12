@@ -260,12 +260,28 @@ export default async function handler(req, res) {
       }
     }
     const scale = parseBoolean(req.query.scale, false);
-    
+    // extract title_scale_value
+    const title_scale_value = parseFloat(req.query.title_scale_value ?? '0.65');
+
+    // extract scale values for components
+    const componentScaleValues = {};
+    for (let i = 1; i <= count; i++) {
+      const key = `component${i}_scale_value`;
+      if (req.query[key]) {
+        const val = parseFloat(req.query[key]);
+        if (!isNaN(val)) {
+          componentScaleValues[i - 1] = val; // index 0-based
+        }
+      }
+    }
+
     const finalSvg = svgContainer({
       ...sharedStyles,
       width: Math.max(sharedStyles.width, maxComponentWidth),
       components: svgParts,
-      scale
+      scale,
+      title_scale_value,
+      component_scale_values: componentScaleValues
     });
 
     res.setHeader('Content-Type', 'image/svg+xml');
