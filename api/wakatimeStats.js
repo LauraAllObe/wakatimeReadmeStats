@@ -47,11 +47,10 @@ export default async function handler(req, res) {
       text_color: req.query.text_color || '4b3b0c',
       logo_color: req.query.logo_color || 'a68b2c',
       font_family: req.query.font_family || 'Calibri',
-      width: parseNumber(req.query.width, 350),
       border_color: req.query.border_color || 'e0d3a8',
       border_width: parseNumber(req.query.border_width, 2),
       border_radius: parseNumber(req.query.border_radius, 10),
-      show_logo: parseBoolean(req.query.show_logo ?? req.query.showLogo, true),
+      show_logo: parseBoolean(req.query.show_logo, true),
       title_prefix: req.query.title_prefix || ''
     };
 
