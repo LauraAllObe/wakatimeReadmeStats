@@ -114,15 +114,14 @@ If using github actions:
 | `text_color`             | All                    | hex color            | Color of all other text.                                                        | `text_color=333333`               |
 | `logo_color`             | All                    | hex color            | Color used to fill the WakaTime logo.                                           | `logo_color=a68b2c`               |
 | `font_family`            | All                    | string               | Font used across the card.                                                      | `font_family=Fira Code`           |
-| `width`                  | All                    | number (px)          | Maximum width of the SVG.                                                       | `width=500`                       |
 | `border_color`           | All                    | hex color            | Color of the outer border.                                                      | `border_color=cccccc`             |
 | `border_width`           | All                    | number (px)          | Border thickness in pixels.                                                     | `border_width=2`                  |
 | `border_radius`          | All                    | number (px)          | Rounded border radius.                                                          | `border_radius=10`                |
-| `show_logo` / `showLogo` | All                    | `true` / `false`     | Whether to show the WakaTime logo.                                              | `show_logo=true`                  |
+| `show_logo`              | All                    | `true` / `false`     | Whether to show the WakaTime logo.                                              | `show_logo=true`                  |
 | `title_prefix`           | All                    | string               | Prefix text for the title.                                                      | `title_prefix=My`                 |
-| `title_scale_value`      | All                    | 0.1 – 1              | Scales the title block width (relative to the widest component).               | `title_scale_value=0.8`           |
+| `title_scale_value`      | All                    | decimal              | Scales the title block width (relative to the widest component).                | `title_scale_value=0.8`           |
 | `scale`                  | All                    | `true` / `false`     | Whether to auto-scale all components to the same width.                         | `scale=true`                      |
-| `componentX_scale_value` | All                    | 0.1 – 1              | Per-component width scale relative to the widest one. Overrides `scale`.       | `component1_scale_value=0.6`      |
+| `componentX_scale_value` | All                    | decimal              | Per-component width scale relative to the widest one. Overrides `scale`.        | `component1_scale_value=1.5`      |
 
 ## Component-Specific Parameters
 
