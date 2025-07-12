@@ -2,19 +2,9 @@
 
 ## Setup Instructions
 
-Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions.
+Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions (svg loads faster on page refresh, updates once a day) or by using the url directly (easier setup and updates on page refresh).
 
-### 1. Grant GitHub Actions Write Permissions
-
-1. Go to **Repository → Settings → Actions → General**
-2. Scroll down to **Workflow permissions**
-3. Select:  
-   ```
-   [x] Read and write permissions
-   ```
-4. Click **Save**
-
-### 2. Create and Add Your WakaTime API Key
+### 1. Create and Add Your WakaTime API Key
 
 #### Get your WakaTime API key:
 1. Go to [https://wakatime.com/settings/account](https://wakatime.com/settings/account)
@@ -29,7 +19,19 @@ Follow these steps to automatically update your WakaTime stats card in your GitH
    ```
 4. Paste your WakaTime key into the value field and click **Add secret**
 
-### 3. Add the GitHub Actions Workflow
+5. if using the url directly, skip to step 4
+
+### 2. Grant GitHub Actions Write Permissions (FOR GITHUB ACTIONS SETUP ONLY)
+
+1. Go to **Repository → Settings → Actions → General**
+2. Scroll down to **Workflow permissions**
+3. Select:  
+   ```
+   [x] Read and write permissions
+   ```
+4. Click **Save**
+
+### 3. Add the GitHub Actions Workflow (FOR GITHUB ACTIONS SETUP ONLY)
 
 1. In your repo, create this folder if it doesn't exist:
    ```
@@ -72,47 +74,38 @@ jobs:
           git push
 ```
 
-Replace `YOUR_USERNAME` in the URL with your actual WakaTime username.
+Replace `YOUR_CUSTOM_VERCEL_URL` in the URL with your actual WakaTime customized url.
 
 ### 4. Add the Stats Card to Your README
 
-In your `README.md`, add the following line wherever you want the card to appear:
+In your `README.md`, add the following line wherever you want the card to appear.
 
+If using the url directly:
+```md
+![WakaTime Stats](YOUR_CUSTOM_VERCEL_URL)
+```
+```md
+<img src="YOUR_CUSTOM_VERCEL_URL" height="410"/>
+```
+
+If using github actions:
 ```md
 ![WakaTime Stats](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/main/stats.svg)
 ```
-
-Or use code:
-
 ```md
 <img src="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/main/stats.svg" height="410"/>
 ```
 *Note the file path may be different, such as https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/stats.svg; or you may have to use the raw.githubsusercontent.com url, such as https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/stats.svg*
 
-### 5. Test the Setup
+### 5. Test the Setup (FOR GITHUB ACTIONS SETUP ONLY)
 
 - Go to the **Actions** tab in your GitHub repo
 - Click **"Update WakaTime Stats"**
 - Use the **"Run workflow"** button to trigger it manually
 - Wait a few seconds, then refresh your repo – `stats.svg` should be updated
 
-## 📊 Card Type: `basic`
 
-This card displays your yearly WakaTime stats, such as total coding time, daily average, and top categories like languages and OS.
-
-### ➕ Basic Example
-
-```html
-<img src="http://localhost:3000/api/wakatime-stats?username=LauraAllObe&type=basic" />
-```
-
-### 🎨 Fully Customized Example
-
-```html
-<img src="http://localhost:3000/api/wakatime-stats?username=LauraAllObe&type=basic&bg_color=f0d9c5&title_color=5c4b3e&text_color=7d6c5e&logo_color=fff8f2&font_family=Fira%20Code&width=500&showLogo=true&hideLanguages=true&hideProjects=true&hideOperatingSystems=true&hideMostActiveDay=true" />
-```
-
-### ⚙️ Available Parameters
+## ⚙️ Available Parameters
 
 | Parameter              | Type         | Description                                                        |
 | ---------------------- | ------------ | ------------------------------------------------------------------ |
@@ -131,23 +124,3 @@ This card displays your yearly WakaTime stats, such as total coding time, daily 
 | `hideMostActiveDay`    | `true/false` | Hides the **Most Active Day** section if set to `true`.            |
 
 ---
-
-## 📁 File Structure
-
-```
-project-root/
-├── .vercel/
-│   └── ...
-├── api/
-│   └── wakatimeStats.js       # Vercel function entry point
-├── lib/
-│   ├── heatmapCard.js         # generates SVG for heatmap
-│   └── basicStatsCard.js      # generates SVG for basic stats
-├── node_modules/
-│   └── ...
-├── .env                       # for local testing WAKATIME_API_KEY
-├── .gitignore
-├── package.json
-├── README.md
-├── vercel.json                # optional config
-```
