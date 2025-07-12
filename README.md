@@ -1,5 +1,33 @@
 # wakatimeReadmeStats
 
+## What is wakatimeReadmeStats?
+
+`wakatimeReadmeStats` lets you showcase beautiful, customizable WakaTime coding activity cards in your GitHub README.  
+It pulls your latest WakaTime data and renders it as rich SVG charts you can embed directly using GitHub Actions or a live endpoint URL.
+
+##  Table of Contents
+
+- [wakatimeReadmeStats](#wakatimereadmestats)
+  - [What is wakatimeReadmeStats?](#what-is-wakatimereadmestats)
+  - [Setup Instructions](#setup-instructions)
+    - [1. Create and Add Your WakaTime API Key](#1-create-and-add-your-wakatime-api-key)
+    - [2. GitHub Actions Write Permissions (FOR GITHUB ACTIONS SETUP ONLY)](#2-github-actions-write-permissions-for-github-actions-setup-only)
+    - [3. GitHub Actions Workflow (FOR GITHUB ACTIONS SETUP ONLY)](#3-github-actions-workflow-for-github-actions-setup-only)
+    - [4. Add Stats Card to Your README](#4-add-stats-card-to-your-readme)
+    - [5. Test the Setup (FOR GITHUB ACTIONS SETUP ONLY)](#5-test-the-setup-for-github-actions-setup-only)
+  - [How to Format Your WakaTime Stats URL](#how-to-format-your-wakatime-stats-url)
+    - [Base URL](#base-url)
+    - [Required Parameters](#required-parameters)
+    - [Component Configuration](#component-configuration)
+    - [Shared Styles (Optional)](#shared-styles-optional)
+    - [Scaling (Optional)](#scaling-optional)
+    - [Full Example](#full-example)
+  - [Shared Parameters](#shared-parameters)
+  - [Component-Specific Parameters](#component-specific-parameters)
+  - [Troubleshooting](#-troubleshooting)
+  - [Self-Hosting (Optional)](#-self-hosting-optional)
+  - [Contribute](#-contribute)
+
 ## Setup Instructions
 
 Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions (svg loads faster on page refresh, updates once a day) or by using the url directly (easier setup and updates on page refresh).
@@ -10,7 +38,7 @@ Follow these steps to automatically update your WakaTime stats card in your GitH
 1. Go to [https://wakatime.com/settings/account](https://wakatime.com/settings/account)
 2. Copy your **"Secret API Key"**
 
-#### Add it to GitHub:
+#### Add to GitHub:
 1. Go to **Repository → Settings → Secrets and variables → Actions**
 2. Click **"New repository secret"**
 3. Name it exactly:
@@ -21,7 +49,7 @@ Follow these steps to automatically update your WakaTime stats card in your GitH
 
 5. if using the url directly, skip to step 4
 
-### 2. Grant GitHub Actions Write Permissions (FOR GITHUB ACTIONS SETUP ONLY)
+### 2. GitHub Actions Write Permissions (FOR GITHUB ACTIONS SETUP ONLY)
 
 1. Go to **Repository → Settings → Actions → General**
 2. Scroll down to **Workflow permissions**
@@ -31,7 +59,7 @@ Follow these steps to automatically update your WakaTime stats card in your GitH
    ```
 4. Click **Save**
 
-### 3. Add the GitHub Actions Workflow (FOR GITHUB ACTIONS SETUP ONLY)
+### 3. GitHub Actions Workflow (FOR GITHUB ACTIONS SETUP ONLY)
 
 1. In your repo, create this folder if it doesn't exist:
    ```
@@ -76,7 +104,7 @@ jobs:
 
 Replace `YOUR_CUSTOM_VERCEL_URL` in the URL with your actual WakaTime customized url.
 
-### 4. Add the Stats Card to Your README
+### 4. Add Stats Card to Your README
 
 In your `README.md`, add the following line wherever you want the card to appear.
 
@@ -111,7 +139,7 @@ When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img
 
 ### Base URL
 ```
-https://your-deployment-url/api/wakatimeStats
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats
 ```
 
 ###  Required Parameters
@@ -165,7 +193,7 @@ Customize global look and layout:
 ### Full Example
 
 ```md
-<img src="https://your-deployment-url/api/wakatimeStats?username=YourName&components=3
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=YourName&components=3
 &component1_type=weekly_avg&component1_chart_type=radar
 &component2_type=basic&component2_hide_languages=true
 &component3_type=heatmap&component3_start_day=mo
@@ -228,3 +256,25 @@ Below are all the parameter options and values for your reference. Happy Customi
 - ✅ bar_vertical – only for all_langs, all_projs
 - ❌ bubble, donut – not supported in weekly_langs, weekly_projs
 - ✅ spiral – supported in weekly, weekly_avg
+
+## ❓ Troubleshooting
+
+- No output? Make sure your WakaTime profile is **public**
+- URL broken? Check your `username` and `WAKATIME_API_KEY`
+- Not updating? Append `?v=1` to the image URL
+
+---
+
+## 🌐 Self-Hosting (Optional)
+
+```bash
+git clone https://github.com/YOUR_USERNAME/wakatimeReadmeStats.git
+cd wakatimeReadmeStats
+npm install && npm run dev
+```
+
+---
+
+## 🤝 Contribute
+
+PRs welcome! Add new chart types, themes, or bugfixes.
