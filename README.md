@@ -104,6 +104,82 @@ If using github actions:
 - Use the **"Run workflow"** button to trigger it manually
 - Wait a few seconds, then refresh your repo – `stats.svg` should be updated
 
+
+## How to Format Your WakaTime Stats URL
+
+When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters follows a clear structure:
+
+### Base URL
+```
+https://your-deployment-url/api/wakatimeStats
+```
+
+###  Required Parameters
+```
+?username=your_wakatime_username
+```
+
+### Component Configuration
+Specify how many components you'd like and which type each one should be:
+
+```
+&components=3
+&component1_type=weekly_avg
+&component2_type=basic
+&component3_type=heatmap
+```
+
+You can also pass parameters specific to each component:
+
+```
+&component1_chart_type=radar
+&component2_hide_languages=true
+&component3_start_day=mo
+```
+
+### Shared Styles (Optional)
+Customize global look and layout:
+
+```
+&bg_color=e6ddd8
+&title_color=fcf9f2
+&text_color=997967
+&logo_color=fcf9f2
+&border_color=ab8c7b
+&border_width=2
+&border_radius=10
+&font_family=Fira+Code
+&title_prefix=YourName's
+```
+
+### Scaling (Optional)
+```
+&scale=true
+&title_scale_value=0.9
+&component1_scale_value=0.8
+&component2_scale_value=0.6
+```
+
+---
+
+### Full Example
+
+```md
+<img src="https://your-deployment-url/api/wakatimeStats?username=YourName&components=3
+&component1_type=weekly_avg&component1_chart_type=radar
+&component2_type=basic&component2_hide_languages=true
+&component3_type=heatmap&component3_start_day=mo
+&bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2
+&border_color=ab8c7b&border_width=2&border_radius=10
+&title_prefix=YourName's&font_family=Fira+Code
+&scale=true&title_scale_value=0.9&component1_scale_value=0.8&component2_scale_value=0.6"
+height="420"/>
+```
+
+This structure helps you clearly organize your WakaTime cards with flexible layout and customization.
+
+Below are all the parameter options and values for your reference. Happy Customizing!
+
 ## Shared Parameters
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
@@ -136,7 +212,7 @@ If using github actions:
 | `hide_title`             | All                                     | `true` / `false`              | Hides the component title.                                                     | `component3_hide_title=true`        |
 | `hide_total`, `hide_time`, `hide_percentage`, `hide_legend` | Most charts                   | `true` / `false`                          | Optionally hide stats within chart.                                | `component2_hide_legend=true`       |
 | `y_axis`, `y_axis_label` | Most bar charts                        | `true` / `false`              | Controls Y-axis visibility and label.                                          | `component1_y_axis=true`            |
-| `num_langs`, `num_projs` | `all_langs`, `all_projs`               | number                        | How many top items to show.                                                    | `component2_num_langs=5`            |
+| `num_langs`, `num_projs` | `all_langs`, `all_projs`               | integer                        | How many top items to show.                                                    | `component2_num_langs=5`            |
 | `heatmap_color`          | `heatmap`                              | hex color                     | Color of the heatmap blocks.                                                   | `component3_heatmap_color=fcf9f2`    |
 | `rank_color`             | `rank`                                 | hex color                     | Color of the rank highlight.                                                   | `component2_rank_color=ffcc00`       |
 | `difficulty`             | `spedometer`                           | `self`, `easy`, `medium`, `hard`      | Difficulty range for spedometer gauge.                                         | `component1_difficulty=medium`       |
