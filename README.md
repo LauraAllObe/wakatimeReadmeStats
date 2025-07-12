@@ -127,16 +127,14 @@ If using github actions:
 
 | **Parameter**            | **Components**                          | **Value**                     | **Description**                                                                 | **Example**                          |
 |--------------------------|-----------------------------------------|-------------------------------|---------------------------------------------------------------------------------|--------------------------------------|
-| `type`                   | All (`componentX_type`)                 | `basic`, `heatmap`, etc.      | Specifies which card to render.                                                | `component1_type=weekly_avg`        |
-| `chart_type`             | `weekly`, `weekly_avg`, `weekly_langs`, `weekly_projs`, `all_langs`, `all_projs` | `bar`, `radar`, `bar_vertical` | Chart visualization style.                                          | `component1_chart_type=radar`       |
+| `type`                   | All                 | `basic`, `heatmap`, `rank`, `spedometer`, `weekly`, `weekly_avg`, `weekly_langs`, `weekly_projs`, `all_langs`, `all_projs`      | Specifies which card to render.                                                | `component1_type=weekly_avg`        |
+| `chart_type`             | `weekly`, `weekly_avg`, `weekly_langs`, `weekly_projs`, `all_langs`, `all_projs` | `bar`, `bar_vertical`, `line`, `area`, `radar`, `bubble`, `donut`, `spiral` → See notes below for compatibility.  | Chart visualization style.                                          | `component1_chart_type=radar`       |
 | `chart_color`            | Same as above                          | hex color                     | Color of bars/lines in charts.                                                 | `component1_chart_color=fcf9f2`      |
 | `chart_curved_line`      | Same as above                          | `true` / `false`              | Enables curved line chart if applicable.                                       | `component1_chart_curved_line=true`  |
 | `start_day`              | `heatmap`, `weekly`, `weekly_projs`, `weekly_langs` | `mo`, `-7`, etc.              | Starting point for data in charts.                                             | `component1_start_day=-7`           |
-| `heading_type`           | All breakdown cards                    | `friendly`, `compact`         | Title formatting style.                                                        | `component2_heading_type=compact`    |
+| `heading_type`           | `heatmap`, `weekly`, `weekly_avg`, `weekly_langs`, `weekly_projs`, `all_langs`, `all_projs`                    | `friendly`, `compact`         | Title formatting style.                                                        | `component2_heading_type=compact`    |
 | `hide_title`             | All                                     | `true` / `false`              | Hides the component title.                                                     | `component3_hide_title=true`        |
 | `hide_total`, `hide_time`, `hide_percentage`, `hide_legend` | Most charts                   | `true` / `false`                          | Optionally hide stats within chart.                                | `component2_hide_legend=true`       |
-| `custom_heading`         | `weekly`, `weekly_avg`                 | string                        | Overrides the auto title for the chart.                                        | `component1_custom_heading=Week`     |
-| `custom_days`            | `weekly`, `weekly_avg`                 | comma-separated days          | Custom days override, e.g. for `last 5 days`.                                  | `component1_custom_days=Mo,Tu,We`    |
 | `y_axis`, `y_axis_label` | Most bar charts                        | `true` / `false`              | Controls Y-axis visibility and label.                                          | `component1_y_axis=true`            |
 | `num_langs`, `num_projs` | `all_langs`, `all_projs`               | number                        | How many top items to show.                                                    | `component2_num_langs=5`            |
 | `heatmap_color`          | `heatmap`                              | hex color                     | Color of the heatmap blocks.                                                   | `component3_heatmap_color=fcf9f2`    |
@@ -145,3 +143,12 @@ If using github actions:
 | `label_type`             | `spedometer`                           | `standard`, `emoji`, `game`, `emojiStandard`, `emojiGame`, `customEmoji`, `customEmojiStandard`, `customEmojiGame`           | How labels are shown above the gauge.                                          | `component1_label_type=emojiGame`        |
 | `custom_emojis`          | `spedometer`                           | 5 emojis string                  | Used when label_type includes customEmoji variations.                                 | `component1_custom_emojis=🐢🐇🚀🔥👑`    |
 | `show_high_score`        | `spedometer`                           | `true` / `false`              | Whether to show your highest speed value.                                      | `component1_show_high_score=true`    |
+
+
+🧾 Notes on chart_type compatibility:
+- ✅ bar – works on all chart components
+- ✅ radar – supported in weekly_avg and weekly
+- ✅ line, area – not available in all_langs, all_projs
+- ✅ bar_vertical – only for all_langs, all_projs
+- ❌ bubble, donut – not supported in weekly_langs, weekly_projs
+- ✅ spiral – supported in weekly, weekly_avg
