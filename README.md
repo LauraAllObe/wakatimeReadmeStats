@@ -1,8 +1,8 @@
 # wakatimeReadmeStats
 <div align="center">
-  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardsGif.gif" width="250"/>
-  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardsGif.gif" width="250"/>
-  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardsGif.gif" width="250"/>
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardSet1.gif" width="250"/>
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardSet2.gif" width="250"/>
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardSet3.gif" width="250"/>
 </div>
 
 ## What is wakatimeReadmeStats?
