@@ -1,6 +1,6 @@
 # wakatimeReadmeStats
 <div align="center">
-  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cards.gif" width="600"/>
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardsGif.gif" width="600"/>
 </div>
 
 ## What is wakatimeReadmeStats?
