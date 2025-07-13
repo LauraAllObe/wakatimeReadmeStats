@@ -37,6 +37,12 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 Follow these steps to automatically update your WakaTime stats card in your GitHub README using GitHub Actions (svg loads faster on page refresh, updates once a day) or by using the url directly (easier setup and updates on page refresh).
 
+### PRE. Create and add your WakaTime account to your IDE
+
+1. Go to [https://wakatime.com/signup](https://wakatime.com/signup) and create an account
+2. Install the wakatime extension in your local IDE
+3. Connect to your wakatime account in the IDE
+
 ### 1. Create and Add Your WakaTime API Key
 
 #### Get your WakaTime API key:
