@@ -262,12 +262,12 @@ Below are all the parameter options and values for your reference. Happy Customi
 
 
 🧾 Notes on chart_type compatibility:
-- bar – in all chart components
-- radar – only in weekly_avg and weekly
-- line, area – not in all_langs, all_projs
-- bar_vertical – only in all_langs, all_projs
-- bubble, donut – not in weekly_langs, weekly_projs
-- spiral – only in weekly, weekly_avg
+- bar: in all chart components
+- radar: only in weekly_avg and weekly
+- line, area: not in all_langs, all_projs
+- bar_vertical: only in all_langs, all_projs
+- bubble, donut: not in weekly_langs, weekly_projs
+- spiral: only in weekly, weekly_avg
 
 ## ❓ Troubleshooting
 
