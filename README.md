@@ -1,5 +1,8 @@
-# wakatimeReadmeStats
+<div align="center">
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/cards.gif" width="400"/>
+</div>
 
+# wakatimeReadmeStats
 ## What is wakatimeReadmeStats?
 
 `wakatimeReadmeStats` lets you showcase beautiful, customizable WakaTime coding activity cards in your GitHub README.  
