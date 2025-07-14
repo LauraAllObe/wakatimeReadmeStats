@@ -10,6 +10,8 @@ import { getLanguageBreakdownCard } from '../lib/languageBreakdownCard.js';
 import { getAlltimeLanguagesCard } from '../lib/alltimeLanguagesCard.js';
 import {getAlltimeProjectsCard } from '../lib/alltimeProjectsCard.js';
 import 'dotenv/config';
+import fs from 'fs';
+import path from 'path';
 
 function parseBoolean(value, defaultValue = false) {
   if (value === undefined) return defaultValue;
@@ -38,16 +40,43 @@ export default async function handler(req, res) {
     const api_key_2 = process.env.WAKATIME_API_KEY ?? '';
     const apiKey = req.query.api_key || api_key_2;
     if (!apiKey || apiKey === '') throw new Error('Missing WAKATIME_API_KEY');
+    
+    const themeParam = req.query.theme;
+    let themeColors = {};
+
+    if (themeParam) {
+      try {
+        const themesPath = path.join(process.cwd(), 'static', 'color_themes.json');
+        const themes = JSON.parse(fs.readFileSync(themesPath, 'utf-8'));
+        const selected = themes.find((t) => t.theme_name === themeParam.toLowerCase());
+        if (selected) {
+          themeColors = {
+            bg_color: selected.bg_color,
+            text_color: selected.text_color,
+            border_color: selected.border_color,
+            title_color: selected.title_color,
+            chart_color: selected.chart_color,
+            rank_color: selected.rank_color,
+            logo_color: selected.logo_color,
+            heatmap_color: selected.heatmap_color
+          };
+        } else {
+          console.warn(`Theme "${themeParam}" not found in color_themes.json.`);
+        }
+      } catch (err) {
+        console.error("Failed to load or parse color_themes.json:", err.message);
+      }
+    }
 
     const sharedStyles = {
       username,
       api_key: apiKey || '',
-      bg_color: req.query.bg_color || 'fffbea',
-      title_color: req.query.title_color || '6b4e16',
-      text_color: req.query.text_color || '4b3b0c',
-      logo_color: req.query.logo_color || 'a68b2c',
+      bg_color: themeColors.bg_color || req.query.bg_color || 'fffbea',
+      title_color: themeColors.title_color || req.query.title_color || '6b4e16',
+      text_color: themeColors.text_color || req.query.text_color || '4b3b0c',
+      logo_color: themeColors.logo_color || req.query.logo_color || 'a68b2c',
       font_family: req.query.font_family || 'Calibri',
-      border_color: req.query.border_color || 'e0d3a8',
+      border_color: themeColors.border_color || req.query.border_color || 'e0d3a8',
       border_width: parseNumber(req.query.border_width, 2),
       border_radius: parseNumber(req.query.border_radius, 10),
       show_logo: parseBoolean(req.query.show_logo, true),
@@ -258,6 +287,7 @@ export default async function handler(req, res) {
         });
       }
     }
+    
     const scale = parseBoolean(req.query.scale, false);
     // extract title_scale_value
     const title_scale_value = parseFloat(req.query.title_scale_value ?? '0.65');
