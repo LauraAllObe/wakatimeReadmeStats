@@ -47,19 +47,12 @@ When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 ```
 
-### Quick Example
-```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" height="400"/>
-```
-
 ### Full Example (Multiple Components + Styling + Scaling)
 
 ```md
 <img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
-&components=3
+&components=1
 &component1_type=weekly_avg&component1_chart_type=radar
-&component2_type=basic&component2_hide_languages=true
-&component3_type=heatmap&component3_start_day=mo
 &bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2
 &border_color=ab8c7b&border_width=2&border_radius=10
 &title_prefix=YourName's&font_family=Fira+Code
@@ -67,7 +60,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 height="420"/>
 ```
 
-## ❓ Troubleshooting
+## Troubleshooting
 
 - No output? Make sure your WakaTime profile is **public**
 - URL broken? Check your `username` and `WAKATIME_API_KEY`
