@@ -1,0 +1,97 @@
+
+<svg width="363" height="467.83629874064906" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="361"
+    height="465.83629874064906"
+    fill="#f8f6f3"
+    stroke="#dcd7ce"
+    stroke-width="2"
+    rx="10"
+    ry="10"
+  />
+  
+    <g transform="translate(20, 20) scale(0.6741428571428572)">
+      <g transform="scale(0.075)" style="color:#7a7266"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g>
+      <text x="30" y="15" fill="#2d2a26" font-size="16" font-family="Calibri">
+        bubble WakaTime Stats
+      </text>
+    </g>
+  <g transform="translate(0, 56) scale(1)">
+      <text x="177.5" y="22.5" font-size="12" text-anchor="middle" fill="#5f574f" font-weight="bold">This week, my most productive day was Thursday</text>
+      <g transform="translate(2.7257493060629088, 0)">
+<circle cx="142.92793500431713" cy="146.17124883497635" r="44.90533658547963" fill="#9c9273" fill-opacity="0.85" />
+<circle cx="229.45238053871134" cy="146.17124883497635" r="39.68509280926209" fill="#928b8a" fill-opacity="0.85" />
+<circle cx="191.09204181860352" cy="214.81782977090057" r="37.01846896974847" fill="#959b8d" fill-opacity="0.85" />
+<circle cx="190.93895757025786" cy="80.53617765720446" r="34.48112966607393" fill="#a69b82" fill-opacity="0.85" />
+<circle cx="121.98600473926541" cy="68.53169748667713" r="33.57497669936465" fill="#a79377" fill-opacity="0.85" />
+<circle cx="126.4324321475835" cy="216.85027193690848" r="25.73905950012925" fill="#98837e" fill-opacity="0.85" />
+<circle cx="242.48053835095814" cy="90.04771473380063" r="15.996722000457723" fill="#9a9274" fill-opacity="0.85" />
+</g>
+
+              <circle cx="29.5" cy="281.83629874064906" r="6" fill="#9c9273" />
+              <text x="41.5" y="284.83629874064906" font-size="10" font-weight="bold" fill="#5f574f">
+                Thu:
+              </text>
+              <text x="91.5" y="284.83629874064906" font-size="10" fill="#5f574f">
+                05:02 (24.6%)
+              </text>
+            
+
+              <circle cx="219.5" cy="281.83629874064906" r="6" fill="#928b8a" />
+              <text x="231.5" y="284.83629874064906" font-size="10" font-weight="bold" fill="#5f574f">
+                Wed:
+              </text>
+              <text x="281.5" y="284.83629874064906" font-size="10" fill="#5f574f">
+                03:56 (19.2%)
+              </text>
+            
+
+              <circle cx="29.5" cy="301.83629874064906" r="6" fill="#959b8d" />
+              <text x="41.5" y="304.83629874064906" font-size="10" font-weight="bold" fill="#5f574f">
+                Sat:
+              </text>
+              <text x="91.5" y="304.83629874064906" font-size="10" fill="#5f574f">
+                03:25 (16.7%)
+              </text>
+            
+
+              <circle cx="219.5" cy="301.83629874064906" r="6" fill="#a69b82" />
+              <text x="231.5" y="304.83629874064906" font-size="10" font-weight="bold" fill="#5f574f">
+                Fri:
+              </text>
+              <text x="281.5" y="304.83629874064906" font-size="10" fill="#5f574f">
+                02:58 (14.5%)
+              </text>
+            
+
+              <circle cx="29.5" cy="321.83629874064906" r="6" fill="#a79377" />
+              <text x="41.5" y="324.83629874064906" font-size="10" font-weight="bold" fill="#5f574f">
+                Sun:
+              </text>
+              <text x="91.5" y="324.83629874064906" font-size="10" fill="#5f574f">
+                02:49 (13.8%)
+              </text>
+            
+
+              <circle cx="219.5" cy="321.83629874064906" r="6" fill="#98837e" />
+              <text x="231.5" y="324.83629874064906" font-size="10" font-weight="bold" fill="#5f574f">
+                Tue:
+              </text>
+              <text x="281.5" y="324.83629874064906" font-size="10" fill="#5f574f">
+                01:39 (8.1%)
+              </text>
+            
+
+              <circle cx="29.5" cy="341.83629874064906" r="6" fill="#9a9274" />
+              <text x="41.5" y="344.83629874064906" font-size="10" font-weight="bold" fill="#5f574f">
+                Mon:
+              </text>
+              <text x="91.5" y="344.83629874064906" font-size="10" fill="#5f574f">
+                38m (3.1%)
+              </text>
+            
+      <text x="177.5" y="381.83629874064906" font-size="12" text-anchor="middle" fill="#5f574f"><tspan font-weight="bold">Total:</tspan> 20 hrs 30 mins</text>
+    </g>
+</svg>

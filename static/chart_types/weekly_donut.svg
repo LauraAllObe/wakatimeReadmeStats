@@ -1,0 +1,297 @@
+
+<svg width="363" height="352.5" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="361"
+    height="350.5"
+    fill="#f8f6f3"
+    stroke="#dcd7ce"
+    stroke-width="2"
+    rx="10"
+    ry="10"
+  />
+  
+    <g transform="translate(20, 20) scale(0.6741428571428572)">
+      <g transform="scale(0.075)" style="color:#7a7266"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g>
+      <text x="30" y="15" fill="#2d2a26" font-size="16" font-family="Calibri">
+        donut WakaTime Stats
+      </text>
+    </g>
+  <g transform="translate(0, 56) scale(1)">
+      <text x="177.5" y="22.5" font-size="12" text-anchor="middle" fill="#5f574f" font-weight="bold">This week, my most productive day was Thursday</text>
+      <defs>
+              <path id="dayPath0" fill="none" d="
+                M 277.5 136.5
+                A 96 96 0 0 1 265.3836330035815 183.18550218344504
+              " />
+            
+
+              <path id="timePath0" fill="none" d="
+                M 233.5 136.5
+                A 52 52 0 0 1 226.93696787693997 161.78798034936605
+              " />
+            
+
+              <path id="pctPath0" fill="none" d="
+                M 245.5 136.5
+                A 64 64 0 0 1 237.42242200238766 167.6236681222967
+              " />
+            
+
+              <path id="dayPath1" fill="none" d="
+                M 265.3836330035815 183.18550218344504
+                A 96 96 0 0 1 167.69005484810697 231.50150217181675
+              " />
+            
+
+              <path id="timePath1" fill="none" d="
+                M 226.93696787693997 161.78798034936605
+                A 52 52 0 0 1 174.01961304272461 187.95914700973407
+              " />
+            
+
+              <path id="pctPath1" fill="none" d="
+                M 237.42242200238766 167.6236681222967
+                A 64 64 0 0 1 172.29336989873798 199.83433478121117
+              " />
+            
+
+              <path id="dayPath2" fill="none" d="
+                M 167.69005484810697 231.50150217181675
+                A 96 96 0 0 1 86.18301972553762 125.06875897560766
+              " />
+            
+
+              <path id="timePath2" fill="none" d="
+                M 174.01961304272461 187.95914700973407
+                A 52 52 0 0 1 129.86996901799955 130.30807777845413
+              " />
+            
+
+              <path id="pctPath2" fill="none" d="
+                M 172.29336989873798 199.83433478121117
+                A 64 64 0 0 1 117.95534648369176 128.8791726504051
+              " />
+            
+
+              <path id="dayPath3" fill="none" d="
+                M 86.18301972553762 125.06875897560766
+                A 96 96 0 0 1 132.14182639095088 54.16063700769256
+              " />
+            
+
+              <path id="timePath3" fill="none" d="
+                M 129.86996901799955 130.30807777845413
+                A 52 52 0 0 1 154.76432262843173 91.89951171250013
+              " />
+            
+
+              <path id="pctPath3" fill="none" d="
+                M 117.95534648369176 128.8791726504051
+                A 64 64 0 0 1 148.5945509273006 81.60709133846171
+              " />
+            
+
+              <path id="dayPath4" fill="none" d="
+                M 132.14182639095088 54.16063700769256
+                A 96 96 0 0 1 228.40543797630386 52.73915062362899
+              " />
+            
+
+              <path id="timePath4" fill="none" d="
+                M 154.76432262843173 91.89951171250013
+                A 52 52 0 0 1 206.9071122371646 91.12953992113236
+              " />
+            
+
+              <path id="pctPath4" fill="none" d="
+                M 148.5945509273006 81.60709133846171
+                A 64 64 0 0 1 212.77029198420257 80.65943374908599
+              " />
+            
+
+              <path id="dayPath5" fill="none" d="
+                M 228.40543797630386 52.73915062362899
+                A 96 96 0 0 1 275.6588583003298 117.78878936096314
+              " />
+            
+
+              <path id="timePath5" fill="none" d="
+                M 206.9071122371646 91.12953992113236
+                A 52 52 0 0 1 232.50271491267867 126.36476090385503
+              " />
+            
+
+              <path id="pctPath5" fill="none" d="
+                M 212.77029198420257 80.65943374908599
+                A 64 64 0 0 1 244.27257220021988 124.02585957397542
+              " />
+            
+
+              <path id="dayPath6" fill="none" d="
+                M 275.6588583003298 117.78878936096314
+                A 96 96 0 0 1 277.5 136.49999999999997
+              " />
+            </defs>
+
+            <path d="
+              M 261.5 136.5
+              A 80 80 0 0 1 251.40302750298457 175.40458515287088
+              L 216.45151375149229 155.95229257643544
+              A 40 40 0 0 0 221.5 136.5
+              Z
+            " fill="#9c8f80" />
+          
+
+              <text font-size="9" fill="#5f574f">
+                <textPath href="#dayPath0" startOffset="50%" text-anchor="middle">Tue</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#timePath0" startOffset="50%" text-anchor="middle">01:39</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#pctPath0" startOffset="50%" text-anchor="middle">8.1%</textPath>
+              </text>
+            
+
+            <path d="
+              M 251.40302750298457 175.40458515287088
+              A 80 80 0 0 1 169.99171237342247 215.667918476514
+              L 175.74585618671125 176.083959238257
+              A 40 40 0 0 0 216.45151375149229 155.95229257643544
+              Z
+            " fill="#9c8f80" />
+          
+
+              <text font-size="9" fill="#5f574f">
+                <textPath href="#dayPath1" startOffset="50%" text-anchor="middle">Wed</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#timePath1" startOffset="50%" text-anchor="middle">03:56</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#pctPath1" startOffset="50%" text-anchor="middle">19.2%</textPath>
+              </text>
+            
+
+            <path d="
+              M 169.99171237342247 215.667918476514
+              A 80 80 0 0 1 102.06918310461468 126.97396581300637
+              L 141.78459155230735 131.7369829065032
+              A 40 40 0 0 0 175.74585618671125 176.083959238257
+              Z
+            " fill="#9c8f80" />
+          
+
+              <text font-size="9" fill="#5f574f">
+                <textPath href="#dayPath2" startOffset="50%" text-anchor="middle">Thu</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#timePath2" startOffset="50%" text-anchor="middle">05:02</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#pctPath2" startOffset="50%" text-anchor="middle">24.6%</textPath>
+              </text>
+            
+
+            <path d="
+              M 102.06918310461468 126.97396581300637
+              A 80 80 0 0 1 140.36818865912574 67.88386417307713
+              L 160.93409432956287 102.19193208653857
+              A 40 40 0 0 0 141.78459155230735 131.7369829065032
+              Z
+            " fill="#9c8f80" />
+          
+
+              <text font-size="9" fill="#5f574f">
+                <textPath href="#dayPath3" startOffset="50%" text-anchor="middle">Fri</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#timePath3" startOffset="50%" text-anchor="middle">02:58</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#pctPath3" startOffset="50%" text-anchor="middle">14.5%</textPath>
+              </text>
+            
+
+            <path d="
+              M 140.36818865912574 67.88386417307713
+              A 80 80 0 0 1 220.58786498025322 66.6992921863575
+              L 201.04393249012662 101.59964609317875
+              A 40 40 0 0 0 160.93409432956287 102.19193208653857
+              Z
+            " fill="#9c8f80" />
+          
+
+              <text font-size="9" fill="#5f574f">
+                <textPath href="#dayPath4" startOffset="50%" text-anchor="middle">Sat</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#timePath4" startOffset="50%" text-anchor="middle">03:25</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#pctPath4" startOffset="50%" text-anchor="middle">16.7%</textPath>
+              </text>
+            
+
+            <path d="
+              M 220.58786498025322 66.6992921863575
+              A 80 80 0 0 1 259.96571525027485 120.90732446746928
+              L 220.73285762513743 128.70366223373463
+              A 40 40 0 0 0 201.04393249012662 101.59964609317875
+              Z
+            " fill="#9c8f80" />
+          
+
+              <text font-size="9" fill="#5f574f">
+                <textPath href="#dayPath5" startOffset="50%" text-anchor="middle">Sun</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#timePath5" startOffset="50%" text-anchor="middle">02:49</textPath>
+              </text>
+            
+
+              <text font-size="8" fill="#5f574f">
+                <textPath href="#pctPath5" startOffset="50%" text-anchor="middle">13.8%</textPath>
+              </text>
+            
+
+            <path d="
+              M 259.96571525027485 120.90732446746928
+              A 80 80 0 0 1 261.5 136.49999999999997
+              L 221.5 136.5
+              A 40 40 0 0 0 220.73285762513743 128.70366223373463
+              Z
+            " fill="#9c8f80" />
+          
+
+              <text font-size="9" fill="#5f574f">
+                <textPath href="#dayPath6" startOffset="5%" text-anchor="start">Mon</textPath>
+              </text>
+            
+      <text x="177.5" y="266.5" font-size="12" text-anchor="middle" fill="#5f574f"><tspan font-weight="bold">Total:</tspan> 20 hrs 30 mins</text>
+    </g>
+</svg>

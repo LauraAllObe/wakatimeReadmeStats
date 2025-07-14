@@ -1,0 +1,53 @@
+
+<svg width="363" height="242.5" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="361"
+    height="240.5"
+    fill="#f8f6f3"
+    stroke="#dcd7ce"
+    stroke-width="2"
+    rx="10"
+    ry="10"
+  />
+  
+    <g transform="translate(20, 20) scale(0.6741428571428572)">
+      <g transform="scale(0.075)" style="color:#7a7266"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g>
+      <text x="30" y="15" fill="#2d2a26" font-size="16" font-family="Calibri">
+        weekly_bar WakaTime Stats
+      </text>
+    </g>
+  <g transform="translate(0, 56) scale(1)">
+      <text x="177.5" y="22.5" font-size="12" text-anchor="middle" fill="#5f574f" font-weight="bold">This week, my most productive day was Thursday</text>
+      <rect x="30" y="86.78754630798261" width="30" height="19.712453692017384" fill="#9c8f80" rx="3" ry="3" />
+<text x="45" y="82.78754630798261" font-size="9" text-anchor="middle" fill="#5f574f">01:39</text>
+<text x="45" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Tue</text>
+<text x="45" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">8.1%</text>
+<rect x="75" y="59.639152467028495" width="30" height="46.860847532971505" fill="#9c8f80" rx="3" ry="3" />
+<text x="90" y="55.639152467028495" font-size="9" text-anchor="middle" fill="#5f574f">03:56</text>
+<text x="90" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Wed</text>
+<text x="90" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">19.2%</text>
+<rect x="120" y="46.5" width="30" height="60" fill="#9c8f80" rx="3" ry="3" />
+<text x="135" y="42.5" font-size="9" text-anchor="middle" fill="#5f574f">05:02</text>
+<text x="135" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Thu</text>
+<text x="135" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">24.6%</text>
+<rect x="165" y="71.12321926758048" width="30" height="35.376780732419526" fill="#9c8f80" rx="3" ry="3" />
+<text x="180" y="67.12321926758048" font-size="9" text-anchor="middle" fill="#5f574f">02:58</text>
+<text x="180" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Fri</text>
+<text x="180" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">14.5%</text>
+<rect x="210" y="65.7251619815687" width="30" height="40.7748380184313" fill="#9c8f80" rx="3" ry="3" />
+<text x="225" y="61.725161981568704" font-size="9" text-anchor="middle" fill="#5f574f">03:25</text>
+<text x="225" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Sat</text>
+<text x="225" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">16.7%</text>
+<rect x="255" y="72.9581680797645" width="30" height="33.541831920235495" fill="#9c8f80" rx="3" ry="3" />
+<text x="270" y="68.9581680797645" font-size="9" text-anchor="middle" fill="#5f574f">02:49</text>
+<text x="270" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Sun</text>
+<text x="270" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">13.8%</text>
+<rect x="300" y="98.88592179142945" width="30" height="7.614078208570552" fill="#9c8f80" rx="3" ry="3" />
+<text x="315" y="94.88592179142945" font-size="9" text-anchor="middle" fill="#5f574f">38m</text>
+<text x="315" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Mon</text>
+<text x="315" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">3.1%</text>
+      <text x="177.5" y="156.5" font-size="12" text-anchor="middle" fill="#5f574f"><tspan font-weight="bold">Total:</tspan> 20 hrs 30 mins</text>
+    </g>
+</svg>

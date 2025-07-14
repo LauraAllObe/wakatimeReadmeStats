@@ -71,12 +71,12 @@ export default async function handler(req, res) {
     const sharedStyles = {
       username,
       api_key: apiKey ?? '',
-      bg_color: themeColors.bg_color ?? req.query.bg_color ?? 'fffbea',
-      title_color: themeColors.title_color ?? req.query.title_color ?? '6b4e16',
-      text_color: themeColors.text_color ?? req.query.text_color ?? '4b3b0c',
-      logo_color: themeColors.logo_color ?? req.query.logo_color ?? 'a68b2c',
+      bg_color: themeColors.bg_color ?? req.query.bg_color ?? 'f8f6f3',
+      title_color: themeColors.title_color ?? req.query.title_color ?? '2d2a26',
+      text_color: themeColors.text_color ?? req.query.text_color ?? '5f574f',
+      logo_color: themeColors.logo_color ?? req.query.logo_color ?? '7a7266',
       font_family: req.query.font_family ?? 'Calibri',
-      border_color: themeColors.border_color ?? req.query.border_color ?? 'e0d3a8',
+      border_color: themeColors.border_color ?? req.query.border_color ?? 'dcd7ce',
       border_width: parseNumber(req.query.border_width, 2),
       border_radius: parseNumber(req.query.border_radius, 10),
       show_logo: parseBoolean(req.query.show_logo, true),
@@ -147,7 +147,7 @@ export default async function handler(req, res) {
           result = await getHeatmapCard({
             ...sharedStyles,
             ...componentOptions,
-            heatmap_color: componentOptions.heatmap_color ?? themeColors.heatmap_color ?? 'e0d3a8',
+            heatmap_color: componentOptions.heatmap_color ?? themeColors.heatmap_color ?? '9c8f80',
             start_day: componentOptions.start_day ?? 'mo',
             heading_type: componentOptions.heading_type ?? 'friendly',
             hide_title: parseBoolean(componentOptions.hide_title, false)
@@ -157,7 +157,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#9c8f80',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -177,7 +177,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#9c8f80',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -194,7 +194,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#9c8f80',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -211,7 +211,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#9c8f80',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? 'mo',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -229,7 +229,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar_vertical',
-            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#9c8f80',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             heading_type: componentOptions.heading_type ?? 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
@@ -247,7 +247,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar_vertical',
-            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#9c8f80',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             heading_type: componentOptions.heading_type ?? 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
@@ -266,7 +266,7 @@ export default async function handler(req, res) {
             ...componentOptions,
             difficulty: componentOptions.difficulty ?? 'medium',
             label_type: componentOptions.label_type ?? 'standard',
-            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#9c8f80',
             custom_emojis: componentOptions.custom_emojis ?? '',
             show_high_score: componentOptions.show_high_score ?? true
           });
@@ -274,7 +274,7 @@ export default async function handler(req, res) {
           result = await getStarRankCard({
             ...sharedStyles,
             ...componentOptions,
-            rank_color: componentOptions.rank_color ?? themeColors.rank_color ?? '#a67c52',
+            rank_color: componentOptions.rank_color ?? themeColors.rank_color ?? '#9c8f80',
             hide_title: parseBoolean(componentOptions.hide_title, false)
           });
         } else {
