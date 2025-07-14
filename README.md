@@ -34,20 +34,20 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 3. **Add the Stats Card to your README**
 
 ```md
-<img src="YOUR URL HERE" height="460"/>
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" height="300"/>
 ```
 
-## How to Format Your WakaTime Stats URL
+## Formatting Examples
 
 When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters includes the essential part (URL & username) and customization parameters as follows.
 
-### Basic URL Example
+### Basic URL
 ```
 <img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" width="300"/>
 ```
 <img src="static/essential.svg" width="300"/>
 
-### Full URL Example (Multiple Components + Styling + Scaling)
+### Full URL (Multiple Components + Styling + Scaling)
 
 ```
 <img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
