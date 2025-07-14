@@ -13,7 +13,7 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 ## Table of Contents
 
 - [Quick Setup](#quick-setup)
-- [How to Format Your URL](#how-to-format-your-wakatime-stats-url)
+- [Formatting Examples](#formatting-examples)
 - [Troubleshooting](#-troubleshooting)
 - [Themes](#themes)
 - [Component Types](#component-types)
