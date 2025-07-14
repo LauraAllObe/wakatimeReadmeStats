@@ -41,24 +41,26 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters includes the essential part (URL & username) and customization parameters as follows.
 
-### Basic Example
+### Basic URL Example
 ```
-https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" width="300"/>
 ```
-<img src="static/essential.svg" width="400"/>
+<img src="static/essential.svg" width="300"/>
 
-### Full Example (Multiple Components + Styling + Scaling)
+### Full URL Example (Multiple Components + Styling + Scaling)
 
 ```
-https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 &components=2
 &title_prefix=_____%27s&border_width=2&border_radius=10&scale=true
 &bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2&border_color=ab8c7b
 &component1_scale_value=1.5&component1_type=weekly_avg&component1_chart_type=radar&component1_chart_color=fcf9f2
 &component1_start_day=mo&component1_y_axis=true&component1_y_axis_label=true&component1_hide_legend=true&component1_hide_total=true
-&component2_type=heatmap&component2_start_day=mo&component2_heatmap_color=fcf9f2
+&component2_type=heatmap&component2_start_day=mo&component2_heatmap_color=fcf9f2" width="300"/>
 ```
-<img src="static/example.svg" width="400"/>
+*Remember to remove spaces and newlines*
+
+<img src="static/example.svg" width="300"/>
 
 ## Troubleshooting
 
