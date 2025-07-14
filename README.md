@@ -38,13 +38,13 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 
 ### Quick Example
 ```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=YourName&components=1&component1_type=basic" height="400"/>
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=basic" height="400"/>
 ```
 
 ### Full Example (Multiple Components + Styling + Scaling)
 
 ```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=YourName&components=3
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=3
 &component1_type=weekly_avg&component1_chart_type=radar
 &component2_type=basic&component2_hide_languages=true
 &component3_type=heatmap&component3_start_day=mo
