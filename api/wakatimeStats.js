@@ -70,20 +70,41 @@ export default async function handler(req, res) {
 
     const sharedStyles = {
       username,
-      api_key: apiKey || '',
-      bg_color: themeColors.bg_color || req.query.bg_color || 'fffbea',
-      title_color: themeColors.title_color || req.query.title_color || '6b4e16',
-      text_color: themeColors.text_color || req.query.text_color || '4b3b0c',
-      logo_color: themeColors.logo_color || req.query.logo_color || 'a68b2c',
-      font_family: req.query.font_family || 'Calibri',
-      border_color: themeColors.border_color || req.query.border_color || 'e0d3a8',
+      api_key: apiKey ?? '',
+      bg_color: themeColors.bg_color ?? req.query.bg_color ?? 'fffbea',
+      title_color: themeColors.title_color ?? req.query.title_color ?? '6b4e16',
+      text_color: themeColors.text_color ?? req.query.text_color ?? '4b3b0c',
+      logo_color: themeColors.logo_color ?? req.query.logo_color ?? 'a68b2c',
+      font_family: req.query.font_family ?? 'Calibri',
+      border_color: themeColors.border_color ?? req.query.border_color ?? 'e0d3a8',
       border_width: parseNumber(req.query.border_width, 2),
       border_radius: parseNumber(req.query.border_radius, 10),
       show_logo: parseBoolean(req.query.show_logo, true),
-      title_prefix: req.query.title_prefix || ''
+      title_prefix: req.query.title_prefix ?? ''
     };
 
-    const count = Math.min(parseInt(components, 10), 10);
+    let count = Math.min(parseInt(components, 10), 10);
+
+    // If no specific component types were provided, apply default setup
+    let hasComponentTypes = false;
+    for (let i = 1; i <= count; i++) {
+      if (req.query[`component${i}_type`]) {
+        hasComponentTypes = true;
+        break;
+      }
+    }
+
+    if (!hasComponentTypes) {
+      count = 2;
+      req.query['component1_type'] = 'rank';
+      req.query['component2_type'] = 'heatmap';
+      req.query['component2_start_day'] = 'mo';
+    }
+
+    if (!hasComponentTypes && !req.query.scale) {
+      req.query.scale = 'true';
+    }
+
     const svgParts = [];
     let maxComponentWidth = 0;
 
@@ -126,7 +147,7 @@ export default async function handler(req, res) {
           result = await getHeatmapCard({
             ...sharedStyles,
             ...componentOptions,
-            heatmap_color: componentOptions.heatmap_color ?? 'e0d3a8',
+            heatmap_color: componentOptions.heatmap_color ?? themeColors.heatmap_color ?? 'e0d3a8',
             start_day: componentOptions.start_day ?? 'mo',
             heading_type: componentOptions.heading_type ?? 'friendly',
             hide_title: parseBoolean(componentOptions.hide_title, false)
@@ -136,7 +157,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -156,7 +177,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -173,7 +194,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? '-7',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -190,7 +211,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar',
-            chart_color: componentOptions.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             start_day: componentOptions.start_day ?? 'mo',
             heading_type: componentOptions.heading_type ?? 'friendly',
@@ -208,7 +229,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar_vertical',
-            chart_color: componentOptions.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             heading_type: componentOptions.heading_type ?? 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
@@ -226,7 +247,7 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             chart_type: componentOptions.chart_type ?? 'bar_vertical',
-            chart_color: componentOptions.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
             chart_curved_line: parseBoolean(componentOptions.chart_curved_line, true),
             heading_type: componentOptions.heading_type ?? 'friendly',
             mixed_colors: parseBoolean(componentOptions.mixed_colors, false),
@@ -245,7 +266,7 @@ export default async function handler(req, res) {
             ...componentOptions,
             difficulty: componentOptions.difficulty ?? 'medium',
             label_type: componentOptions.label_type ?? 'standard',
-            chart_color: componentOptions.chart_color ?? '#a67c52',
+            chart_color: componentOptions.chart_color ?? themeColors.chart_color ?? '#a67c52',
             custom_emojis: componentOptions.custom_emojis ?? '',
             show_high_score: componentOptions.show_high_score ?? true
           });
@@ -253,7 +274,7 @@ export default async function handler(req, res) {
           result = await getStarRankCard({
             ...sharedStyles,
             ...componentOptions,
-            rank_color: componentOptions.rank_color ?? '#a67c52',
+            rank_color: componentOptions.rank_color ?? themeColors.rank_color ?? '#a67c52',
             hide_title: parseBoolean(componentOptions.hide_title, false)
           });
         } else {
