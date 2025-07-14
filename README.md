@@ -34,23 +34,18 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 3. **Add the Stats Card to your README**
 
 ```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" height="410"/>
+<img src="YOUR URL HERE" height="460"/>
 ```
-
-## Troubleshooting
-
-- No output? Make sure your WakaTime profile is **public**
-- URL broken? Check your `username` and `WAKATIME_API_KEY`
-- Not updating? Append `?v=1` to the image URL
 
 ## How to Format Your WakaTime Stats URL
 
-When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters follows a clear structure:
+When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters includes the essential part (URL & username) and customization parameters as follows.
 
-### Essential URL & Parameter
+### Basic Example
 ```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 ```
+<img src="static/essential.svg" width="400"/>
 
 ### Full Example (Multiple Components + Styling + Scaling)
 
@@ -64,6 +59,12 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 &component2_type=heatmap&component2_start_day=mo&component2_heatmap_color=fcf9f2
 ```
 <img src="static/example.svg" width="400"/>
+
+## Troubleshooting
+
+- No output? Make sure your WakaTime profile is **public**
+- URL broken? Check your `username` and `WAKATIME_API_KEY`
+- Not updating? Append `?v=1` to the image URL
 
 ## Optional for Customization
 
