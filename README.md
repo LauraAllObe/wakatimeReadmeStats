@@ -156,6 +156,24 @@ When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img
   <img src="static/types/spedometer.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=spedometer" width="250"/>
 </div>
 
+<div align="center"> 
+  <details>
+    <summary>Name key for component types</summary>
+    <ul style="display: inline-block; text-align: left; list-style-position: inside; padding-left: 0; margin: 0 auto;">
+      <li>heatmap (row1, col1)</li>
+      <li>basic (row1, col2)</li>
+      <li>weekly (row2, col1)</li>
+      <li>weekly_avg (row2, col2)</li>
+      <li>rank (row2, col3)</li>
+      <li>weekly_langs (row3, col1)</li>
+      <li>weekly_projs (row3, col2)</li>
+      <li>all_projs (row3, col3)</li>
+      <li>all_langs (row4, col1)</li>
+      <li>spedometer (row4, col2)</li>
+    </ul>
+  </details>
+</div>
+
 ### Chart Types
 
 <div align="center">
