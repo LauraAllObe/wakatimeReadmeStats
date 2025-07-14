@@ -25,7 +25,7 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 1. **Create a WakaTime Account**  
    - Sign up at [wakatime.com/signup](https://wakatime.com/signup)
-   - Make sure your WakaTime profile is **public** and the username is set
+   - Set your WakaTime profile to **public** and set the username
    - Connect it to your IDE: [Editor Setup Guide](https://wakatime.com/plugins)
 
 2. **Get your API Key**  
