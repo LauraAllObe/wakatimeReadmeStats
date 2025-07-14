@@ -49,7 +49,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 
 ### Quick Example
 ```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=basic" height="400"/>
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" height="400"/>
 ```
 
 ### Full Example (Multiple Components + Styling + Scaling)
