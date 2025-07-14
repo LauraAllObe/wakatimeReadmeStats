@@ -132,6 +132,44 @@ When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img
   <img src="static/color_themes/warm_graphite.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=warm_graphite" width="250"/>
 </div>
 
+<div align="center"> 
+  <details>
+    <summary>Name key for themes</summary>
+    <div style="text-align: left; display: inline-block;">
+      <div>• mocha_pink (row1, col1)</div>
+      <div>• latte_red (row1, col2)</div>
+      <div>• icy_indigo (row1, col3)</div>
+      <div>• storm_blue (row2, col1)</div>
+      <div>• sky_blue (row2, col2)</div>
+      <div>• sunlight_gold (row2, col3)</div>
+      <div>• fresh_green (row3, col1)</div>
+      <div>• soft_rose (row3, col2)</div>
+      <div>• neutral_cyan (row3, col3)</div>
+      <div>• amber_cream (row4, col1)</div>
+      <div>• nature_green (row4, col2)</div>
+      <div>• cherry_blossom (row4, col3)</div>
+      <div>• ocean_mist (row5, col1)</div>
+      <div>• lime_leaf (row5, col2)</div>
+      <div>• pastel_pink (row5, col3)</div>
+      <div>• lavender_dream (row6, col1)</div>
+      <div>• gray_cloud (row6, col2)</div>
+      <div>• frost_steel (row6, col3)</div>
+      <div>• earth_brown (row7, col1)</div>
+      <div>• royal_violet (row7, col2)</div>
+      <div>• lemon_glow (row7, col3)</div>
+      <div>• arctic_wave (row8, col1)</div>
+      <div>• spicy_coral (row8, col2)</div>
+      <div>• berry_grape (row8, col3)</div>
+      <div>• midnight_violet (row9, col1)</div>
+      <div>• teal_neon (row9, col2)</div>
+      <div>• dark_github (row9, col3)</div>
+      <div>• classic_monokai (row10, col1)</div>
+      <div>• cyber_aqua (row10, col2)</div>
+      <div>• warm_graphite (row10, col3)</div>
+    </div>
+  </details>
+</div>
+
 ### Component Types
 
 <div align="center">
@@ -159,18 +197,18 @@ When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img
 <div align="center"> 
   <details>
     <summary>Name key for component types</summary>
-    <ul style="display: inline-block; text-align: left; list-style-position: inside; padding-left: 0; margin: 0 auto;">
-      <li>heatmap (row1, col1)</li>
-      <li>basic (row1, col2)</li>
-      <li>weekly (row2, col1)</li>
-      <li>weekly_avg (row2, col2)</li>
-      <li>rank (row2, col3)</li>
-      <li>weekly_langs (row3, col1)</li>
-      <li>weekly_projs (row3, col2)</li>
-      <li>all_projs (row3, col3)</li>
-      <li>all_langs (row4, col1)</li>
-      <li>spedometer (row4, col2)</li>
-    </ul>
+    <div style="text-align: left; display: inline-block;">
+      <div>• heatmap (row1, col1)</div>
+      <div>• basic (row1, col2)</div>
+      <div>• weekly (row2, col1)</div>
+      <div>• weekly_avg (row2, col2)</div>
+      <div>• rank (row2, col3)</div>
+      <div>• weekly_langs (row3, col1)</div>
+      <div>• weekly_projs (row3, col2)</div>
+      <div>• all_projs (row3, col3)</div>
+      <div>• all_langs (row4, col1)</div>
+      <div>• spedometer (row4, col2)</div>
+    </div>
   </details>
 </div>
 
@@ -191,6 +229,22 @@ When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img
 <div align="center">
   <img src="static/chart_types/weekly_radar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=radar" width="250"/>
   <img src="static/chart_types/weekly_bubble.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bubble" width="250"/>
+</div>
+
+<div align="center"> 
+  <details>
+    <summary>Name key for chart types</summary>
+    <div style="text-align: left; display: inline-block;">
+      <div>• bar (row1, col1)</div>
+      <div>• line (row1, col2)</div>
+      <div>• area (row1, col3)</div>
+      <div>• bar_vertical (row2, col1)</div>
+      <div>• spiral (row2, col2)</div>
+      <div>• donut (row2, col3)</div>
+      <div>• radar (row3, col1)</div>
+      <div>• bubble (row3, col2)</div>
+    </div>
+  </details>
 </div>
 
 <br/>
