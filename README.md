@@ -57,13 +57,13 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 &components=2
-&component1_type=weekly_avg&component1_chart_type=radar
-&component2_type=heatmap&component2_heatmap_color=ab8c7b
-&bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2
-&border_color=ab8c7b&border_width=2&border_radius=10
-&title_prefix=YourName's&font_family=Fira+Code
-&scale=true&title_scale_value=0.9&component1_scale_value=0.8&component2_scale_value=0.6
+&title_prefix=_____%27s&border_width=2&border_radius=10&scale=true
+&bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2&border_color=ab8c7b
+&component1_scale_value=1.5&component1_type=weekly_avg&component1_chart_type=radar&component1_chart_color=fcf9f2
+&component1_start_day=mo&component1_y_axis=true&component1_y_axis_label=true&component1_hide_legend=true&component1_hide_total=true
+&component2_type=heatmap&component2_start_day=mo&component2_heatmap_color=fcf9f2
 ```
+<img src="static/example.svg" width="400"/>
 
 ## Optional for Customization
 
