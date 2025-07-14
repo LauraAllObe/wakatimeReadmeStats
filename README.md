@@ -50,14 +50,13 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ### Full Example (Multiple Components + Styling + Scaling)
 
 ```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 &components=1
 &component1_type=weekly_avg&component1_chart_type=radar
 &bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2
 &border_color=ab8c7b&border_width=2&border_radius=10
 &title_prefix=YourName's&font_family=Fira+Code
-&scale=true&title_scale_value=0.9&component1_scale_value=0.8&component2_scale_value=0.6"
-height="420"/>
+&scale=true&title_scale_value=0.9&component1_scale_value=0.8&component2_scale_value=0.6
 ```
 
 ## Troubleshooting
