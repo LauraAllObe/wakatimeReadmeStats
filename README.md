@@ -36,7 +36,6 @@ When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 ```
 
----
 ### Quick Example
 ```md
 <img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=YourName&components=1&component1_type=basic" height="400"/>
