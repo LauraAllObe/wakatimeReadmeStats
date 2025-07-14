@@ -10,6 +10,17 @@
 `wakatimeReadmeStats` lets you showcase beautiful, customizable WakaTime coding activity cards in your GitHub README.  
 It pulls your latest WakaTime data and renders it as rich SVG charts you can embed directly using GitHub Actions or a live endpoint URL.
 
+## Table of Contents
+
+- [Quick Setup](#quick-setup)
+- [How to Format Your URL](#how-to-format-your-wakatime-stats-url)
+- [Troubleshooting](#-troubleshooting)
+- [Themes](#themes)
+- [Component Types](#component-types)
+- [Chart Types](#chart-types)
+- [All Shared Parameters](#all-shared-parameters)
+- [All Component-Specific Parameters](#all-component-specific-parameters)
+
 ## Quick Setup
 
 1. **Create a WakaTime Account**  
@@ -61,7 +72,7 @@ height="420"/>
 - URL broken? Check your `username` and `WAKATIME_API_KEY`
 - Not updating? Append `?v=1` to the image URL
 
-## REST IS OPTIONAL (for extra customization)
+## Optional for Customization
 
 ### Themes
 
@@ -125,7 +136,7 @@ height="420"/>
   <img src="static/color_themes/warm_graphite.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=warm_graphite" width="250"/>
 </div>
 
-### Types
+### Component Types
 
 <div align="center">
   <img src="static/types/heatmap.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=heatmap" width="250"/>
@@ -168,6 +179,10 @@ height="420"/>
   <img src="static/chart_types/weekly_bubble.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bubble" width="250"/>
 </div>
 
+
+<details>
+<summary>Click to expand full customization parameter list</summary>
+  
 ### All Shared Parameters
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
@@ -209,7 +224,6 @@ height="420"/>
 | `custom_emojis`          | `spedometer`                           | 5 emojis string                  | Used when label_type includes customEmoji variations.                                 | `component1_custom_emojis=🐢🐇🚀🔥👑`    |
 | `show_high_score`        | `spedometer`                           | `true` / `false`              | Whether to show your highest speed value.                                      | `component1_show_high_score=true`    |
 
-
 🧾 Notes on chart_type compatibility:
 - bar: in all chart components
 - radar: only in weekly_avg and weekly
@@ -217,3 +231,4 @@ height="420"/>
 - bar_vertical: only in all_langs, all_projs
 - bubble, donut: not in weekly_langs, weekly_projs
 - spiral: only in weekly, weekly_avg
+</details>
