@@ -56,7 +56,7 @@ height="420"/>
 ```
 
 ## REST IS OPTIONAL (for extra customization)
-## Shared Parameters
+### Shared Parameters
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
 |--------------------------|------------------------|----------------------|---------------------------------------------------------------------------------|-------------------------------------|
@@ -75,7 +75,7 @@ height="420"/>
 | `scale`                  | All                    | `true` / `false`     | Whether to auto-scale all components to the same width.                         | `scale=true`                      |
 | `componentX_scale_value` | All                    | decimal              | Per-component width scale relative to the widest one. Overrides `scale`.        | `component1_scale_value=1.5`      |
 
-## Component-Specific Parameters
+### Component-Specific Parameters
 
 | **Parameter**            | **Components**                          | **Value**                     | **Description**                                                                 | **Example**                          |
 |--------------------------|-----------------------------------------|-------------------------------|---------------------------------------------------------------------------------|--------------------------------------|
