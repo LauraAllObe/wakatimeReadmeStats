@@ -129,8 +129,9 @@ height="420"/>
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
 |--------------------------|------------------------|----------------------|---------------------------------------------------------------------------------|-------------------------------------|
-| `username`               | All                    | `string`             | **Required**. Your WakaTime username (from your WakaTime profile URL).          | `username=yourname`                |
-| `bg_color`               | All                    | hex color            | Background color of the SVG card.                                               | `bg_color=ffffff`                  |
+| `username`               | All                    | `string`             | **Required**. Your WakaTime username (from your WakaTime profile URL).          | `username=yourname`               |
+| `theme`                  | All                    | `string`             | Color theme for all card colors.                                                | `theme=teal_neon`                 |
+| `bg_color`               | All                    | hex color            | Background color of the SVG card.                                               | `bg_color=ffffff`                 |
 | `title_color`            | All                    | hex color            | Color of the title text.                                                        | `title_color=000000`              |
 | `text_color`             | All                    | hex color            | Color of all other text.                                                        | `text_color=333333`               |
 | `logo_color`             | All                    | hex color            | Color used to fill the WakaTime logo.                                           | `logo_color=a68b2c`               |
