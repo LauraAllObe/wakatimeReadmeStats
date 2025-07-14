@@ -125,7 +125,50 @@ height="420"/>
   <img src="static/color_themes/warm_graphite.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=warm_graphite" width="250"/>
 </div>
 
-### Shared Parameters
+### Types
+
+<div align="center">
+  <img src="static/heatmap.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=heatmap" width="250"/>
+  <img src="static/basic.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=basic" width="250"/>
+</div>
+
+<div align="center">
+  <img src="static/weekly_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
+  <img src="static/weekly_avg_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_avg&component1_chart_type=bar" width="250"/>
+  <img src="static/rank.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=rank" width="250"/>
+</div>
+
+<div align="center">
+  <img src="static/weekly_langs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_langs&component1_chart_type=bar" width="250"/>
+  <img src="static/weekly_projs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_projs&component1_chart_type=bar" width="250"/>
+  <img src="static/all_projs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_projs&component1_chart_type=bar_vertical" width="250"/>
+</div>
+
+<div align="center">
+  <img src="static/all_langs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
+  <img src="static/spedometer.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=spedometer" width="250"/>
+</div>
+
+### Chart Types
+
+<div align="center">
+  <img src="static/chart_types/weekly_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
+  <img src="static/chart_types/weekly_line.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=line" width="250"/>
+  <img src="static/chart_types/weekly_area.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=area" width="250"/>
+</div>
+
+<div align="center">
+  <img src="static/chart_types/all_langs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
+  <img src="static/chart_types/weekly_spiral.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=spiral" width="250"/>
+  <img src="static/chart_types/weekly_donut.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=donut" width="250"/>
+</div>
+
+<div align="center">
+  <img src="static/chart_types/weekly_radar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=radar" width="250"/>
+  <img src="static/chart_types/weekly_bubble.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bubble" width="250"/>
+</div>
+
+### All Shared Parameters
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
 |--------------------------|------------------------|----------------------|---------------------------------------------------------------------------------|-------------------------------------|
@@ -145,7 +188,7 @@ height="420"/>
 | `scale`                  | All                    | `true` / `false`     | Whether to auto-scale all components to the same width.                         | `scale=true`                      |
 | `componentX_scale_value` | All                    | decimal              | Per-component width scale relative to the widest one. Overrides `scale`.        | `component1_scale_value=1.5`      |
 
-### Component-Specific Parameters
+### All Component-Specific Parameters
 
 | **Parameter**            | **Components**                          | **Value**                     | **Description**                                                                 | **Example**                          |
 |--------------------------|-----------------------------------------|-------------------------------|---------------------------------------------------------------------------------|--------------------------------------|
