@@ -10,29 +10,6 @@
 `wakatimeReadmeStats` lets you showcase beautiful, customizable WakaTime coding activity cards in your GitHub README.  
 It pulls your latest WakaTime data and renders it as rich SVG charts you can embed directly using GitHub Actions or a live endpoint URL.
 
-##  Table of Contents
-
-- [wakatimeReadmeStats](#wakatimereadmestats)
-  - [What is wakatimeReadmeStats?](#what-is-wakatimereadmestats)
-  - [Setup Instructions](#setup-instructions)
-    - [1. Create and Add Your WakaTime API Key](#1-create-and-add-your-wakatime-api-key)
-    - [2. GitHub Actions Write Permissions (FOR GITHUB ACTIONS SETUP ONLY)](#2-github-actions-write-permissions-for-github-actions-setup-only)
-    - [3. GitHub Actions Workflow (FOR GITHUB ACTIONS SETUP ONLY)](#3-github-actions-workflow-for-github-actions-setup-only)
-    - [4. Add Stats Card to Your README](#4-add-stats-card-to-your-readme)
-    - [5. Test the Setup (FOR GITHUB ACTIONS SETUP ONLY)](#5-test-the-setup-for-github-actions-setup-only)
-  - [How to Format Your WakaTime Stats URL](#how-to-format-your-wakatime-stats-url)
-    - [Base URL](#base-url)
-    - [Required Parameters](#required-parameters)
-    - [Component Configuration](#component-configuration)
-    - [Shared Styles (Optional)](#shared-styles-optional)
-    - [Scaling (Optional)](#scaling-optional)
-    - [Full Example](#full-example)
-  - [Shared Parameters](#shared-parameters)
-  - [Component-Specific Parameters](#component-specific-parameters)
-  - [Troubleshooting](#-troubleshooting)
-  - [Self-Hosting (Optional)](#-self-hosting-optional)
-  - [Contribute](#-contribute)
-
 ## Setup Instructions
 
 1. **Create a WakaTime Account**  
