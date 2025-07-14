@@ -65,11 +65,6 @@ height="420"/>
 
 ### Themes
 
-specify as
-```md
-&theme=theme_name_here
-```
-
 <div align="center">
   <img src="static/color_themes/mocha_pink.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=mocha_pink" width="250"/>
   <img src="static/color_themes/latte_red.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=latte_red" width="250"/>
