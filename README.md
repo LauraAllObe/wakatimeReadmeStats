@@ -14,7 +14,7 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 - [Quick Setup](#quick-setup)
 - [Formatting Examples](#formatting-examples)
-- [Troubleshooting](#-troubleshooting)
+- [Troubleshooting](#troubleshooting)
 - [Themes](#themes)
 - [Component Types](#component-types)
 - [Chart Types](#chart-types)
