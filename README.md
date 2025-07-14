@@ -37,6 +37,11 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 <img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" height="410"/>
 ```
 
+## Troubleshooting
+
+- No output? Make sure your WakaTime profile is **public**
+- URL broken? Check your `username` and `WAKATIME_API_KEY`
+- Not updating? Append `?v=1` to the image URL
 
 ## How to Format Your WakaTime Stats URL
 
@@ -59,12 +64,6 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 &title_prefix=YourName's&font_family=Fira+Code
 &scale=true&title_scale_value=0.9&component1_scale_value=0.8&component2_scale_value=0.6
 ```
-
-## Troubleshooting
-
-- No output? Make sure your WakaTime profile is **public**
-- URL broken? Check your `username` and `WAKATIME_API_KEY`
-- Not updating? Append `?v=1` to the image URL
 
 ## Optional for Customization
 
