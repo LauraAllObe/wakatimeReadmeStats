@@ -10,7 +10,7 @@
 `wakatimeReadmeStats` lets you showcase beautiful, customizable WakaTime coding activity cards in your GitHub README.  
 It pulls your latest WakaTime data and renders it as rich SVG charts you can embed directly using GitHub Actions or a live endpoint URL.
 
-## Setup Instructions
+## Quick Setup
 
 1. **Create a WakaTime Account**  
    - Sign up at [wakatime.com/signup](https://wakatime.com/signup)  
@@ -54,6 +54,12 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 &scale=true&title_scale_value=0.9&component1_scale_value=0.8&component2_scale_value=0.6"
 height="420"/>
 ```
+
+## ❓ Troubleshooting
+
+- No output? Make sure your WakaTime profile is **public**
+- URL broken? Check your `username` and `WAKATIME_API_KEY`
+- Not updating? Append `?v=1` to the image URL
 
 ## REST IS OPTIONAL (for extra customization)
 ### Shared Parameters
@@ -104,9 +110,3 @@ height="420"/>
 - bar_vertical: only in all_langs, all_projs
 - bubble, donut: not in weekly_langs, weekly_projs
 - spiral: only in weekly, weekly_avg
-
-## ❓ Troubleshooting
-
-- No output? Make sure your WakaTime profile is **public**
-- URL broken? Check your `username` and `WAKATIME_API_KEY`
-- Not updating? Append `?v=1` to the image URL
