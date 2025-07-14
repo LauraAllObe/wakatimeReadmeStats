@@ -49,7 +49,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 
 ### Full Example (Multiple Components + Styling + Scaling)
 
-```md
+```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 &components=1
 &component1_type=weekly_avg&component1_chart_type=radar
