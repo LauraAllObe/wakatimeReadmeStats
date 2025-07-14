@@ -55,10 +55,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 height="420"/>
 ```
 
-This structure helps you clearly organize your WakaTime cards with flexible layout and customization.
-
-Below are all the parameter options and values for your reference. Happy Customizing!
-
+## REST IS OPTIONAL (for extra customization)
 ## Shared Parameters
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
