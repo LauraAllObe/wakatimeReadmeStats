@@ -61,7 +61,7 @@ height="420"/>
 - URL broken? Check your `username` and `WAKATIME_API_KEY`
 - Not updating? Append `?v=1` to the image URL
 
-## For extra customization (OPTIONAL)
+## Rest is optional! (for extra customization)
 ### Shared Parameters
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
