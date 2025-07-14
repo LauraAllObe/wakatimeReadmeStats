@@ -172,7 +172,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
   <img src="static/chart_types/weekly_bubble.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bubble" width="250"/>
 </div>
 
-
+<br/>
 <details>
 <summary>Click to expand full customization parameter list</summary>
   
