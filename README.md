@@ -31,14 +31,9 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters follows a clear structure:
 
-### Base URL
+### Essential URL & Parameter
 ```
-https://wakatime-readme-stats.vercel.app/api/wakatimeStats
-```
-
-###  Required Parameters
-```
-?username=your_wakatime_username
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 ```
 
 ---
