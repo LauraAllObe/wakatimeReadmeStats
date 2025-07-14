@@ -41,50 +41,13 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats
 ?username=your_wakatime_username
 ```
 
-### Component Configuration
-Specify how many components you'd like and which type each one should be:
-
-```
-&components=3
-&component1_type=weekly_avg
-&component2_type=basic
-&component3_type=heatmap
-```
-
-You can also pass parameters specific to each component:
-
-```
-&component1_chart_type=radar
-&component2_hide_languages=true
-&component3_start_day=mo
-```
-
-### Shared Styles (Optional)
-Customize global look and layout:
-
-```
-&bg_color=e6ddd8
-&title_color=fcf9f2
-&text_color=997967
-&logo_color=fcf9f2
-&border_color=ab8c7b
-&border_width=2
-&border_radius=10
-&font_family=Fira+Code
-&title_prefix=YourName's
-```
-
-### Scaling (Optional)
-```
-&scale=true
-&title_scale_value=0.9
-&component1_scale_value=0.8
-&component2_scale_value=0.6
-```
-
 ---
+### Quick Example
+```md
+<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=YourName&components=1&component1_type=basic" height="400"/>
+```
 
-### Full Example
+### Full Example (Multiple Components + Styling + Scaling)
 
 ```md
 <img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=YourName&components=3
