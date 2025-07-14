@@ -51,8 +51,9 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 
 ```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
-&components=1
+&components=2
 &component1_type=weekly_avg&component1_chart_type=radar
+&component2_type=heatmap&component2_heatmap_color=ab8c7b
 &bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2
 &border_color=ab8c7b&border_width=2&border_radius=10
 &title_prefix=YourName's&font_family=Fira+Code
