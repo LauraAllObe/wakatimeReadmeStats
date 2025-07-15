@@ -34,9 +34,11 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
    - Select new repository secret and add the name as "WAKATIME_API_KEY" and the value as the API key you copied
 
 3. **Add the GitHub Actions Workflow**  
-   - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo as follows
-   - **Note:** if your WakaTime and GitHub usernames are different, replace ```"$GITHUB_ACTOR"``` in the URL with your actual WakaTime username.
-   
+   - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo (example provided below)
+   - **Note:** if using the example and your WakaTime and GitHub usernames are different, replace ```"$GITHUB_ACTOR"``` in the URL with your actual WakaTime username.
+<details>
+    <summary>Copy & Paste Ready Example</summary>
+  
 ```yml
 name: Update WakaTime Stats SVG
 
@@ -69,13 +71,11 @@ jobs:
           git commit -m "Update WakaTime stats SVG" || echo "No changes"
           git push
 ```
+</details>
 
 4. **Add the Stats Card to your README**
-
-```md
-<img src="wakatime/stats.svg" height="300"/>
-```
-**Note:** to update immediately, navigate to actions -> Update WakaTime Stats SVG -> Run Workflow and click Run Now.
+   - Add this to your readme: ```md <img src="wakatime/stats.svg" height="300"/>```
+   - **Note:** to update immediately, navigate to actions -> Update WakaTime Stats SVG -> Run Workflow and click **Run Now**.
 
 ## Formatting Examples
 
