@@ -25,39 +25,77 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 1. **Create a WakaTime Account**  
    - Sign up at [wakatime.com/signup](https://wakatime.com/signup)
-   - Set your WakaTime profile to **public** and set the username
+   - Set your WakaTime profile to **public** and confirm your **username**
    - Connect it to your IDE: [Editor Setup Guide](https://wakatime.com/plugins)
 
 2. **Get your API Key**  
-   - Copy from [your WakaTime account settings](https://wakatime.com/settings/account)  
-   - **Note:** You don't need to share this key for URL-based setup
+   - Copy your API Key from [your WakaTime account settings](https://wakatime.com/settings/account)
+   - Go to your GitHub repository where you want to display your stats -> Settings -> Secrets and variables -> Actions
+   - Select new repository secret and add the name as "WAKATIME_API_KEY" and the value as the API key you copied
 
-3. **Add the Stats Card to your README**
+3. **Add the GitHub Actions Workflow**  
+   - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo as follows
+   - **Note:** if your WakaTime and GitHub usernames are different, replace ```"$GITHUB_ACTOR"``` in the URL with your actual WakaTime username.
+   
+```yml
+name: Update WakaTime Stats SVG
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # every 6 hours
+  workflow_dispatch:
+
+jobs:
+  generate-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate SVG from Vercel API
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: |
+          mkdir -p .github/workflows
+          curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY" \
+            -o .github/workflows/wakatime-stats.svg
+
+      - name: Commit SVG to repo
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .github/workflows/wakatime-stats.svg
+          git commit -m "Update WakaTime stats SVG" || echo "No changes"
+          git push
+```
+
+4. **Add the Stats Card to your README**
 
 ```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" height="300"/>
+<img src=".github/workflows/wakatime-stats.svg" height="300"/>
 ```
 
 ## Formatting Examples
 
-When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters includes the essential part (URL & username) and customization parameters as follows.
+The curl command can be customized. The basic command includes the URL & username. Customization can be done as given in the example below.
 
 ### Basic URL
 ```
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username" width="300"/>
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 ```
 <img src="static/essential.svg" width="300"/>
 
 ### Full URL (Multiple Components + Styling + Scaling)
 
 ```
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 &components=2
 &title_prefix=_____%27s&border_width=2&border_radius=10&scale=true
 &bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2&border_color=ab8c7b
 &component1_scale_value=1.5&component1_type=weekly_avg&component1_chart_type=radar&component1_chart_color=fcf9f2
 &component1_start_day=mo&component1_y_axis=true&component1_y_axis_label=true&component1_hide_legend=true&component1_hide_total=true
-&component2_type=heatmap&component2_start_day=mo&component2_heatmap_color=fcf9f2" width="300"/>
+&component2_type=heatmap&component2_start_day=mo&component2_heatmap_color=fcf9f2
 ```
 *Remember to remove spaces and newlines*
 
