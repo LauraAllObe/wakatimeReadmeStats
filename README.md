@@ -75,6 +75,7 @@ jobs:
 ```md
 <img src="wakatime/stats.svg" height="300"/>
 ```
+**Note:** to update immediately, navigate to actions -> Update WakaTime Stats SVG -> Run Workflow and click Run Now.
 
 ## Formatting Examples
 
