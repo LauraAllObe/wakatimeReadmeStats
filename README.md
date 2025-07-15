@@ -35,10 +35,12 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 3. **Add the GitHub Actions Workflow**  
    - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo (example provided below)
-   - **Note:** if using the example and your WakaTime and GitHub usernames are different, replace ```"$GITHUB_ACTOR"``` in the URL with your actual WakaTime username.
 <details>
-    <summary>Copy & Paste Ready Example</summary>
+<summary>Copy/Paste-Ready Example</summary>
+<br/>
   
+**Note:** if your WakaTime and GitHub usernames are different, replace ```"$GITHUB_ACTOR"``` in the URL with your actual WakaTime username.
+
 ```yml
 name: Update WakaTime Stats SVG
 
