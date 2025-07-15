@@ -37,8 +37,7 @@ export default async function handler(req, res) {
   if (!username) return res.status(400).send('Missing username.');
 
   try {
-    const api_key_2 = process.env.WAKATIME_API_KEY ?? '';
-    const apiKey = req.query.api_key || api_key_2;
+    const apiKey = req.query.api_key || '';
     if (!apiKey || apiKey === '') throw new Error('Missing WAKATIME_API_KEY');
     
     const themeParam = req.query.theme;
