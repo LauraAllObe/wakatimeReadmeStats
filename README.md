@@ -82,14 +82,14 @@ The curl command can be customized. The basic command includes the URL & usernam
 
 ### Basic URL
 ```
-https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key"
 ```
 <img src="static/essential.svg" width="300"/>
 
 ### Full URL (Multiple Components + Styling + Scaling)
 
 ```
-https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key
 &components=2
 &title_prefix=_____%27s&border_width=2&border_radius=10&scale=true
 &bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2&border_color=ab8c7b
@@ -112,63 +112,63 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ### Themes
 
 <div align="center">
-  <img src="static/color_themes/mocha_pink.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=mocha_pink" width="250"/>
-  <img src="static/color_themes/latte_red.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=latte_red" width="250"/>
-  <img src="static/color_themes/icy_indigo.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=icy_indigo" width="250"/>
+  <img src="static/color_themes/mocha_pink.svg" alt="TO USE ADD THIS: &theme=mocha_pink" width="250"/>
+  <img src="static/color_themes/latte_red.svg" alt="TO USE ADD THIS: &theme=latte_red" width="250"/>
+  <img src="static/color_themes/icy_indigo.svg" alt="TO USE ADD THIS: &theme=icy_indigo" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/storm_blue.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=storm_blue" width="250"/>
-  <img src="static/color_themes/sky_blue.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=sky_blue" width="250"/>
-  <img src="static/color_themes/sunlight_gold.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=sunlight_gold" width="250"/>
+  <img src="static/color_themes/storm_blue.svg" alt="TO USE ADD THIS: &theme=storm_blue" width="250"/>
+  <img src="static/color_themes/sky_blue.svg" alt="TO USE ADD THIS: &theme=sky_blue" width="250"/>
+  <img src="static/color_themes/sunlight_gold.svg" alt="TO USE ADD THIS: &theme=sunlight_gold" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/fresh_green.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=fresh_green" width="250"/>
-  <img src="static/color_themes/soft_rose.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=soft_rose" width="250"/>
-  <img src="static/color_themes/neutral_cyan.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=neutral_cyan" width="250"/>
+  <img src="static/color_themes/fresh_green.svg" alt="TO USE ADD THIS: &theme=fresh_green" width="250"/>
+  <img src="static/color_themes/soft_rose.svg" alt="TO USE ADD THIS: &theme=soft_rose" width="250"/>
+  <img src="static/color_themes/neutral_cyan.svg" alt="TO USE ADD THIS: &theme=neutral_cyan" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/amber_cream.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=amber_cream" width="250"/>
-  <img src="static/color_themes/nature_green.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=nature_green" width="250"/>
-  <img src="static/color_themes/cherry_blossom.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=cherry_blossom" width="250"/>
+  <img src="static/color_themes/amber_cream.svg" alt="TO USE ADD THIS: &theme=amber_cream" width="250"/>
+  <img src="static/color_themes/nature_green.svg" alt="TO USE ADD THIS: &theme=nature_green" width="250"/>
+  <img src="static/color_themes/cherry_blossom.svg" alt="TO USE ADD THIS: &theme=cherry_blossom" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/ocean_mist.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=ocean_mist" width="250"/>
-  <img src="static/color_themes/lime_leaf.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=lime_leaf" width="250"/>
-  <img src="static/color_themes/pastel_pink.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=pastel_pink" width="250"/>
+  <img src="static/color_themes/ocean_mist.svg" alt="TO USE ADD THIS: &theme=ocean_mist" width="250"/>
+  <img src="static/color_themes/lime_leaf.svg" alt="TO USE ADD THIS: &theme=lime_leaf" width="250"/>
+  <img src="static/color_themes/pastel_pink.svg" alt="TO USE ADD THIS: &theme=pastel_pink" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/lavender_dream.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=lavender_dream" width="250"/>
-  <img src="static/color_themes/gray_cloud.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=gray_cloud" width="250"/>
-  <img src="static/color_themes/frost_steel.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=frost_steel" width="250"/>
+  <img src="static/color_themes/lavender_dream.svg" alt="TO USE ADD THIS: &theme=lavender_dream" width="250"/>
+  <img src="static/color_themes/gray_cloud.svg" alt="TO USE ADD THIS: &theme=gray_cloud" width="250"/>
+  <img src="static/color_themes/frost_steel.svg" alt="TO USE ADD THIS: &theme=frost_steel" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/earth_brown.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=earth_brown" width="250"/>
-  <img src="static/color_themes/royal_violet.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=royal_violet" width="250"/>
-  <img src="static/color_themes/lemon_glow.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=lemon_glow" width="250"/>
+  <img src="static/color_themes/earth_brown.svg" alt="TO USE ADD THIS: &theme=earth_brown" width="250"/>
+  <img src="static/color_themes/royal_violet.svg" alt="TO USE ADD THIS: &theme=royal_violet" width="250"/>
+  <img src="static/color_themes/lemon_glow.svg" alt="TO USE ADD THIS: &theme=lemon_glow" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/arctic_wave.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=arctic_wave" width="250"/>
-  <img src="static/color_themes/spicy_coral.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=spicy_coral" width="250"/>
-  <img src="static/color_themes/berry_grape.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=berry_grape" width="250"/>
+  <img src="static/color_themes/arctic_wave.svg" alt="TO USE ADD THIS: &theme=arctic_wave" width="250"/>
+  <img src="static/color_themes/spicy_coral.svg" alt="TO USE ADD THIS: &theme=spicy_coral" width="250"/>
+  <img src="static/color_themes/berry_grape.svg" alt="TO USE ADD THIS: &theme=berry_grape" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/midnight_violet.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=midnight_violet" width="250"/>
-  <img src="static/color_themes/teal_neon.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=teal_neon" width="250"/>
-  <img src="static/color_themes/dark_github.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=dark_github" width="250"/>
+  <img src="static/color_themes/midnight_violet.svg" alt="TO USE ADD THIS: &theme=midnight_violet" width="250"/>
+  <img src="static/color_themes/teal_neon.svg" alt="TO USE ADD THIS: &theme=teal_neon" width="250"/>
+  <img src="static/color_themes/dark_github.svg" alt="TO USE ADD THIS: &theme=dark_github" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/color_themes/classic_monokai.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=classic_monokai" width="250"/>
-  <img src="static/color_themes/cyber_aqua.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=cyber_aqua" width="250"/>
-  <img src="static/color_themes/warm_graphite.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=warm_graphite" width="250"/>
+  <img src="static/color_themes/classic_monokai.svg" alt="TO USE ADD THIS: &theme=classic_monokai" width="250"/>
+  <img src="static/color_themes/cyber_aqua.svg" alt="TO USE ADD THIS: &theme=cyber_aqua" width="250"/>
+  <img src="static/color_themes/warm_graphite.svg" alt="TO USE ADD THIS: &theme=warm_graphite" width="250"/>
 </div>
 
 <div align="center"> 
@@ -212,25 +212,25 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ### Component Types
 
 <div align="center">
-  <img src="static/types/heatmap.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=heatmap" width="250"/>
-  <img src="static/types/basic.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=basic" width="250"/>
+  <img src="static/types/heatmap.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=heatmap" width="250"/>
+  <img src="static/types/basic.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=basic" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/types/weekly_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
-  <img src="static/types/weekly_avg_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_avg&component1_chart_type=bar" width="250"/>
-  <img src="static/types/rank.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=rank" width="250"/>
+  <img src="static/types/weekly_bar.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
+  <img src="static/types/weekly_avg_bar.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly_avg&component1_chart_type=bar" width="250"/>
+  <img src="static/types/rank.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=rank" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/types/weekly_langs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_langs&component1_chart_type=bar" width="250"/>
-  <img src="static/types/weekly_projs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_projs&component1_chart_type=bar" width="250"/>
-  <img src="static/types/all_projs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_projs&component1_chart_type=bar_vertical" width="250"/>
+  <img src="static/types/weekly_langs_bar.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly_langs&component1_chart_type=bar" width="250"/>
+  <img src="static/types/weekly_projs_bar.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly_projs&component1_chart_type=bar" width="250"/>
+  <img src="static/types/all_projs_bar_vertical.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=all_projs&component1_chart_type=bar_vertical" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/types/all_langs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
-  <img src="static/types/spedometer.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=spedometer" width="250"/>
+  <img src="static/types/all_langs_bar_vertical.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
+  <img src="static/types/spedometer.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=spedometer" width="250"/>
 </div>
 
 <div align="center"> 
@@ -254,20 +254,20 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ### Chart Types
 
 <div align="center">
-  <img src="static/chart_types/weekly_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
-  <img src="static/chart_types/weekly_line.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=line" width="250"/>
-  <img src="static/chart_types/weekly_area.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=area" width="250"/>
+  <img src="static/chart_types/weekly_bar.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
+  <img src="static/chart_types/weekly_line.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=line" width="250"/>
+  <img src="static/chart_types/weekly_area.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=area" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/chart_types/all_langs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
-  <img src="static/chart_types/weekly_spiral.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=spiral" width="250"/>
-  <img src="static/chart_types/weekly_donut.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=donut" width="250"/>
+  <img src="static/chart_types/all_langs_bar_vertical.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
+  <img src="static/chart_types/weekly_spiral.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=spiral" width="250"/>
+  <img src="static/chart_types/weekly_donut.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=donut" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/chart_types/weekly_radar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=radar" width="250"/>
-  <img src="static/chart_types/weekly_bubble.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bubble" width="250"/>
+  <img src="static/chart_types/weekly_radar.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=radar" width="250"/>
+  <img src="static/chart_types/weekly_bubble.svg" alt="TO USE ADD THIS (CAN CHANGE NUMBERS AS NEEDED): &components=1&component1_type=weekly&component1_chart_type=bubble" width="250"/>
 </div>
 
 <div align="center"> 
