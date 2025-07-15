@@ -35,6 +35,7 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
 
 3. **Add the GitHub Actions Workflow**  
    - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo (example provided below)
+   - To update immediately, navigate to actions -> Update WakaTime Stats SVG (or other name used) -> Run Workflow and click **Run Now**.
 <details>
 <summary>Copy/Paste-Ready Example</summary>
 <br/>
@@ -77,7 +78,6 @@ jobs:
 
 4. **Add the Stats Card to your README**
    - Add this to your readme: ```md <img src="wakatime/stats.svg" height="300"/>```
-   - **Note:** to update immediately, navigate to actions -> Update WakaTime Stats SVG -> Run Workflow and click **Run Now**.
 
 ## Formatting Examples
 
