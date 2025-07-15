@@ -8,7 +8,7 @@
 ## What is wakatimeReadmeStats?
 
 `wakatimeReadmeStats` lets you showcase pretty, customizable coding activity cards in your GitHub README.  
-It pulls your latest WakaTime data and renders it as rich SVG charts you can embed directly using GitHub Actions or a live endpoint URL.
+It pulls your latest WakaTime data and renders it as rich SVG charts you can embed directly using GitHub Actions.
 
 ## Table of Contents
 
