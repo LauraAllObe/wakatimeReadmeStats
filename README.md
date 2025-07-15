@@ -107,9 +107,11 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 
 ## Troubleshooting
 
-- No output? Make sure your WakaTime profile is **public**
-- URL broken? Check your `username` and `WAKATIME_API_KEY`
-- Not updating? Append `?v=1` to the image URL
+- **No output?** Make sure your WakaTime profile and GitHub repository are **public**
+- **URL broken?** Check your `username` and `WAKATIME_API_KEY`
+- **Not updating?** Trigger a manual update via GitHub Actions, or append `?v=1` to the image URL on your readme to bypass cache.
+- **Still seeing old data?** Add a unique query string to the image URL on your readme, like `?timestamp=<some-value>` to force a fresh load.
+- **SVG not committed?** Make sure your `.gitignore` doesn't exclude the `wakatime/` folder or `*.svg` files.
 
 ## Optional for Customization
 
