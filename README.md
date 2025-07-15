@@ -82,7 +82,7 @@ jobs:
 
 ## Formatting Examples
 
-The curl command can be customized. The basic command includes the URL & username. Customization can be done as given in the example below.
+The card can be customized by changing the curl command in your GitHub actions workflow, such as in the examples below.
 
 ### Basic URL
 ```
