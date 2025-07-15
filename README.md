@@ -1,67 +1,113 @@
 # wakatimeReadmeStats
 <div align="center">
-  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardSet1.gif" width="250"/>
-  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardSet2.gif" width="250"/>
-  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardSet3.gif" width="250"/>
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardGif1.gif" width="250"/>
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardGif2.gif" width="250"/>
+  <img src="https://github.com/LauraAllObe/wakatimeReadmeStats/blob/main/static/cardGif3.gif" width="250"/>
 </div>
 
 ## What is wakatimeReadmeStats?
 
-`wakatimeReadmeStats` lets you showcase beautiful, customizable WakaTime coding activity cards in your GitHub README.  
+`wakatimeReadmeStats` lets you showcase pretty, customizable coding activity cards in your GitHub README.  
 It pulls your latest WakaTime data and renders it as rich SVG charts you can embed directly using GitHub Actions or a live endpoint URL.
+
+## Table of Contents
+
+- [Quick Setup](#quick-setup)
+- [Formatting Examples](#formatting-examples)
+- [Troubleshooting](#troubleshooting)
+- [Themes](#themes)
+- [Component Types](#component-types)
+- [Chart Types](#chart-types)
+- [All Shared Parameters](#all-shared-parameters)
+- [All Component-Specific Parameters](#all-component-specific-parameters)
 
 ## Quick Setup
 
 1. **Create a WakaTime Account**  
-   - Sign up at [wakatime.com/signup](https://wakatime.com/signup)  
+   - Sign up at [wakatime.com/signup](https://wakatime.com/signup)
+   - Set your WakaTime profile to **public** and confirm your **username**
    - Connect it to your IDE: [Editor Setup Guide](https://wakatime.com/plugins)
 
 2. **Get your API Key**  
-   - Copy from [your WakaTime account settings](https://wakatime.com/settings/account)  
-   - **Note:** You don't need to share this key for URL-based setup
+   - Copy your API Key from [your WakaTime account settings](https://wakatime.com/settings/account)
+   - Go to your GitHub repository where you want to display your stats -> Settings -> Secrets and variables -> Actions
+   - Select new repository secret and add the name as "WAKATIME_API_KEY" and the value as the API key you copied
 
-3. **Add the Stats Card to your README**
+3. **Add the GitHub Actions Workflow**  
+   - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo as follows
+   - **Note:** if your WakaTime and GitHub usernames are different, replace ```"$GITHUB_ACTOR"``` in the URL with your actual WakaTime username.
+   
+```yml
+name: Update WakaTime Stats SVG
 
-```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=YourName&components=1&component1_type=basic" height="410"/>
+on:
+  schedule:
+    - cron: '0 */6 * * *' # every 6 hours
+  workflow_dispatch:
+
+jobs:
+  generate-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate SVG from Vercel API
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: |
+          mkdir -p .github/workflows
+          curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY" \
+            -o .github/workflows/wakatime-stats.svg
+
+      - name: Commit SVG to repo
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .github/workflows/wakatime-stats.svg
+          git commit -m "Update WakaTime stats SVG" || echo "No changes"
+          git push
 ```
 
+4. **Add the Stats Card to your README**
 
-## How to Format Your WakaTime Stats URL
+```md
+<img src=".github/workflows/wakatime-stats.svg" height="300"/>
+```
 
-When using the `wakatimeReadmeStats` service directly via a URL (e.g. with `<img src="..."/>` in your README), the format of the URL parameters follows a clear structure:
+## Formatting Examples
 
-### Essential URL & Parameter
+The curl command can be customized. The basic command includes the URL & username. Customization can be done as given in the example below.
+
+### Basic URL
 ```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
 ```
+<img src="static/essential.svg" width="300"/>
 
-### Quick Example
-```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=basic" height="400"/>
+### Full URL (Multiple Components + Styling + Scaling)
+
 ```
-
-### Full Example (Multiple Components + Styling + Scaling)
-
-```md
-<img src="https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=3
-&component1_type=weekly_avg&component1_chart_type=radar
-&component2_type=basic&component2_hide_languages=true
-&component3_type=heatmap&component3_start_day=mo
-&bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2
-&border_color=ab8c7b&border_width=2&border_radius=10
-&title_prefix=YourName's&font_family=Fira+Code
-&scale=true&title_scale_value=0.9&component1_scale_value=0.8&component2_scale_value=0.6"
-height="420"/>
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username
+&components=2
+&title_prefix=_____%27s&border_width=2&border_radius=10&scale=true
+&bg_color=e6ddd8&title_color=fcf9f2&text_color=997967&logo_color=fcf9f2&border_color=ab8c7b
+&component1_scale_value=1.5&component1_type=weekly_avg&component1_chart_type=radar&component1_chart_color=fcf9f2
+&component1_start_day=mo&component1_y_axis=true&component1_y_axis_label=true&component1_hide_legend=true&component1_hide_total=true
+&component2_type=heatmap&component2_start_day=mo&component2_heatmap_color=fcf9f2
 ```
+*Remember to remove spaces and newlines*
 
-## ❓ Troubleshooting
+<img src="static/example.svg" width="300"/>
+
+## Troubleshooting
 
 - No output? Make sure your WakaTime profile is **public**
 - URL broken? Check your `username` and `WAKATIME_API_KEY`
 - Not updating? Append `?v=1` to the image URL
 
-## REST IS OPTIONAL (for extra customization)
+## Optional for Customization
 
 ### Themes
 
@@ -125,28 +171,84 @@ height="420"/>
   <img src="static/color_themes/warm_graphite.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&theme=warm_graphite" width="250"/>
 </div>
 
-### Types
+<div align="center"> 
+  <details>
+    <summary>Name key for themes</summary>
+    <div style="text-align: left; display: inline-block;">
+      <div>• mocha_pink (row1, col1)</div>
+      <div>• latte_red (row1, col2)</div>
+      <div>• icy_indigo (row1, col3)</div>
+      <div>• storm_blue (row2, col1)</div>
+      <div>• sky_blue (row2, col2)</div>
+      <div>• sunlight_gold (row2, col3)</div>
+      <div>• fresh_green (row3, col1)</div>
+      <div>• soft_rose (row3, col2)</div>
+      <div>• neutral_cyan (row3, col3)</div>
+      <div>• amber_cream (row4, col1)</div>
+      <div>• nature_green (row4, col2)</div>
+      <div>• cherry_blossom (row4, col3)</div>
+      <div>• ocean_mist (row5, col1)</div>
+      <div>• lime_leaf (row5, col2)</div>
+      <div>• pastel_pink (row5, col3)</div>
+      <div>• lavender_dream (row6, col1)</div>
+      <div>• gray_cloud (row6, col2)</div>
+      <div>• frost_steel (row6, col3)</div>
+      <div>• earth_brown (row7, col1)</div>
+      <div>• royal_violet (row7, col2)</div>
+      <div>• lemon_glow (row7, col3)</div>
+      <div>• arctic_wave (row8, col1)</div>
+      <div>• spicy_coral (row8, col2)</div>
+      <div>• berry_grape (row8, col3)</div>
+      <div>• midnight_violet (row9, col1)</div>
+      <div>• teal_neon (row9, col2)</div>
+      <div>• dark_github (row9, col3)</div>
+      <div>• classic_monokai (row10, col1)</div>
+      <div>• cyber_aqua (row10, col2)</div>
+      <div>• warm_graphite (row10, col3)</div>
+    </div>
+  </details>
+</div>
+
+### Component Types
 
 <div align="center">
-  <img src="static/heatmap.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=heatmap" width="250"/>
-  <img src="static/basic.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=basic" width="250"/>
+  <img src="static/types/heatmap.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=heatmap" width="250"/>
+  <img src="static/types/basic.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=basic" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/weekly_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
-  <img src="static/weekly_avg_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_avg&component1_chart_type=bar" width="250"/>
-  <img src="static/rank.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=rank" width="250"/>
+  <img src="static/types/weekly_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bar" width="250"/>
+  <img src="static/types/weekly_avg_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_avg&component1_chart_type=bar" width="250"/>
+  <img src="static/types/rank.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=rank" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/weekly_langs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_langs&component1_chart_type=bar" width="250"/>
-  <img src="static/weekly_projs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_projs&component1_chart_type=bar" width="250"/>
-  <img src="static/all_projs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_projs&component1_chart_type=bar_vertical" width="250"/>
+  <img src="static/types/weekly_langs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_langs&component1_chart_type=bar" width="250"/>
+  <img src="static/types/weekly_projs_bar.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly_projs&component1_chart_type=bar" width="250"/>
+  <img src="static/types/all_projs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_projs&component1_chart_type=bar_vertical" width="250"/>
 </div>
 
 <div align="center">
-  <img src="static/all_langs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
-  <img src="static/spedometer.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=spedometer" width="250"/>
+  <img src="static/types/all_langs_bar_vertical.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=all_langs&component1_chart_type=bar_vertical" width="250"/>
+  <img src="static/types/spedometer.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=spedometer" width="250"/>
+</div>
+
+<div align="center"> 
+  <details>
+    <summary>Name key for component types</summary>
+    <div style="text-align: left; display: inline-block;">
+      <div>• heatmap (row1, col1)</div>
+      <div>• basic (row1, col2)</div>
+      <div>• weekly (row2, col1)</div>
+      <div>• weekly_avg (row2, col2)</div>
+      <div>• rank (row2, col3)</div>
+      <div>• weekly_langs (row3, col1)</div>
+      <div>• weekly_projs (row3, col2)</div>
+      <div>• all_projs (row3, col3)</div>
+      <div>• all_langs (row4, col1)</div>
+      <div>• spedometer (row4, col2)</div>
+    </div>
+  </details>
 </div>
 
 ### Chart Types
@@ -168,6 +270,26 @@ height="420"/>
   <img src="static/chart_types/weekly_bubble.svg" alt="TO USE: https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&components=1&component1_type=weekly&component1_chart_type=bubble" width="250"/>
 </div>
 
+<div align="center"> 
+  <details>
+    <summary>Name key for chart types</summary>
+    <div style="text-align: left; display: inline-block;">
+      <div>• bar (row1, col1)</div>
+      <div>• line (row1, col2)</div>
+      <div>• area (row1, col3)</div>
+      <div>• bar_vertical (row2, col1)</div>
+      <div>• spiral (row2, col2)</div>
+      <div>• donut (row2, col3)</div>
+      <div>• radar (row3, col1)</div>
+      <div>• bubble (row3, col2)</div>
+    </div>
+  </details>
+</div>
+
+<br/>
+<details>
+<summary>Click to expand full customization parameter list</summary>
+  
 ### All Shared Parameters
 
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
@@ -209,7 +331,6 @@ height="420"/>
 | `custom_emojis`          | `spedometer`                           | 5 emojis string                  | Used when label_type includes customEmoji variations.                                 | `component1_custom_emojis=🐢🐇🚀🔥👑`    |
 | `show_high_score`        | `spedometer`                           | `true` / `false`              | Whether to show your highest speed value.                                      | `component1_show_high_score=true`    |
 
-
 🧾 Notes on chart_type compatibility:
 - bar: in all chart components
 - radar: only in weekly_avg and weekly
@@ -217,3 +338,4 @@ height="420"/>
 - bar_vertical: only in all_langs, all_projs
 - bubble, donut: not in weekly_langs, weekly_projs
 - spiral: only in weekly, weekly_avg
+</details>
