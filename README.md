@@ -28,7 +28,7 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
    - Set your WakaTime profile to **public** and confirm your **username**
    - Connect it to your IDE: [Editor Setup Guide](https://wakatime.com/plugins)
 
-2. **Get your API Key**  
+2. **Set your API Key**  
    - Copy your API Key from [your WakaTime account settings](https://wakatime.com/settings/account)
    - Go to your GitHub repository where you want to display your stats -> Settings -> Secrets and variables -> Actions
    - Select new repository secret and add the name as "WAKATIME_API_KEY" and the value as the API key you copied
