@@ -57,15 +57,15 @@ jobs:
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
-          mkdir -p .github/workflows
+          mkdir -p wakatime
           curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY" \
-            -o .github/workflows/wakatime-stats.svg
+            -o wakatime/stats.svg
 
       - name: Commit SVG to repo
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add .github/workflows/wakatime-stats.svg
+          git add wakatime/stats.svg
           git commit -m "Update WakaTime stats SVG" || echo "No changes"
           git push
 ```
@@ -73,7 +73,7 @@ jobs:
 4. **Add the Stats Card to your README**
 
 ```md
-<img src=".github/workflows/wakatime-stats.svg" height="300"/>
+<img src="wakatime/stats.svg" height="300"/>
 ```
 
 ## Formatting Examples
