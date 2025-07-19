@@ -50,6 +50,9 @@ on:
     - cron: '0 */6 * * *' # every 6 hours
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate-stats:
     runs-on: ubuntu-latest
