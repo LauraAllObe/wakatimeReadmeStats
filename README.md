@@ -104,7 +104,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ```
 <img src="static/wakaOnly.svg" width="300"/>
 
-> Heads up: Heatmap, Basic Stats, and Star Rank now default to GitHub data when you provide a `github_token` and keep `default_source=github`. If the token is missing or you set `default_source=waka`, they will use WakaTime data instead.
+> ⚠️Heads up⚠️: Heatmap, Basic Stats, and Star Rank now default to GitHub data when you provide a `github_token` and keep `default_source=github`. You can also set `default_source=combo` per component to blend GitHub + WakaTime (heatmap/basic). If the token is missing or you set `default_source=waka`, they will use WakaTime data instead.
 
 ### Full URL (Multiple Components + Styling + Scaling)
 
@@ -317,7 +317,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
 |--------------------------|------------------------|----------------------|---------------------------------------------------------------------------------|-------------------------------------|
 | `username`               | All                    | `string`             | **Required**. Your WakaTime username (from your WakaTime profile URL).          | `username=yourname`               |
-| `default_source`         | All                    | `github` (default) / `waka` | Chooses which data source to prefer when a component supports both. Rank card will auto-fallback to WakaTime if `github_token` is missing. | `default_source=github`           |
+| `default_source`         | All / per-component    | `github` (default) / `waka` / `combo` | Chooses which data source to prefer when a component supports both. Rank card will auto-fallback to WakaTime if `github_token` is missing. Heatmap/Basic can also use `combo` to blend GitHub + WakaTime (taking the larger value where applicable). | `default_source=github` / `component1_default_source=combo` |
 | `theme`                  | All                    | `string`             | Color theme for all card colors.                                                | `theme=teal_neon`                 |
 | `bg_color`               | All                    | hex color            | Background color of the SVG card.                                               | `bg_color=ffffff`                 |
 | `title_color`            | All                    | hex color            | Color of the title text.                                                        | `title_color=000000`              |
@@ -350,6 +350,13 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 | `num_langs`, `num_projs` | `all_langs`, `all_projs`               | integer                        | How many top items to show.                                                    | `component2_num_langs=5`            |
 | `heatmap_color`          | `heatmap`                              | hex color                     | Color of the heatmap blocks.                                                   | `component3_heatmap_color=fcf9f2`    |
 | `rank_color`             | `rank`                                 | hex color                     | Color of the rank highlight.                                                   | `component2_rank_color=ffcc00`       |
+| `hide_github_contributions` | `basic` (GitHub/combo)              | `true` / `false`              | Hide GitHub total contributions line.                                         | `component1_hide_github_contributions=true` |
+| `hide_github_commits`    | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub commits line.                                                      | `component1_hide_github_commits=true` |
+| `hide_github_prs`        | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub pull requests line.                                               | `component1_hide_github_prs=true` |
+| `hide_github_issues`     | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub issues line.                                                      | `component1_hide_github_issues=true` |
+| `hide_github_reviews`    | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub reviews line.                                                     | `component1_hide_github_reviews=true` |
+| `hide_github_stars`      | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub stars line.                                                       | `component1_hide_github_stars=true` |
+| `hide_github_followers`  | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub followers line.                                                   | `component1_hide_github_followers=true` |
 | `difficulty`             | `spedometer`                           | `self`, `easy`, `medium`, `hard`      | Difficulty range for spedometer gauge.                                         | `component1_difficulty=medium`       |
 | `label_type`             | `spedometer`                           | `standard`, `emoji`, `game`, `emojiStandard`, `emojiGame`, `customEmoji`, `customEmojiStandard`, `customEmojiGame`           | How labels are shown above the gauge.                                          | `component1_label_type=emojiGame`        |
 | `custom_emojis`          | `spedometer`                           | 5 emojis string                  | Used when label_type includes customEmoji variations.                                 | `component1_custom_emojis=🐢🐇🚀🔥👑`    |
