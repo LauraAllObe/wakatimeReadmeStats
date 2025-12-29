@@ -28,7 +28,7 @@ function log_normal_cdf(x) {
  * @param {number} params.prs The number of pull requests.
  * @param {number} params.issues The number of issues.
  * @param {number} params.reviews The number of reviews.
- * @param {number} params.repos Total number of repos.
+ * @param {number} params.repos Total repos contributed to.
  * @param {number} params.stars The number of stars.
  * @param {number} params.followers The number of followers.
  * @returns {{ level: string, percentile: number }} The users rank.
@@ -39,8 +39,7 @@ function calculateRank({
   prs,
   issues,
   reviews,
-  // eslint-disable-next-line no-unused-vars
-  repos, // unused
+  repos,
   stars,
   followers,
 }) {
@@ -52,6 +51,8 @@ function calculateRank({
     ISSUES_WEIGHT = 1;
   const REVIEWS_MEDIAN = 2,
     REVIEWS_WEIGHT = 1;
+  const REPOS_MEDIAN = 5,
+    REPOS_WEIGHT = 2;
   const STARS_MEDIAN = 50,
     STARS_WEIGHT = 4;
   const FOLLOWERS_MEDIAN = 10,
@@ -62,6 +63,7 @@ function calculateRank({
     PRS_WEIGHT +
     ISSUES_WEIGHT +
     REVIEWS_WEIGHT +
+    REPOS_WEIGHT +
     STARS_WEIGHT +
     FOLLOWERS_WEIGHT;
 
@@ -74,6 +76,7 @@ function calculateRank({
       PRS_WEIGHT * exponential_cdf(prs / PRS_MEDIAN) +
       ISSUES_WEIGHT * exponential_cdf(issues / ISSUES_MEDIAN) +
       REVIEWS_WEIGHT * exponential_cdf(reviews / REVIEWS_MEDIAN) +
+      REPOS_WEIGHT * log_normal_cdf(repos / REPOS_MEDIAN) +
       STARS_WEIGHT * log_normal_cdf(stars / STARS_MEDIAN) +
       FOLLOWERS_WEIGHT * log_normal_cdf(followers / FOLLOWERS_MEDIAN)) /
       TOTAL_WEIGHT;
