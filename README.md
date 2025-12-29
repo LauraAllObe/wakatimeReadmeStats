@@ -104,6 +104,8 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ```
 <img src="static/wakaOnly.svg" width="300"/>
 
+> Heads up: Heatmap, Basic Stats, and Star Rank now default to GitHub data when you provide a `github_token` and keep `default_source=github`. If the token is missing or you set `default_source=waka`, they will use WakaTime data instead.
+
 ### Full URL (Multiple Components + Styling + Scaling)
 
 ```
