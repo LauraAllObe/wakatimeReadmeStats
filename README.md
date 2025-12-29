@@ -35,6 +35,7 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
    - Copy your API Key from [your WakaTime account settings](https://wakatime.com/settings/account)
    - Go to your GitHub repository where you want to display your stats -> Settings -> Secrets and variables -> Actions
    - Select new repository secret and add the name as "WAKATIME_API_KEY" and the value as the API key you copied
+   - (Optional, for GitHub-sourced rank calculations) ensure `GITHUB_TOKEN` is available to your workflow. GitHub Actions provides this automatically; you just need to pass it through as shown below.
 
 3. **Add the GitHub Actions Workflow**  
    - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo (example provided below)
@@ -67,9 +68,11 @@ jobs:
       - name: Generate SVG from Vercel API
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p wakatime
-          curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY" \
+          # Remove default_source and github_token params to keep using WakaTime as the default data source.
+          curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY&default_source=github&github_token=$GITHUB_TOKEN" \
             -o wakatime/stats.svg
 
       - name: Commit SVG to repo
@@ -307,6 +310,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
 |--------------------------|------------------------|----------------------|---------------------------------------------------------------------------------|-------------------------------------|
 | `username`               | All                    | `string`             | **Required**. Your WakaTime username (from your WakaTime profile URL).          | `username=yourname`               |
+| `default_source`         | All                    | `waka` (default) / `github` | Chooses which data source to prefer when a component supports both. Currently the rank card supports GitHub when set to `github`. | `default_source=github`           |
 | `theme`                  | All                    | `string`             | Color theme for all card colors.                                                | `theme=teal_neon`                 |
 | `bg_color`               | All                    | hex color            | Background color of the SVG card.                                               | `bg_color=ffffff`                 |
 | `title_color`            | All                    | hex color            | Color of the title text.                                                        | `title_color=000000`              |
