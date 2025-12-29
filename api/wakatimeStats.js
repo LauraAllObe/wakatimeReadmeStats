@@ -37,8 +37,9 @@ export default async function handler(req, res) {
   if (!username) return res.status(400).send('Missing username.');
 
   try {
+    const default_source = (req.query.default ?? 'waka').toLowerCase() === 'waka' ? 'waka' : 'github';
     const apiKey = req.query.api_key || '';
-    if (!apiKey || apiKey === '') throw new Error('Missing WAKATIME_API_KEY');
+    const githubToken = req.query.github_token || process.env.GITHUB_TOKEN || '';
     
     const themeParam = req.query.theme;
     let themeColors = {};
@@ -81,7 +82,9 @@ export default async function handler(req, res) {
       border_radius: parseNumber(req.query.border_radius, 10),
       show_header: parseBoolean(req.query.show_header, true),
       show_logo: parseBoolean(req.query.show_logo, true),
-      title_prefix: req.query.title_prefix ?? ''
+      title_prefix: req.query.title_prefix ?? '',
+      default_source: req.query.default_source ?? 'waka',
+      github_token: githubToken
     };
 
     let count = Math.min(parseInt(components, 10), 10);
@@ -130,6 +133,10 @@ export default async function handler(req, res) {
       if (!componentOptions.type) continue;
 
       const type = componentOptions.type;
+      const requiresGitHub = type == 'rank' && default_source === 'github';
+      if (requiresGitHub && (!apiKey || apiKey === '')) {
+        throw new Error('Missing GITHUB_API_KEY');
+      }
 
       try {
         let result;
