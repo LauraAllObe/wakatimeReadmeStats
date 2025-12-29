@@ -71,8 +71,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p wakatime
-          # Default source is GitHub. If github_token is omitted, it will auto-fallback to WakaTime.
-          curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY&default_source=github&github_token=$GITHUB_TOKEN" \
+          curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY&github_token=$GITHUB_TOKEN" \
             -o wakatime/stats.svg
 
       - name: Commit SVG to repo
