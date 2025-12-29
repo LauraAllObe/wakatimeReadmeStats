@@ -37,13 +37,13 @@ export default async function handler(req, res) {
   if (!username) return res.status(400).send('Missing username.');
 
   try {
-    const defaultParam = (req.query.default_source ?? req.query.default ?? 'waka').toLowerCase();
-    const default_source = defaultParam === 'github' ? 'github' : 'waka';
+    const defaultParam = (req.query.default_source ?? req.query.default ?? 'github').toLowerCase();
+    let default_source = defaultParam === 'waka' ? 'waka' : 'github';
     const apiKey = req.query.api_key || '';
     if (!apiKey || apiKey === '') throw new Error('Missing WAKATIME_API_KEY');
     const githubToken = req.query.github_token || process.env.GITHUB_TOKEN || '';
     if (default_source === 'github' && !githubToken) {
-      throw new Error('Missing GITHUB_TOKEN for GitHub default_source');
+      default_source = 'waka'; // safety fallback when GitHub token is absent
     }
     
     const themeParam = req.query.theme;
