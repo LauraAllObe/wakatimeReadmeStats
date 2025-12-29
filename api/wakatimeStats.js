@@ -73,25 +73,6 @@ export default async function handler(req, res) {
       }
     }
 
-    const sharedStyles = {
-      username,
-      api_key: apiKey ?? '',
-      bg_color: themeColors.bg_color ?? req.query.bg_color ?? 'f8f6f3',
-      title_color: themeColors.title_color ?? req.query.title_color ?? '2d2a26',
-      text_color: themeColors.text_color ?? req.query.text_color ?? '5f574f',
-      logo_color: themeColors.logo_color ?? req.query.logo_color ?? '7a7266',
-  
-      font_family: req.query.font_family ?? 'Calibri',
-      border_color: themeColors.border_color ?? req.query.border_color ?? 'dcd7ce',
-      border_width: parseNumber(req.query.border_width, 2),
-      border_radius: parseNumber(req.query.border_radius, 10),
-      show_header: parseBoolean(req.query.show_header, true),
-      show_logo: parseBoolean(req.query.show_logo, true),
-      title_prefix: req.query.title_prefix ?? '',
-      default_source,
-      github_token: githubToken
-    };
-
     let count = Math.min(parseInt(components, 10), 10);
 
     // If no specific component types were provided, apply default setup
@@ -111,6 +92,25 @@ export default async function handler(req, res) {
     if (!hasComponentTypes && !req.query.scale) {
       req.query.scale = 'true';
     }
+
+    const sharedStyles = {
+      username,
+      api_key: apiKey ?? '',
+      bg_color: themeColors.bg_color ?? req.query.bg_color ?? 'f8f6f3',
+      title_color: themeColors.title_color ?? req.query.title_color ?? '2d2a26',
+      text_color: themeColors.text_color ?? req.query.text_color ?? '5f574f',
+      logo_color: themeColors.logo_color ?? req.query.logo_color ?? '7a7266',
+  
+      font_family: req.query.font_family ?? 'Calibri',
+      border_color: themeColors.border_color ?? req.query.border_color ?? 'dcd7ce',
+      border_width: parseNumber(req.query.border_width, 2),
+      border_radius: parseNumber(req.query.border_radius, 10),
+      show_header: parseBoolean(req.query.show_header, count > 1),
+      show_logo: parseBoolean(req.query.show_logo, true),
+      title_prefix: req.query.title_prefix ?? '',
+      default_source,
+      github_token: githubToken
+    };
 
     const svgParts = [];
     let maxComponentWidth = 0;
