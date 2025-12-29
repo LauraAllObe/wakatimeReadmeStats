@@ -104,10 +104,8 @@ export default async function handler(req, res) {
     }
 
     if (!hasComponentTypes) {
-      count = 2;
+      count = 1;
       req.query['component1_type'] = 'rank';
-      req.query['component2_type'] = 'heatmap';
-      req.query['component2_start_day'] = 'mo';
     }
 
     if (!hasComponentTypes && !req.query.scale) {

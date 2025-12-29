@@ -95,9 +95,15 @@ The card can be customized by changing the curl command in your GitHub actions w
 
 ### Basic URL
 ```
-https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key"
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key&github_token=your_github_token
 ```
 <img src="static/essential.svg" width="300"/>
+
+### WakaTime Only URL (no GitHub token needed)
+```
+https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key&default_source=waka
+```
+<!-- Add your image reference here -->
 
 ### Full URL (Multiple Components + Styling + Scaling)
 
