@@ -74,10 +74,12 @@ export default async function handler(req, res) {
       title_color: themeColors.title_color ?? req.query.title_color ?? '2d2a26',
       text_color: themeColors.text_color ?? req.query.text_color ?? '5f574f',
       logo_color: themeColors.logo_color ?? req.query.logo_color ?? '7a7266',
+  
       font_family: req.query.font_family ?? 'Calibri',
       border_color: themeColors.border_color ?? req.query.border_color ?? 'dcd7ce',
       border_width: parseNumber(req.query.border_width, 2),
       border_radius: parseNumber(req.query.border_radius, 10),
+      show_header: parseBoolean(req.query.show_header, true),
       show_logo: parseBoolean(req.query.show_logo, true),
       title_prefix: req.query.title_prefix ?? ''
     };
