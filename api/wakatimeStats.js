@@ -137,11 +137,10 @@ export default async function handler(req, res) {
       }
       if (!componentOptions.type) continue;
 
-      if (!componentOptions.default_source) {
-        componentOptions.default_source = default_source;
-      }
-
       const type = componentOptions.type;
+      if (!componentOptions.default_source) {
+        componentOptions.default_source = (type === 'basic' && githubToken) ? 'combo' : default_source;
+      }
 
       try {
         let result;
