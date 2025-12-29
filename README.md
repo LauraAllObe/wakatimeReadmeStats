@@ -102,7 +102,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key&default_source=waka
 ```
-<!-- Add your image reference here -->
+<img src="static/wakaOnly.svg" width="300"/>
 
 ### Full URL (Multiple Components + Styling + Scaling)
 
