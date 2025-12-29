@@ -1,0 +1,107 @@
+
+<svg width="363" height="468.5" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;">
+  <rect
+    x="1"
+    y="1"
+    width="361"
+    height="466.5"
+    fill="#f8f6f3"
+    stroke="#dcd7ce"
+    stroke-width="2"
+    rx="10"
+    ry="10"
+  />
+  
+    <g transform="translate(20, 20) scale(0.6741428571428572)">
+      <g transform="scale(0.075)" style="color:#7a7266"><path fill="currentColor" d="M128 0C57.308 0 0 57.308 0 128c0 70.693 57.308 128 128 128 70.693 0 128-57.307 128-128C256 57.308 198.693 0 128 0m0 33.805c51.939 0 94.195 42.256 94.195 94.195 0 51.94-42.256 94.195-94.195 94.195-51.939 0-94.195-42.255-94.195-94.195 0-51.939 42.256-94.195 94.195-94.195m-12.5 121.838h-.113a6.342 6.342 0 0 1-4.953-2.528L81.56 114.732a6.34 6.34 0 0 1 10.131-7.62l23.993 31.893 6.863-8.478a6.34 6.34 0 0 1 4.926-2.35h.008a6.331 6.331 0 0 1 4.93 2.364l6.59 8.187 37.692-48.594a6.338 6.338 0 0 1 10.015 7.77L144.1 152.837a6.338 6.338 0 0 1-4.95 2.453h-.057a6.335 6.335 0 0 1-4.938-2.364l-6.697-8.319-7.033 8.686a6.336 6.336 0 0 1-4.926 2.35"/></g>
+      <text x="30" y="15" fill="#2d2a26" font-size="16" font-family="Calibri">
+        radar WakaTime Stats
+      </text>
+    </g>
+  <g transform="translate(0, 56) scale(1)">
+      <text x="177.5" y="22.5" font-size="12" text-anchor="middle" fill="#5f574f" font-weight="bold">This week, my most productive day was Thursday</text>
+      <path d="M 181.5 119.77731092436973 L 198.25353176717206 127.84538659882544 L 202.39131240389622 145.97418808057648 L 190.79750869537625 160.5123580937073 L 172.20249130462375 160.5123580937073 L 160.60868759610378 145.97418808057648 L 164.74646823282794 127.84538659882544 Z" fill="none" stroke="#d7cfc7" stroke-dasharray="2,2" stroke-width="0.5"/>
+<path d="M 181.5 98.3487394957983 L 215.00706353434413 114.48489084470972 L 223.28262480779244 150.74249380821178 L 200.0950173907525 179.81883383447342 L 162.9049826092475 179.81883383447342 L 139.71737519220756 150.74249380821178 L 147.99293646565587 114.48489084470972 Z" fill="none" stroke="#d7cfc7" stroke-dasharray="2,2" stroke-width="0.5"/>
+<path d="M 181.5 76.92016806722687 L 231.76059530151622 101.124395090594 L 244.17393721168867 155.5107995358471 L 209.39252608612875 199.12530957523956 L 153.60747391387127 199.12530957523956 L 118.82606278831133 155.5107995358471 L 131.23940469848378 101.12439509059402 Z" fill="none" stroke="#d7cfc7" stroke-dasharray="2,2" stroke-width="0.5"/>
+<path d="M 181.5 55.49159663865544 L 248.51412706868828 87.76389933647829 L 265.0652496155849 160.2791052634824 L 218.690034781505 218.43178531600566 L 144.30996521849502 218.43178531600566 L 97.93475038441511 160.2791052634824 L 114.48587293131172 87.76389933647829 Z" fill="none" stroke="#d7cfc7" stroke-dasharray="2,2" stroke-width="0.5"/>
+<line x1="181.5" y1="141.20588235294116" x2="181.5" y2="55.49159663865544" stroke="#d7cfc7" stroke-width="0.5"/>
+<line x1="181.5" y1="141.20588235294116" x2="248.51412706868828" y2="87.76389933647829" stroke="#d7cfc7" stroke-width="0.5"/>
+<line x1="181.5" y1="141.20588235294116" x2="265.0652496155849" y2="160.2791052634824" stroke="#d7cfc7" stroke-width="0.5"/>
+<line x1="181.5" y1="141.20588235294116" x2="218.690034781505" y2="218.43178531600566" stroke="#d7cfc7" stroke-width="0.5"/>
+<line x1="181.5" y1="141.20588235294116" x2="144.30996521849502" y2="218.43178531600566" stroke="#d7cfc7" stroke-width="0.5"/>
+<line x1="181.5" y1="141.20588235294116" x2="97.93475038441511" y2="160.2791052634824" stroke="#d7cfc7" stroke-width="0.5"/>
+<line x1="181.5" y1="141.20588235294116" x2="114.48587293131172" y2="87.76389933647829" stroke="#d7cfc7" stroke-width="0.5"/>
+<polygon points="181.5,113.04523422148775 233.83897985201634,99.46693871970584 265.0652496155849,160.2791052634824 203.42772843160597,186.7392796193985 156.2263725980718,193.68711042204197 134.7844740503588,151.86839630365048 172.99581992366538,134.42402504780037" fill="#9c8f80" fill-opacity="0.2" stroke="#9c8f80" stroke-width="2"/>
+<text x="181.5" y="43.49159663865544" font-size="10" text-anchor="middle" alignment-baseline="middle" fill="#5f574f">Tue</text>
+<text x="257.8961048583046" y="80.28202171417348" font-size="10" text-anchor="middle" alignment-baseline="middle" fill="#5f574f">Wed</text>
+<text x="276.76438456176675" y="162.94935647095818" font-size="10" text-anchor="middle" alignment-baseline="middle" fill="#5f574f">Thu</text>
+<text x="223.8966396509157" y="229.24341173083468" font-size="10" text-anchor="middle" alignment-baseline="middle" fill="#5f574f">Fri</text>
+<text x="139.1033603490843" y="229.24341173083468" font-size="10" text-anchor="middle" alignment-baseline="middle" fill="#5f574f">Sat</text>
+<text x="86.23561543823322" y="162.94935647095818" font-size="10" text-anchor="middle" alignment-baseline="middle" fill="#5f574f">Sun</text>
+<text x="105.10389514169536" y="80.2820217141735" font-size="10" text-anchor="middle" alignment-baseline="middle" fill="#5f574f">Mon</text>
+
+                <text x="27.5" y="276.5" font-size="10" font-weight="bold" fill="#5f574f">
+                  Tue:
+                </text>
+                <rect x="75.5" y="266.5" width="73" height="14" fill="#9c8f80" fill-opacity="0.30" />
+                <text x="112" y="277.5" font-size="9" text-anchor="middle" fill="#5f574f">
+                  01:39 (8.1%)
+                </text>
+              
+
+                <text x="207.5" y="276.5" font-size="10" font-weight="bold" fill="#5f574f">
+                  Wed:
+                </text>
+                <rect x="255.5" y="266.5" width="73" height="14" fill="#9c8f80" fill-opacity="0.57" />
+                <text x="292" y="277.5" font-size="9" text-anchor="middle" fill="#5f574f">
+                  03:56 (19.2%)
+                </text>
+              
+
+                <text x="27.5" y="300.5" font-size="10" font-weight="bold" fill="#5f574f">
+                  Thu:
+                </text>
+                <rect x="75.5" y="290.5" width="73" height="14" fill="#9c8f80" fill-opacity="0.70" />
+                <text x="112" y="301.5" font-size="9" text-anchor="middle" fill="#5f574f">
+                  05:02 (24.6%)
+                </text>
+              
+
+                <text x="207.5" y="300.5" font-size="10" font-weight="bold" fill="#5f574f">
+                  Fri:
+                </text>
+                <rect x="255.5" y="290.5" width="73" height="14" fill="#9c8f80" fill-opacity="0.45" />
+                <text x="292" y="301.5" font-size="9" text-anchor="middle" fill="#5f574f">
+                  02:58 (14.5%)
+                </text>
+              
+
+                <text x="27.5" y="324.5" font-size="10" font-weight="bold" fill="#5f574f">
+                  Sat:
+                </text>
+                <rect x="75.5" y="314.5" width="73" height="14" fill="#9c8f80" fill-opacity="0.51" />
+                <text x="112" y="325.5" font-size="9" text-anchor="middle" fill="#5f574f">
+                  03:25 (16.7%)
+                </text>
+              
+
+                <text x="207.5" y="324.5" font-size="10" font-weight="bold" fill="#5f574f">
+                  Sun:
+                </text>
+                <rect x="255.5" y="314.5" width="73" height="14" fill="#9c8f80" fill-opacity="0.44" />
+                <text x="292" y="325.5" font-size="9" text-anchor="middle" fill="#5f574f">
+                  02:49 (13.8%)
+                </text>
+              
+
+                <text x="27.5" y="348.5" font-size="10" font-weight="bold" fill="#5f574f">
+                  Mon:
+                </text>
+                <rect x="75.5" y="338.5" width="73" height="14" fill="#9c8f80" fill-opacity="0.18" />
+                <text x="112" y="349.5" font-size="9" text-anchor="middle" fill="#5f574f">
+                  38m (3.1%)
+                </text>
+              
+      <text x="177.5" y="382.5" font-size="12" text-anchor="middle" fill="#5f574f"><tspan font-weight="bold">Total:</tspan> 20 hrs 30 mins</text>
+    </g>
+</svg>

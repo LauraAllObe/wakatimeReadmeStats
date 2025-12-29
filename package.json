@@ -1,0 +1,33 @@
+{
+  "name": "wakatime-readme-stats",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "api/wakatimeStats.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.35.1",
+    "canvas": "^3.1.0",
+    "d3-hierarchy": "^3.1.2",
+    "dotenv": "^16.5.0",
+    "next": "^16.0.7",
+    "node-fetch": "^3.3.2"
+  },
+  "description": "project-root/\r ├── api/\r │   └── wakatimeStats.js     # Vercel function entry point\r ├── lib/\r │   ├── heatmapCard.js        # generates SVG for heatmap\r │   └── basicStatsCard.js     # generates SVG for basic stats\r ├── server/\r │   └── server.js             # server code\r ├── package.json\r ├── vercel.json               # config file (optional)",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauraAllObe/wakatimeReadmeStats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauraAllObe/wakatimeReadmeStats/issues"
+  },
+  "homepage": "https://github.com/LauraAllObe/wakatimeReadmeStats#readme"
+}
