@@ -134,6 +134,10 @@ export default async function handler(req, res) {
       }
       if (!componentOptions.type) continue;
 
+      if (!componentOptions.mode && req.query.mode) {
+        componentOptions.mode = req.query.mode;
+      }
+
       const type = componentOptions.type;
 
       let componentDefaultSource = componentOptions.default_source ?? default_source;
