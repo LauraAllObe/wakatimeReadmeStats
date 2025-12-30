@@ -40,9 +40,11 @@ export default async function handler(req, res) {
     const apiKey = req.query.api_key || '';
     if (!apiKey || apiKey === '') throw new Error('Missing WAKATIME_API_KEY');
     const githubToken = req.query.github_token || process.env.GITHUB_TOKEN || '';
-    const userDefault = (req.query.default_source ?? req.query.default ?? '').toLowerCase();
-    const default_source = githubToken ? 'combo' : 'waka';
-    
+    const userDefaultSource = req.query.default_source;
+    const default_source = githubToken
+      ? (userDefaultSource ?? 'combo')
+      : 'waka';
+
     const themeParam = req.query.theme;
     let themeColors = {};
 
@@ -133,9 +135,14 @@ export default async function handler(req, res) {
       if (!componentOptions.type) continue;
 
       const type = componentOptions.type;
-      if (!componentOptions.default_source) {
-        componentOptions.default_source = (type === 'basic' && githubToken) ? 'combo' : default_source;
+
+      let componentDefaultSource = componentOptions.default_source ?? default_source;
+      if (!githubToken) {
+        componentDefaultSource = 'waka';
+      } else if (type === 'rank' && componentDefaultSource === 'combo') {
+        componentDefaultSource = 'github';
       }
+      componentOptions.default_source = componentDefaultSource;
 
       try {
         let result;

@@ -104,7 +104,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ```
 <img src="static/wakaOnly.svg" width="300"/>
 
-> ⚠️Heads up⚠️: Heatmap, Basic Stats, and Star Rank now default to GitHub data when you provide a `github_token` and keep `default_source=github`. You can also set `default_source=combo` per component to blend GitHub + WakaTime (heatmap/basic). If the token is missing or you set `default_source=waka`, they will use WakaTime data instead.
+> Heads up: If you omit `github_token`, everything forces `default_source=waka`. With a `github_token`, shared and per-component defaults are `combo` unless you override them. Star Rank doesn't support `combo`, so it will use GitHub when a token is present and WakaTime otherwise.
 
 ### Full URL (Multiple Components + Styling + Scaling)
 
@@ -317,7 +317,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 | **Parameter**            | **Components**         | **Value**            | **Description**                                                                 | **Example**                         |
 |--------------------------|------------------------|----------------------|---------------------------------------------------------------------------------|-------------------------------------|
 | `username`               | All                    | `string`             | **Required**. Your WakaTime username (from your WakaTime profile URL).          | `username=yourname`               |
-| `default_source`         | All / per-component    | `github` (default) / `waka` / `combo` | Chooses data source. If `github_token` is missing, everything falls back to `waka`. If `github_token` is present and you do not specify a value, it defaults to `combo`. Rank card auto-fallbacks when token is missing. Heatmap/Basic can blend via `combo` (take larger per-day/per-metric). | `default_source=github` / `component1_default_source=combo` |
+| `default_source`         | All / per-component    | `waka` / `github` / `combo` (default: `waka` without `github_token`, `combo` with one) | Chooses data source. Without `github_token`, all cards use `waka`. With a token, defaults to `combo` unless you override; Star Rank treats `combo` as GitHub when a token exists (WakaTime otherwise). | `default_source=waka` / `component1_default_source=combo` |
 | `theme`                  | All                    | `string`             | Color theme for all card colors.                                                | `theme=teal_neon`                 |
 | `bg_color`               | All                    | hex color            | Background color of the SVG card.                                               | `bg_color=ffffff`                 |
 | `title_color`            | All                    | hex color            | Color of the title text.                                                        | `title_color=000000`              |
