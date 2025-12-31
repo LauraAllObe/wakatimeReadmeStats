@@ -26,19 +26,26 @@ It pulls your latest WakaTime data and renders it as rich SVG charts you can emb
   <img src="https://drive.google.com/uc?export=view&id=19uzZJNvf0ZplFIJhzFBMlDRLBYd5BlFJ" alt="Video Thumbnail" height="400"/>
 </a>
 
-1. **Create a WakaTime Account**  
-   - Sign up at [wakatime.com/signup](https://wakatime.com/signup)
-   - Set your WakaTime profile to **public** and confirm your **username**
-   - Connect it to your IDE: [Editor Setup Guide](https://wakatime.com/plugins)
+1. **Create a WakaTime account**
+   - Sign up: https://wakatime.com/signup
+   - Set your profile to **public** and note your **username**
+   - Connect WakaTime to your IDE
 
-2. **Set your API Key**  
-   - Copy your API Key from [your WakaTime account settings](https://wakatime.com/settings/account)
-   - Go to your GitHub repository where you want to display your stats -> Settings -> Secrets and variables -> Actions
-   - Select new repository secret and add the name as "WAKATIME_API_KEY" and the value as the API key you copied
-   - (Optional but recommended for GitHub-sourced rank calculations) ensure `GITHUB_TOKEN` is available to your workflow. GitHub Actions provides this automatically; you just need to pass it through as shown below. If the token is missing and you request GitHub as the default source, the service will safely fall back to WakaTime data.
+2. **Add your WakaTime API key (required)**
+   - Copy your API key: https://wakatime.com/settings/account
+   - In your GitHub repo:
+     - **Settings → Secrets and variables → Actions → New repository secret**
+     - **Name:** `WAKATIME_API_KEY`
+     - **Value:** *(your API key)*
 
-3. **Add the GitHub Actions Workflow**  
-   - Create a new workflow file at ```.github/workflows/wakatime-stats.yml``` in your repo (example provided below)
+3. **Set up a GitHub token (recommended)**
+
+   **Option A — Built-in token (recommended, no setup required)**  
+   GitHub Actions automatically provides `secrets.GITHUB_TOKEN`.  
+   Ensure your workflow includes:
+   ```yml
+   permissions:
+     contents: write
 
 <details>
 <summary>Copy/Paste-Ready Example</summary>
@@ -51,7 +58,7 @@ name: Update WakaTime Stats SVG
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # every 6 hours
+    - cron: "0 */6 * * *" # every 6 hours
   workflow_dispatch:
 
 permissions:
@@ -63,30 +70,48 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Generate SVG from Vercel API
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           mkdir -p wakatime
-          curl -s "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY&github_token=$GITHUB_TOKEN" \
+          curl -fsSL "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=$GITHUB_ACTOR&api_key=$WAKATIME_API_KEY&github_token=$GITHUB_TOKEN" \
             -o wakatime/stats.svg
 
-      - name: Commit SVG to repo
+      - name: Bump README cache-buster for wakatime/stats.svg (daily)
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add wakatime/stats.svg
-          git commit -m "Update WakaTime stats SVG" || echo "No changes"
+          set -euo pipefail
+
+          V="$(date -u +%Y%m%d)"  # changes once per day
+
+          # Replace existing ?v=... if present
+          sed -i -E "s|(wakatime/stats\.svg)\?v=[0-9]+|\1?v=$V|g" README.md
+
+          # If no ?v= present, append it inside src="..."
+          sed -i -E "s|(wakatime/stats\.svg)(\"|')|\1?v=$V\2|g" README.md
+
+      - name: Commit changes to repo
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add wakatime/stats.svg README.md
+          git diff --cached --quiet && echo "No changes" && exit 0
+
+          git commit -m "Update WakaTime stats SVG (cache-bust v=$(date -u +%Y%m%d))"
           git push
 ```
 </details>
 
 4. **Add the Stats Card to your README**
-   - Add this to your readme: ```md <img src="wakatime/stats.svg" height="300"/>```
+   - Add this to your readme: ```md <img src="wakatime/stats.svg?v=1" height="300"/>```
    - To update immediately, navigate to actions -> Update WakaTime Stats SVG (or other name used) -> Run Workflow and click **Run Now**.
+   - If you’re using a profile README (<username>/<username> repo), put the workflow in that repo (the same place as the README being edited).
 
 ## Formatting Examples
 
