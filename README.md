@@ -121,30 +121,27 @@ The card can be customized by changing the curl command in your GitHub actions w
 ```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key&github_token=your_github_token
 ```
-<img src="static/essential.svg" width="300"/>
+<div align="center">
+  <img src="static/basicGithub.svg" width="300"/>
+  <img src="static/basic.svg" width="300"/><br/>
 
-<details>
-<summary>Star Rank quick picks (click to expand)</summary>
+  <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic (&component1_mode=level)</sub>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>add &amp;component1_default_source=waka</sub>
+</div>
 
-- Waka level: `&component1_type=rank&component1_default_source=waka&component1_mode=level`
-<img src="static/essential.svg" width="300"/>
-- GitHub level: `&component1_type=rank&component1_default_source=github&component1_mode=level`
-<img src="static/essential.svg" width="300"/>
-- GitHub stats: `&component1_type=rank&component1_default_source=github&component1_mode=stats`
-<img src="static/essential.svg" width="300"/>
-- GitHub progress: `&component1_type=rank&component1_default_source=github&component1_mode=progress`
-<img src="static/essential.svg" width="300"/>
+<br/>
 
-*(Add `&component1_show_icons=false` if you dont want the icons.)*
-</details>
+<div align="center">
+  <img src="static/statsGithub.svg" width="300"/>
+  <img src="static/progressGithub.svg" width="300"/><br/>
 
-### WakaTime Only URL (no GitHub token needed)
-```
-https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key&default_source=waka
-```
-<img src="static/wakaOnly.svg" width="300"/>
+  <sub>add &amp;component1_mode=stats</sub>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>&nbsp;&nbsp;&nbsp;add &amp;component1_mode=progress</sub>
+</div>
 
-> Heads up: Without `github_token`, all cards force `default_source=waka` (shared and per-component). With a `github_token`, shared and per-component defaults are `combo` unless you override them. Star Rank treats `combo` as GitHub when a token exists, and as WakaTime when it doesn't.
+> Heads up: Without `github_token`, all cards force `default_source=waka` and (shared and per-component) and `mode=level` on rank card. With a `github_token`, shared and per-component defaults are `combo` unless you override them. Star Rank treats `combo` as GitHub when a token exists, and as WakaTime when it doesn't.
 
 ### Full URL (Multiple Components + Styling + Scaling)
 
@@ -159,7 +156,7 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ```
 *Remember to remove spaces and newlines*
 
-<img src="static/example.svg" width="300"/>
+<img src="static/example.svg" width="450"/>
 
 ## Troubleshooting
 
