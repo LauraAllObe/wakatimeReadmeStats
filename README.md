@@ -125,9 +125,9 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
   <img src="static/basicGithub.svg" width="300"/>
   <img src="static/basic.svg" width="300"/><br/>
 
-  <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic (&component1_mode=level)</sub>
+  <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic (`&component1_mode=level`)</sub>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>add &amp;component1_default_source=waka</sub>
+  <sub>add `&component1_default_source=waka`</sub>
 </div>
 
 <br/>
@@ -136,9 +136,9 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
   <img src="static/statsGithub.svg" width="300"/>
   <img src="static/progressGithub.svg" width="300"/><br/>
 
-  <sub>add &amp;component1_mode=stats</sub>
+  <sub>add `&component1_mode=stats`</sub>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>&nbsp;&nbsp;&nbsp;add &amp;component1_mode=progress</sub>
+  <sub>&nbsp;&nbsp;&nbsp;add `&component1_mode=progress`</sub>
 </div>
 
 > Heads up: Without `github_token`, all cards force `default_source=waka` and (shared and per-component) and `mode=level` on rank card. With a `github_token`, shared and per-component defaults are `combo` unless you override them. Star Rank treats `combo` as GitHub when a token exists, and as WakaTime when it doesn't.
