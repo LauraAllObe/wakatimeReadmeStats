@@ -33,6 +33,28 @@ function log_normal_cdf(x) {
  * @param {number} params.followers The number of followers.
  * @returns {{ level: string, percentile: number }} The users rank.
  */
+const MEDIANS = {
+  commits: { all: 1000, recent: 250 },
+  prs: 50,
+  issues: 25,
+  reviews: 2,
+  repos: 5,
+  stars: 50,
+  followers: 10
+};
+
+function getMedians(all_commits) {
+  return {
+    commits: all_commits ? MEDIANS.commits.all : MEDIANS.commits.recent,
+    prs: MEDIANS.prs,
+    issues: MEDIANS.issues,
+    reviews: MEDIANS.reviews,
+    repos: MEDIANS.repos,
+    stars: MEDIANS.stars,
+    followers: MEDIANS.followers
+  };
+}
+
 function calculateRank({
   all_commits,
   commits,
@@ -43,19 +65,20 @@ function calculateRank({
   stars,
   followers,
 }) {
-  const COMMITS_MEDIAN = all_commits ? 1000 : 250,
+  const medians = getMedians(all_commits);
+  const COMMITS_MEDIAN = medians.commits,
     COMMITS_WEIGHT = 2;
-  const PRS_MEDIAN = 50,
+  const PRS_MEDIAN = medians.prs,
     PRS_WEIGHT = 3;
-  const ISSUES_MEDIAN = 25,
+  const ISSUES_MEDIAN = medians.issues,
     ISSUES_WEIGHT = 1;
-  const REVIEWS_MEDIAN = 2,
+  const REVIEWS_MEDIAN = medians.reviews,
     REVIEWS_WEIGHT = 1;
-  const REPOS_MEDIAN = 5,
+  const REPOS_MEDIAN = medians.repos,
     REPOS_WEIGHT = 2;
-  const STARS_MEDIAN = 50,
+  const STARS_MEDIAN = medians.stars,
     STARS_WEIGHT = 4;
-  const FOLLOWERS_MEDIAN = 10,
+  const FOLLOWERS_MEDIAN = medians.followers,
     FOLLOWERS_WEIGHT = 1;
 
   const TOTAL_WEIGHT =
@@ -81,10 +104,10 @@ function calculateRank({
       FOLLOWERS_WEIGHT * log_normal_cdf(followers / FOLLOWERS_MEDIAN)) /
       TOTAL_WEIGHT;
 
-  const level = LEVELS[THRESHOLDS.findIndex((t) => rank * 100 <= t)];
+const level = LEVELS[THRESHOLDS.findIndex((t) => rank * 100 <= t)];
 
   return { level, percentile: rank * 100 };
 }
 
-export { calculateRank };
+export { calculateRank, getMedians, MEDIANS };
 export default calculateRank;

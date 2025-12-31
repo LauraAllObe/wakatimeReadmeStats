@@ -98,6 +98,21 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 ```
 <img src="static/essential.svg" width="300"/>
 
+<details>
+<summary>Star Rank quick picks (click to expand)</summary>
+
+- Waka level: `&component1_type=rank&component1_default_source=waka&component1_mode=level`
+<img src="static/essential.svg" width="300"/>
+- GitHub level: `&component1_type=rank&component1_default_source=github&component1_mode=level`
+<img src="static/essential.svg" width="300"/>
+- GitHub stats: `&component1_type=rank&component1_default_source=github&component1_mode=stats`
+<img src="static/essential.svg" width="300"/>
+- GitHub progress: `&component1_type=rank&component1_default_source=github&component1_mode=progress`
+<img src="static/essential.svg" width="300"/>
+
+*(Add `&component1_show_icons=false` if you dont want the icons.)*
+</details>
+
 ### WakaTime Only URL (no GitHub token needed)
 ```
 https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatime_username&api_key=your_api_key&default_source=waka
@@ -357,7 +372,8 @@ https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=your_wakatim
 | `hide_github_reviews`    | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub reviews line.                                                     | `component1_hide_github_reviews=true` |
 | `hide_github_stars`      | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub stars line.                                                       | `component1_hide_github_stars=true` |
 | `hide_github_followers`  | `basic` (GitHub/combo)                 | `true` / `false`              | Hide GitHub followers line.                                                   | `component1_hide_github_followers=true` |
-| `mode`                   | `rank`                                 | `level` (default), `stats`, `progress` | Switch right-hand display: `level` shows tier/progress, `stats` shows the GitHub inputs, `progress` shows how many more of each stat are needed for the next tier (GitHub only). | `component1_mode=stats` |
+| `mode`                   | `rank`                                 | `level` (default), `stats`, `progress` | Switch right-hand display: `level` shows tier/progress, `stats` shows GitHub inputs, `progress` shows how many more of each stat are needed for the next tier (GitHub only). If `default_source=waka`, non-`level` modes fall back to `level`. | `component1_mode=stats` |
+| `show_icons`             | `rank`                                 | `true` / `false`              | Show colored icons beside rank stats/progress rows.                           | `component1_show_icons=true` |
 | `difficulty`             | `spedometer`                           | `self`, `easy`, `medium`, `hard`      | Difficulty range for spedometer gauge.                                         | `component1_difficulty=medium`       |
 | `label_type`             | `spedometer`                           | `standard`, `emoji`, `game`, `emojiStandard`, `emojiGame`, `customEmoji`, `customEmojiStandard`, `customEmojiGame`           | How labels are shown above the gauge.                                          | `component1_label_type=emojiGame`        |
 | `custom_emojis`          | `spedometer`                           | 5 emojis string                  | Used when label_type includes customEmoji variations.                                 | `component1_custom_emojis=🐢🐇🚀🔥👑`    |

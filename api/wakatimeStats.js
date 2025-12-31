@@ -293,7 +293,8 @@ export default async function handler(req, res) {
             ...sharedStyles,
             ...componentOptions,
             rank_color: componentOptions.rank_color ?? themeColors.rank_color ?? '#9c8f80',
-            hide_title: parseBoolean(componentOptions.hide_title, false)
+            hide_title: parseBoolean(componentOptions.hide_title, false),
+            show_icons: parseBoolean(componentOptions.show_icons ?? req.query.show_icons, true),
           });
         } else {
           svgParts.push({
