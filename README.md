@@ -88,11 +88,8 @@ jobs:
 
           V="$(date -u +%Y%m%d)"  # changes once per day
 
-          # Replace existing ?v=... if present
-          sed -i -E "s|(wakatime/stats\.svg)\?v=[0-9]+|\1?v=$V|g" README.md
-
-          # If no ?v= present, append it inside src="..."
-          sed -i -E "s|(wakatime/stats\.svg)(\"|')|\1?v=$V\2|g" README.md
+          sed -i -E "s#(wakatime/stats\.svg)\?v=[0-9]+#\1?v=$V#g" README.md
+          sed -i -E "s#(wakatime/stats\.svg)(\"|')#\1?v=$V\2#g" README.md
 
       - name: Commit changes to repo
         run: |
