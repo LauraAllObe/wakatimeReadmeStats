@@ -8,7 +8,9 @@ import { getWeekdayAverageCard } from '../lib/weekdayAverageCard.js';
 import { getProjectBreakdownCard } from '../lib/projectBreakdownCard.js';
 import { getLanguageBreakdownCard } from '../lib/languageBreakdownCard.js';
 import { getAlltimeLanguagesCard } from '../lib/alltimeLanguagesCard.js';
-import {getAlltimeProjectsCard } from '../lib/alltimeProjectsCard.js';import { renderErrorSvg } from '../lib/utils.js';import 'dotenv/config';
+import {getAlltimeProjectsCard} from '../lib/alltimeProjectsCard.js';
+import { renderErrorSvg } from '../lib/utils.js';
+import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 
