@@ -332,8 +332,9 @@ export default async function handler(req, res) {
             lineHeight: 13
           }),
           height: 72,
-          width: 0,
-          type
+          width: 320,
+          type,
+          align: 'left'
         });
       }
     }
