@@ -8,8 +8,7 @@ import { getWeekdayAverageCard } from '../lib/weekdayAverageCard.js';
 import { getProjectBreakdownCard } from '../lib/projectBreakdownCard.js';
 import { getLanguageBreakdownCard } from '../lib/languageBreakdownCard.js';
 import { getAlltimeLanguagesCard } from '../lib/alltimeLanguagesCard.js';
-import {getAlltimeProjectsCard } from '../lib/alltimeProjectsCard.js';
-import 'dotenv/config';
+import {getAlltimeProjectsCard } from '../lib/alltimeProjectsCard.js';import { renderErrorSvg } from '../lib/utils.js';import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 
@@ -314,14 +313,23 @@ export default async function handler(req, res) {
       } catch (err) {
         console.error(`Component ${i} (${type}) error:`, err.message || err);
 
+        const errorTitle = type === 'heatmap' ? 'Heatmap Error' : 'Card Error';
+        const errorMessage = type === 'heatmap'
+          ? `Heatmap unavailable: ${err.message || 'Unavailable'}`
+          : `${type || 'Component'} unavailable: ${err.message || 'Unavailable'}`;
+
         svgParts.push({
-          content: `
-            <text x="20" y="20" fill="black" font-size="14">
-              ${type === 'heatmap'
-                ? '⚠︎ Heatmap Error: ' + (err.message || 'Unavailable')
-                : '⚠︎ Error: ' + (err.message || 'Unavailable')}
-            </text>`,
-          height: 40,
+          content: renderErrorSvg({
+            title: errorTitle,
+            message: errorMessage,
+            width: 320,
+            height: 72,
+            titleFontSize: 12,
+            messageFontSize: 11,
+            maxCharsPerLine: 44,
+            lineHeight: 13
+          }),
+          height: 72,
           width: 0,
           type
         });
@@ -358,12 +366,16 @@ export default async function handler(req, res) {
 
   } catch (err) {
     console.error("Server error:", err.message || err);
-    const errorSvg = `
-      <svg width="700" height="120" xmlns="http://www.w3.org/2000/svg" style="font-family:Calibri,sans-serif;font-size:14;">
-        <rect width="100%" height="100%" fill="#ffffff" />
-        <text x="20" y="40" fill="#333333" font-size="18" font-weight="bold">WakaTime Error</text>
-        <text x="20" y="70" fill="#333333">${err.message || "Unknown error occurred."}</text>
-      </svg>`;
+    const errorSvg = renderErrorSvg({
+      title: 'WakaTime Error',
+      message: err.message || 'Unknown error occurred.',
+      width: 520,
+      height: 120,
+      titleFontSize: 14,
+      messageFontSize: 12,
+      maxCharsPerLine: 72,
+      lineHeight: 15
+    });
     res.setHeader('Content-Type', 'image/svg+xml');
     res.status(200).send(errorSvg);
   }
